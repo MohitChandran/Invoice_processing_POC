@@ -1,0 +1,105 @@
+COMPANY TRAVEL POLICY — BUSINESS RULES (DUMMY DATA)
+
+====================================================
+SECTION 1 — EMPLOYEE LEVEL DEFINITIONS
+====================================================
+L1 – Entry Level / Intern
+L2 – Associate
+L3 – Senior Associate
+L4 – Manager
+L5 – Director / Executive Leadership (Top Level)
+
+====================================================
+SECTION 2 — TRAVEL MODE POLICY & MAXIMUM REIMBURSEMENT
+====================================================
+
+[Cab / Taxi Fare Limits]
+- L1: Maximum claim allowed ₹250 per trip
+- L2: Maximum claim allowed ₹350 per trip
+- L3: Maximum claim allowed ₹450 per trip
+- L4: Maximum claim allowed ₹600 per trip
+- L5: Maximum claim allowed ₹1000 per trip
+
+[Auto-Rickshaw]
+- All levels: Max claim ₹150 per trip
+
+[Train Ticket Limits]
+- L1: Sleeper class only, max reimbursement ₹500 per single trip
+- L2: Sleeper or 3AC based on manager approval, max ₹1000
+- L3: 3AC mandatory, max ₹1500
+- L4: 2AC allowed, max ₹2500
+- L5: Business 2AC / First Class allowed, no strict fare cap (soft cap ₹3500)
+
+[Flight Ticket Limits]
+- L1: Flights not permitted except special approval
+- L2: Only Economy class, max reimbursement ₹5000
+- L3: Economy class, max reimbursement ₹8000
+- L4: Economy or Premium Economy, max ₹12000
+- L5: Business Class allowed, soft cap ₹25000
+
+====================================================
+SECTION 3 — ACCOMMODATION (HOTEL) POLICIES
+====================================================
+
+Hotel Stay Maximum Rate Per Night:
+- L1: ₹800
+- L2: ₹1200
+- L3: ₹1800
+- L4: ₹2500
+- L5: ₹4500
+
+Common Rules:
+- Hotel receipts must be itemized.
+- Alcohol charges are not reimbursable.
+- Late checkout fees allowed only if travel document supports late return.
+
+====================================================
+SECTION 4 — MEAL & DAILY ALLOWANCES
+====================================================
+
+Meal Allowance Per Day:
+- L1: ₹250
+- L2: ₹300
+- L3: ₹400
+- L4: ₹600
+- L5: ₹800
+
+General Meal Rules:
+- Snacks are not considered meals.
+- Bills must contain GST number and date.
+
+====================================================
+SECTION 5 — SPECIAL TRAVEL RULES
+====================================================
+
+One-Day Return Policy:
+- If total travel duration is less than 24 hours, hotel stay cannot be claimed.
+- Only local travel and meals can be reimbursed.
+- For same-day return, only one meal allowance applies.
+
+Maximum Business Trip Budget:
+- L1: ₹1200 per day
+- L2: ₹2000 per day
+- L3: ₹3000 per day
+- L4: ₹5000 per day
+- L5: ₹10000 per day (flexible)
+
+====================================================
+SECTION 6 — GENERAL POLICIES
+====================================================
+
+- Travel must match approved itinerary from proposal.
+- Name on invoice must match employee records.
+- Travel date must be within ±3 days of approved proposal.
+- Claims beyond limits require manager approval.
+- Duplicate invoices are strictly rejected.
+- Missing GST or missing ticket number reduces confidence score.
+- Hand-written bills are accepted only for cab/auto with company stamp.
+
+====================================================
+SECTION 7 — EXCEPTIONS
+====================================================
+
+- Medical emergency travel automatically shifts validation to "pending approval".
+- Weather delays or train cancellations can exceed budget by 20%.
+- If employee level information is missing, default to L3 for calculation.

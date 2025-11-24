@@ -1,0 +1,85 @@
+# Travel Invoice Validation Business Rules
+
+## General Policy
+All travel expenses must comply with company travel policy and be pre-approved through the proposal system.
+
+## Employee Level Classification
+- Level A: Senior Management (Directors, VPs, C-Suite)
+- Level B: Middle Management (Managers, Senior Managers)
+- Level C: Junior Management (Team Leads, Supervisors)
+- Level D: Staff (Associates, Analysts, Individual Contributors)
+
+## Fare Limits by Employee Level
+
+### Domestic Travel (within country)
+- Level A: Maximum fare limit ₹15,000 per trip
+- Level B: Maximum fare limit ₹10,000 per trip
+- Level C: Maximum fare limit ₹7,500 per trip
+- Level D: Maximum fare limit ₹5,000 per trip
+
+### International Travel
+- Level A: Maximum fare limit ₹75,000 per trip
+- Level B: Maximum fare limit ₹50,000 per trip
+- Level C: Maximum fare limit ₹35,000 per trip
+- Level D: Maximum fare limit ₹25,000 per trip
+
+## Travel Class Restrictions
+- Level A: Business class permitted for flights over 4 hours, economy otherwise
+- Level B: Premium economy permitted for international flights, economy for domestic
+- Level C and D: Economy class only for all travel
+
+## Booking Requirements
+- All travel must be booked at least 7 days in advance for domestic, 14 days for international
+- Last-minute bookings require special approval from department head
+- Employees must use company-approved travel vendors when possible
+
+## Invoice Requirements
+- Invoice must clearly show: passenger name, origin, destination, travel date, fare amount
+- Invoice date must match or precede the travel date
+- Passenger name must match employee name in proposal exactly
+- Origin and destination must match approved itinerary
+
+## Reimbursement Conditions
+- Fare exceeding approved limit by more than 10% requires additional justification
+- Cancellation fees are not reimbursable without valid reason
+- Service fees and taxes are included in fare limit calculation
+- Multiple segments on same trip are summed for total fare
+
+## Validation Rules
+1. APPROVED if:
+   - Employee found in proposal with valid level
+   - Fare is within or at limit for employee level
+   - All required invoice fields are present and valid
+   - Passenger name matches employee (allowing minor spelling variations)
+
+2. REJECTED if:
+   - Fare exceeds employee level limit by more than 10%
+   - Employee not found in proposal
+   - Missing critical information (name, date, fare, route)
+   - Invoice appears fraudulent or tampered
+   - Travel dates are in the distant past (>90 days) without explanation
+
+3. MANUAL REVIEW REQUIRED if:
+   - Fare exceeds limit by 5-10%
+   - Name matching is ambiguous (multiple employees with similar names)
+   - Invoice quality is poor and extraction confidence is low
+   - Employee level is not specified in proposal
+   - Unusual route or fare pattern detected
+
+## Special Circumstances
+- Emergency travel may exceed limits with proper documentation
+- Training and conferences may have different fare limits
+- Client-billed travel follows client's policy, not internal policy
+- Group bookings require separate approval process
+
+## Fraud Detection
+- Flag if fare amount appears altered or inconsistent
+- Flag if invoice date is after travel date
+- Flag if same invoice submitted multiple times
+- Flag if passenger name doesn't match any employee reasonably
+
+## Data Quality Standards
+- Extraction confidence below 70% triggers manual review
+- Missing fare limit in proposal requires fallback to lowest level
+- Ambiguous dates should default to ISO format interpretation
+- Currency conversions must use date-specific exchange rates
