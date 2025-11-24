@@ -17,11 +17,36 @@ logger = logging.getLogger(__name__)
 
 
 class SessionManager:
-    """Manages validation sessions."""
+    """Manages validation sessions with file-based persistence."""
     
     def __init__(self):
         self.sessions = {}
         self.session_timeout = 3600  # 1 hour
+        self.session_file = Path("temp_storage/sessions.json")
+        self._load_sessions()
+    
+    def _load_sessions(self):
+        """Load sessions from file."""
+        try:
+            if self.session_file.exists():
+                import json
+                with open(self.session_file, 'r') as f:
+                    self.sessions = json.load(f)
+                logger.info(f"Loaded {len(self.sessions)} sessions from disk")
+                print(f"💾 Loaded {len(self.sessions)} sessions from persistence")
+        except Exception as e:
+            logger.warning(f"Could not load sessions: {str(e)}")
+            self.sessions = {}
+    
+    def _save_sessions(self):
+        """Save sessions to file."""
+        try:
+            import json
+            self.session_file.parent.mkdir(parents=True, exist_ok=True)
+            with open(self.session_file, 'w') as f:
+                json.dump(self.sessions, f, indent=2)
+        except Exception as e:
+            logger.error(f"Could not save sessions: {str(e)}")
     
     def create_session(self) -> str:
         """
@@ -40,6 +65,7 @@ class SessionManager:
             'data': {}
         }
         
+        self._save_sessions()  # Persist to disk
         logger.info(f"Created session: {session_id}")
         
         return session_id
@@ -64,11 +90,13 @@ class SessionManager:
                 'data': data
             })
             self.sessions[session_id]['data'].update(data)
+            self._save_sessions()  # Persist to disk
     
     def close_session(self, session_id: str):
         """Mark session as complete."""
         if session_id in self.sessions:
             self.sessions[session_id]['status'] = 'completed'
+            self._save_sessions()  # Persist to disk
             logger.info(f"Closed session: {session_id}")
     
     def cleanup_old_sessions(self):
@@ -100,7 +128,8 @@ class Orchestrator:
     async def process_validation(
         self,
         invoice_id: str,
-        proposal_id: str
+        proposal_id: str,
+        session_id: Optional[str] = None
     ) -> Dict[str, Any]:
         """
         Execute full validation workflow.
@@ -108,6 +137,7 @@ class Orchestrator:
         Args:
             invoice_id: Invoice file ID
             proposal_id: Proposal Excel file ID
+            session_id: Optional session ID to use (creates new if not provided)
             
         Returns:
             Validation result
@@ -115,7 +145,25 @@ class Orchestrator:
         Raises:
             Exception: If workflow fails
         """
-        session_id = self.session_manager.create_session()
+        # Use provided session_id or create new one
+        if session_id is None:
+            session_id = self.session_manager.create_session()
+            print(f"🆕 Created NEW session: {session_id}")
+        else:
+            # Ensure session exists in manager
+            if session_id not in self.session_manager.sessions:
+                self.session_manager.sessions[session_id] = {
+                    'session_id': session_id,
+                    'created_at': time.time(),
+                    'status': 'active',
+                    'steps': [],
+                    'data': {}
+                }
+                self.session_manager._save_sessions()  # Persist to disk
+                print(f"📝 Registered existing session: {session_id}")
+                logger.info(f"Registered existing session: {session_id}")
+            else:
+                print(f"♻️  Reusing existing session: {session_id}")
         
         try:
             print(f"\n{'='*80}")
@@ -413,6 +461,183 @@ class Orchestrator:
     def cleanup_sessions(self):
         """Cleanup old sessions."""
         self.session_manager.cleanup_old_sessions()
+    
+    async def chat_with_context(
+        self,
+        session_id: str,
+        user_question: str
+    ) -> Dict[str, Any]:
+        """
+        Chat with orchestrator about session data.
+        User can ask questions about validation results, policies, extracted data, etc.
+        
+        Args:
+            session_id: Session ID to get context from
+            user_question: User's question
+            
+        Returns:
+            Dict with answer and metadata
+            
+        Raises:
+            Exception: If session not found or chat fails
+        """
+        try:
+            print(f"\n{'='*80}")
+            print(f"💬 USER CHAT REQUEST")
+            print(f"{'='*80}")
+            print(f"Session ID: {session_id}")
+            print(f"Question: {user_question}")
+            logger.info(f"[{session_id}] Chat request: {user_question}")
+            
+            # DEBUG: Check available sessions
+            print(f"\n🔍 DEBUG: Checking session availability...")
+            print(f"   Total sessions in manager: {len(self.session_manager.sessions)}")
+            print(f"   Available session IDs: {list(self.session_manager.sessions.keys())}")
+            print(f"   Looking for: {session_id}")
+            
+            # Get session data
+            session = self.session_manager.get_session(session_id)
+            
+            if not session:
+                print(f"   ❌ Session {session_id} NOT FOUND!")
+                print(f"   Available sessions: {list(self.session_manager.sessions.keys())}")
+                raise Exception(f"Session {session_id} not found. Please process validation first.")
+            
+            print(f"   ✅ Session found! Status: {session.get('status')}")
+            
+            # Extract all available data from session
+            session_data = session.get('data', {})
+            
+            # Build context from session
+            context_parts = []
+            
+            # Extracted data
+            if 'extracted_data' in session_data:
+                extracted = session_data['extracted_data']
+                context_parts.append(f"""
+EXTRACTED INVOICE DATA:
+- Passenger Name: {extracted.get('passenger_name', 'N/A')}
+- Origin: {extracted.get('origin', 'N/A')}
+- Destination: {extracted.get('destination', 'N/A')}
+- Travel Date: {extracted.get('travel_date', 'N/A')}
+- Fare: ₹{extracted.get('fare', 0.0)}
+- Extraction Confidence: {extracted.get('confidence', 0.0)*100:.1f}%
+""")
+            
+            # Employee data
+            if 'employee_data' in session_data:
+                employee = session_data['employee_data']
+                context_parts.append(f"""
+EMPLOYEE DETAILS:
+- Name: {employee.get('name', 'N/A')}
+- Level: {employee.get('employee_level', 'N/A')}
+- Fare Limit: ₹{employee.get('fare_limit', 0.0):,.2f}
+""")
+            
+            # Validation result
+            if 'validation_result' in session_data:
+                validation = session_data['validation_result']
+                context_parts.append(f"""
+VALIDATION RESULT:
+- Status: {validation.get('validation_status', 'N/A').upper()}
+- Remarks: {validation.get('remarks', 'N/A')}
+""")
+                
+                # Policy rules applied (check both possible field names)
+                rules = validation.get('policy_rules_applied') or validation.get('rules_applied')
+                if rules:
+                    # Handle rules that might be strings or have other formats
+                    rule_list = []
+                    for rule in rules:
+                        if isinstance(rule, str):
+                            rule_list.append(f"- {rule}")
+                        else:
+                            rule_list.append(f"- {str(rule)}")
+                    
+                    context_parts.append(f"""
+POLICY RULES APPLIED:
+{chr(10).join(rule_list)}
+""")
+                
+                # Violations
+                if validation.get('violations'):
+                    violations = validation['violations']
+                    # Handle violations that might be strings or dicts
+                    violation_list = []
+                    for v in violations:
+                        if isinstance(v, dict):
+                            violation_list.append(f"- {v.get('description', str(v))}")
+                        else:
+                            violation_list.append(f"- {v}")
+                    
+                    context_parts.append(f"""
+POLICY VIOLATIONS:
+{chr(10).join(violation_list)}
+""")
+            
+            # Combine context
+            full_context = "\n".join(context_parts)
+            
+            print(f"\n📋 Session Context Loaded:")
+            print(f"   - Has extracted data: {'extracted_data' in session_data}")
+            print(f"   - Has employee data: {'employee_data' in session_data}")
+            print(f"   - Has validation result: {'validation_result' in session_data}")
+            
+            # Build chat prompt
+            system_prompt = """You are an AI assistant helping users understand their travel invoice validation results.
+
+You have access to the complete session data including:
+- Extracted invoice information (passenger, route, date, fare)
+- Employee details (name, level, fare limits)
+- Validation results (approved/rejected status)
+- Policy rules that were applied
+- Any policy violations found
+
+Answer the user's question clearly and concisely based on the available data.
+If the data needed to answer the question is not available, say so politely.
+
+Be helpful, accurate, and reference specific data points when answering."""
+
+            user_prompt = f"""Here is the session data:
+
+{full_context}
+
+User's Question: {user_question}
+
+Please answer based on the above information."""
+
+            # Call LLM
+            from src.agents.llm_client import ollama_client
+            
+            print(f"\n🤖 Calling LLM to generate answer...")
+            
+            response = await ollama_client.generate(
+                prompt=user_prompt,
+                system_prompt=system_prompt,
+                temperature=0.3  # Lower temperature for factual responses
+            )
+            
+            answer = response.get('response', '').strip()
+            
+            print(f"✅ Answer generated!")
+            print(f"   Length: {len(answer)} characters")
+            print(f"{'='*80}\n")
+            
+            logger.info(f"[{session_id}] Chat response generated")
+            
+            return {
+                'session_id': session_id,
+                'question': user_question,
+                'answer': answer,
+                'has_context': bool(context_parts),
+                'context_items': len(context_parts)
+            }
+            
+        except Exception as e:
+            print(f"❌ Chat error: {str(e)}")
+            print(f"{'='*80}\n")
+            logger.error(f"[{session_id}] Chat failed: {str(e)}", exc_info=True)
+            raise Exception(f"Chat request failed: {str(e)}")
 
 
 # Singleton instance

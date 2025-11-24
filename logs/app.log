@@ -1382,3 +1382,1773 @@ Extract the information now:
 2025-11-24 15:39:16 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 1 relevant rules for query
 2025-11-24 15:39:16 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: test...
 2025-11-24 15:39:16 - src.main - INFO - [no-session] - Request 806c4bad completed: 200 (0.26s)
+2025-11-24 15:55:41 - src.main - INFO - [no-session] - Request a41f823e: GET /
+2025-11-24 15:55:41 - src.main - INFO - [no-session] - Request a41f823e completed: 200 (0.00s)
+2025-11-24 16:00:39 - src.main - INFO - [no-session] - Shutting down application...
+2025-11-24 16:00:39 - src.main - INFO - [no-session] - Goodbye!
+2025-11-24 16:00:43 - root - INFO - [no-session] - Logging system initialized
+2025-11-24 16:00:43 - root - INFO - [no-session] - Log file: /home/mohitchandran/Desktop/LIC_POC/logs/app.log
+2025-11-24 16:00:43 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:00:43 - src.main - INFO - [no-session] - AI Travel Invoice Validator Starting...
+2025-11-24 16:00:43 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:00:43 - src.main - INFO - [no-session] - Checking Ollama connection...
+2025-11-24 16:00:43 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:00:43 - src.main - INFO - [no-session] - ✓ Ollama connected: http://192.168.10.200:11434
+2025-11-24 16:00:43 - src.main - INFO - [no-session] - ✓ Model available: gemma3:27b
+2025-11-24 16:00:43 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Using Ollama embedding model: mxbai-embed-large:latest
+2025-11-24 16:00:43 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Connected to collection: business_policies
+2025-11-24 16:00:43 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Rules retriever initialized successfully (10 documents)
+2025-11-24 16:00:43 - src.main - INFO - [no-session] - ✓ RAG system initialized
+2025-11-24 16:00:43 - src.main - INFO - [no-session] - Application ready!
+2025-11-24 16:00:43 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:01:12 - src.main - INFO - [no-session] - Shutting down application...
+2025-11-24 16:01:12 - src.main - INFO - [no-session] - Goodbye!
+2025-11-24 16:01:14 - root - INFO - [no-session] - Logging system initialized
+2025-11-24 16:01:14 - root - INFO - [no-session] - Log file: /home/mohitchandran/Desktop/LIC_POC/logs/app.log
+2025-11-24 16:01:14 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:01:14 - src.main - INFO - [no-session] - AI Travel Invoice Validator Starting...
+2025-11-24 16:01:14 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:01:14 - src.main - INFO - [no-session] - Checking Ollama connection...
+2025-11-24 16:01:15 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:01:15 - src.main - INFO - [no-session] - ✓ Ollama connected: http://192.168.10.200:11434
+2025-11-24 16:01:15 - src.main - INFO - [no-session] - ✓ Model available: gemma3:27b
+2025-11-24 16:01:15 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Using Ollama embedding model: mxbai-embed-large:latest
+2025-11-24 16:01:15 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Connected to collection: business_policies
+2025-11-24 16:01:15 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Rules retriever initialized successfully (10 documents)
+2025-11-24 16:01:15 - src.main - INFO - [no-session] - ✓ RAG system initialized
+2025-11-24 16:01:15 - src.main - INFO - [no-session] - Application ready!
+2025-11-24 16:01:15 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:01:16 - root - INFO - [no-session] - Logging system initialized
+2025-11-24 16:01:16 - root - INFO - [no-session] - Log file: /home/mohitchandran/Desktop/LIC_POC/logs/app.log
+2025-11-24 16:01:16 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:01:16 - src.main - INFO - [no-session] - AI Travel Invoice Validator Starting...
+2025-11-24 16:01:16 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:01:16 - src.main - INFO - [no-session] - Checking Ollama connection...
+2025-11-24 16:01:17 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:01:17 - src.main - INFO - [no-session] - ✓ Ollama connected: http://192.168.10.200:11434
+2025-11-24 16:01:17 - src.main - INFO - [no-session] - ✓ Model available: gemma3:27b
+2025-11-24 16:01:17 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Using Ollama embedding model: mxbai-embed-large:latest
+2025-11-24 16:01:17 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Connected to collection: business_policies
+2025-11-24 16:01:17 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Rules retriever initialized successfully (10 documents)
+2025-11-24 16:01:17 - src.main - INFO - [no-session] - ✓ RAG system initialized
+2025-11-24 16:01:17 - src.main - INFO - [no-session] - Application ready!
+2025-11-24 16:01:17 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:01:42 - src.main - INFO - [no-session] - Shutting down application...
+2025-11-24 16:01:42 - src.main - INFO - [no-session] - Goodbye!
+2025-11-24 16:01:44 - root - INFO - [no-session] - Logging system initialized
+2025-11-24 16:01:44 - root - INFO - [no-session] - Log file: /home/mohitchandran/Desktop/LIC_POC/logs/app.log
+2025-11-24 16:01:44 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:01:44 - src.main - INFO - [no-session] - AI Travel Invoice Validator Starting...
+2025-11-24 16:01:44 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:01:44 - src.main - INFO - [no-session] - Checking Ollama connection...
+2025-11-24 16:01:44 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:01:44 - src.main - INFO - [no-session] - ✓ Ollama connected: http://192.168.10.200:11434
+2025-11-24 16:01:44 - src.main - INFO - [no-session] - ✓ Model available: gemma3:27b
+2025-11-24 16:01:44 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Using Ollama embedding model: mxbai-embed-large:latest
+2025-11-24 16:01:44 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Connected to collection: business_policies
+2025-11-24 16:01:44 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Rules retriever initialized successfully (10 documents)
+2025-11-24 16:01:44 - src.main - INFO - [no-session] - ✓ RAG system initialized
+2025-11-24 16:01:44 - src.main - INFO - [no-session] - Application ready!
+2025-11-24 16:01:44 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:02:49 - src.main - INFO - [no-session] - Shutting down application...
+2025-11-24 16:02:49 - src.main - INFO - [no-session] - Goodbye!
+2025-11-24 16:02:51 - root - INFO - [no-session] - Logging system initialized
+2025-11-24 16:02:51 - root - INFO - [no-session] - Log file: /home/mohitchandran/Desktop/LIC_POC/logs/app.log
+2025-11-24 16:02:51 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:02:51 - src.main - INFO - [no-session] - AI Travel Invoice Validator Starting...
+2025-11-24 16:02:51 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:02:51 - src.main - INFO - [no-session] - Checking Ollama connection...
+2025-11-24 16:02:51 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:02:51 - src.main - INFO - [no-session] - ✓ Ollama connected: http://192.168.10.200:11434
+2025-11-24 16:02:51 - src.main - INFO - [no-session] - ✓ Model available: gemma3:27b
+2025-11-24 16:02:51 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Using Ollama embedding model: mxbai-embed-large:latest
+2025-11-24 16:02:51 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Connected to collection: business_policies
+2025-11-24 16:02:51 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Rules retriever initialized successfully (10 documents)
+2025-11-24 16:02:51 - src.main - INFO - [no-session] - ✓ RAG system initialized
+2025-11-24 16:02:51 - src.main - INFO - [no-session] - Application ready!
+2025-11-24 16:02:51 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:02:53 - root - INFO - [no-session] - Logging system initialized
+2025-11-24 16:02:53 - root - INFO - [no-session] - Log file: /home/mohitchandran/Desktop/LIC_POC/logs/app.log
+2025-11-24 16:02:53 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:02:53 - src.main - INFO - [no-session] - AI Travel Invoice Validator Starting...
+2025-11-24 16:02:53 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:02:53 - src.main - INFO - [no-session] - Checking Ollama connection...
+2025-11-24 16:02:53 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:02:53 - src.main - INFO - [no-session] - ✓ Ollama connected: http://192.168.10.200:11434
+2025-11-24 16:02:53 - src.main - INFO - [no-session] - ✓ Model available: gemma3:27b
+2025-11-24 16:02:53 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Using Ollama embedding model: mxbai-embed-large:latest
+2025-11-24 16:02:53 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Connected to collection: business_policies
+2025-11-24 16:02:53 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Rules retriever initialized successfully (10 documents)
+2025-11-24 16:02:53 - src.main - INFO - [no-session] - ✓ RAG system initialized
+2025-11-24 16:02:53 - src.main - INFO - [no-session] - Application ready!
+2025-11-24 16:02:53 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:03:49 - src.main - INFO - [no-session] - Request d2a5210d: POST /api/user-chat
+2025-11-24 16:03:49 - src.routes.chat_routes - INFO - [no-session] - Chat request for session sess_abc123: Why was this document rejected?
+2025-11-24 16:03:49 - src.agents.orchestrator - INFO - [no-session] - [sess_abc123] Chat request: Why was this document rejected?
+2025-11-24 16:03:49 - src.agents.orchestrator - ERROR - [no-session] - [sess_abc123] Chat failed: Session sess_abc123 not found. Please process validation first.
+Traceback (most recent call last):
+  File "/home/mohitchandran/Desktop/LIC_POC/src/agents/orchestrator.py", line 448, in chat_with_context
+    raise Exception(f"Session {session_id} not found. Please process validation first.")
+Exception: Session sess_abc123 not found. Please process validation first.
+2025-11-24 16:03:49 - src.routes.chat_routes - ERROR - [no-session] - Chat endpoint error: Chat request failed: Session sess_abc123 not found. Please process validation first.
+Traceback (most recent call last):
+  File "/home/mohitchandran/Desktop/LIC_POC/src/agents/orchestrator.py", line 448, in chat_with_context
+    raise Exception(f"Session {session_id} not found. Please process validation first.")
+Exception: Session sess_abc123 not found. Please process validation first.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mohitchandran/Desktop/LIC_POC/src/routes/chat_routes.py", line 65, in user_chat
+    result = await orchestrator.chat_with_context(
+  File "/home/mohitchandran/Desktop/LIC_POC/src/agents/orchestrator.py", line 567, in chat_with_context
+    raise Exception(f"Chat request failed: {str(e)}")
+Exception: Chat request failed: Session sess_abc123 not found. Please process validation first.
+2025-11-24 16:03:49 - src.main - INFO - [no-session] - Request d2a5210d completed: 500 (0.01s)
+2025-11-24 16:04:16 - src.main - INFO - [no-session] - Request 443196e6: GET /health
+2025-11-24 16:04:17 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:04:18 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 1 relevant rules for query
+2025-11-24 16:04:18 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: test...
+2025-11-24 16:04:18 - src.main - INFO - [no-session] - Request 443196e6 completed: 200 (1.16s)
+2025-11-24 16:04:20 - src.main - INFO - [no-session] - Request b2363ad9: GET /health
+2025-11-24 16:04:20 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:04:21 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 1 relevant rules for query
+2025-11-24 16:04:21 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: test...
+2025-11-24 16:04:21 - src.main - INFO - [no-session] - Request b2363ad9 completed: 200 (0.53s)
+2025-11-24 16:04:23 - src.main - INFO - [no-session] - Request 8058fc94: GET /health
+2025-11-24 16:04:23 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:04:24 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 1 relevant rules for query
+2025-11-24 16:04:24 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: test...
+2025-11-24 16:04:24 - src.main - INFO - [no-session] - Request 8058fc94 completed: 200 (0.30s)
+2025-11-24 16:04:24 - src.main - INFO - [no-session] - Request ba07f577: POST /api/session
+2025-11-24 16:04:24 - src.routes.session_routes - INFO - [no-session] - Created session: 647cbca2-cced-41d2-8b4e-b7a1341e43a2
+2025-11-24 16:04:24 - src.main - INFO - [no-session] - Request ba07f577 completed: 200 (0.00s)
+2025-11-24 16:04:24 - src.main - INFO - [no-session] - Request c2c183db: POST /api/upload-invoice
+2025-11-24 16:04:24 - python_multipart.multipart - DEBUG - [no-session] - Calling on_part_begin with no data
+2025-11-24 16:04:24 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_field with data[36:55]
+2025-11-24 16:04:24 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_value with data[57:113]
+2025-11-24 16:04:24 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_end with no data
+2025-11-24 16:04:24 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_field with data[115:127]
+2025-11-24 16:04:24 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_value with data[129:144]
+2025-11-24 16:04:24 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_end with no data
+2025-11-24 16:04:24 - python_multipart.multipart - DEBUG - [no-session] - Calling on_headers_finished with no data
+2025-11-24 16:04:24 - python_multipart.multipart - DEBUG - [no-session] - Calling on_part_data with data[148:50353]
+2025-11-24 16:04:24 - python_multipart.multipart - DEBUG - [no-session] - Calling on_part_end with no data
+2025-11-24 16:04:24 - python_multipart.multipart - DEBUG - [no-session] - Calling on_end with no data
+2025-11-24 16:04:24 - src.routes.upload_routes - INFO - [no-session] - Received invoice upload: mohit_dummyticket.pdf (session: 647cbca2-cced-41d2-8b4e-b7a1341e43a2)
+2025-11-24 16:04:24 - src.services.file_storage - INFO - [no-session] - Saved invoice: inv_b80023a9e3af (50205 bytes)
+2025-11-24 16:04:24 - src.routes.upload_routes - INFO - [no-session] - Invoice saved: inv_b80023a9e3af
+2025-11-24 16:04:24 - src.main - INFO - [no-session] - Request c2c183db completed: 200 (0.01s)
+2025-11-24 16:04:24 - src.main - INFO - [no-session] - Request bc51f345: POST /api/upload-proposal
+2025-11-24 16:04:24 - python_multipart.multipart - DEBUG - [no-session] - Calling on_part_begin with no data
+2025-11-24 16:04:24 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_field with data[36:55]
+2025-11-24 16:04:24 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_value with data[57:119]
+2025-11-24 16:04:24 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_end with no data
+2025-11-24 16:04:24 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_field with data[121:133]
+2025-11-24 16:04:24 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_value with data[135:162]
+2025-11-24 16:04:24 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_end with no data
+2025-11-24 16:04:24 - python_multipart.multipart - DEBUG - [no-session] - Calling on_headers_finished with no data
+2025-11-24 16:04:24 - python_multipart.multipart - DEBUG - [no-session] - Calling on_part_data with data[166:5130]
+2025-11-24 16:04:24 - python_multipart.multipart - DEBUG - [no-session] - Calling on_part_end with no data
+2025-11-24 16:04:24 - python_multipart.multipart - DEBUG - [no-session] - Calling on_end with no data
+2025-11-24 16:04:24 - src.routes.upload_routes - INFO - [no-session] - Received proposal upload: dummy_travel_proposals.xlsx (session: 647cbca2-cced-41d2-8b4e-b7a1341e43a2)
+2025-11-24 16:04:24 - src.services.file_storage - INFO - [no-session] - Saved proposal: prop_0f5fdb4a74fd (4964 bytes)
+2025-11-24 16:04:24 - src.routes.upload_routes - INFO - [no-session] - Proposal saved: prop_0f5fdb4a74fd
+2025-11-24 16:04:24 - src.main - INFO - [no-session] - Request bc51f345 completed: 200 (0.01s)
+2025-11-24 16:04:24 - src.main - INFO - [no-session] - Request 385b51bd: POST /api/process-validation
+2025-11-24 16:04:24 - src.routes.process_routes - INFO - [no-session] - Processing validation: invoice=inv_b80023a9e3af, proposal=prop_0f5fdb4a74fd, session=647cbca2-cced-41d2-8b4e-b7a1341e43a2
+2025-11-24 16:04:24 - src.agents.orchestrator - INFO - [no-session] - Created session: sess_06d12a204084
+2025-11-24 16:04:24 - src.agents.orchestrator - INFO - [no-session] - [sess_06d12a204084] Starting validation: invoice=inv_b80023a9e3af, proposal=prop_0f5fdb4a74fd
+2025-11-24 16:04:24 - src.agents.orchestrator - INFO - [no-session] - [sess_06d12a204084] Loading files...
+2025-11-24 16:04:24 - src.services.file_storage - DEBUG - [no-session] - Found invoice: /home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_b80023a9e3af.pdf
+2025-11-24 16:04:24 - src.services.file_storage - DEBUG - [no-session] - Found proposal: /home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_0f5fdb4a74fd.xlsx
+2025-11-24 16:04:24 - src.agents.orchestrator - INFO - [no-session] - [sess_06d12a204084] Files loaded successfully
+2025-11-24 16:04:24 - src.agents.orchestrator - INFO - [no-session] - [sess_06d12a204084] Extracting invoice data...
+2025-11-24 16:04:24 - src.agents.extraction_agent - INFO - [no-session] - [sess_06d12a204084] Extracting data from invoice: inv_b80023a9e3af.pdf
+2025-11-24 16:04:25 - src.services.extractor_utils - INFO - [no-session] - Converted PDF page 0 to image (528997 bytes)
+2025-11-24 16:04:25 - PIL.PngImagePlugin - DEBUG - [no-session] - STREAM b'IHDR' 16 13
+2025-11-24 16:04:25 - PIL.PngImagePlugin - DEBUG - [no-session] - STREAM b'pHYs' 41 9
+2025-11-24 16:04:25 - PIL.PngImagePlugin - DEBUG - [no-session] - STREAM b'IDAT' 62 528919
+2025-11-24 16:04:25 - src.services.extractor_utils - INFO - [no-session] - Resized image for VLM: 2134x2134 -> 1536x1536
+2025-11-24 16:04:25 - src.services.extractor_utils - INFO - [no-session] - Preprocessed image: 528997 bytes -> 156363 bytes (reduction: 70.4%)
+2025-11-24 16:04:25 - src.agents.extraction_agent - INFO - [no-session] - [sess_06d12a204084] Calling VLM (gemma3:27b) for extraction...
+2025-11-24 16:04:25 - src.agents.extraction_agent - INFO - [no-session] - [sess_06d12a204084] Processing image: inv_b80023a9e3af.pdf (156363 bytes)
+2025-11-24 16:04:25 - src.agents.llm_client - INFO - [no-session] - Sending vision request to Ollama with gemma3:27b (image size: 156363 bytes)
+2025-11-24 16:04:25 - src.agents.llm_client - INFO - [no-session] - Using timeout: 60s for vision request
+2025-11-24 16:04:25 - src.agents.llm_client - DEBUG - [no-session] - Prompt: You are analyzing a TRAVEL INVOICE IMAGE. Look at the image carefully and extract these EXACT fields:
+
+📋 REQUIRED FIELDS TO EXTRACT:
+================================
+
+1. **Passenger Name** (passenger_...
+2025-11-24 16:04:44 - src.agents.llm_client - INFO - [no-session] - Received vision response from gemma3:27b
+2025-11-24 16:04:44 - src.agents.llm_client - DEBUG - [no-session] - Response: ```json
+{
+    "passenger_name": "MOHIT",
+    "origin": "COIMBATORE",
+    "destination": "CHENNAI",
+    "travel_date": "2025-11-24",
+    "fare": 500.00,
+    "confidence": 0.98,
+    "notes": "All fields extracted clearly"
+}
+```
+2025-11-24 16:04:44 - src.agents.extraction_agent - INFO - [no-session] - [sess_06d12a204084] VLM response length: 225 characters
+2025-11-24 16:04:44 - src.agents.extraction_agent - INFO - [no-session] - [sess_06d12a204084] Raw VLM response (full): ```json
+{
+    "passenger_name": "MOHIT",
+    "origin": "COIMBATORE",
+    "destination": "CHENNAI",
+    "travel_date": "2025-11-24",
+    "fare": 500.00,
+    "confidence": 0.98,
+    "notes": "All fields extracted clearly"
+}
+```
+2025-11-24 16:04:44 - src.agents.extraction_agent - INFO - [no-session] - [sess_06d12a204084] Parsed JSON: {
+  "passenger_name": "MOHIT",
+  "origin": "COIMBATORE",
+  "destination": "CHENNAI",
+  "travel_date": "2025-11-24",
+  "fare": 500.0,
+  "confidence": 0.98,
+  "notes": "All fields extracted clearly"
+}
+2025-11-24 16:04:44 - src.agents.extraction_agent - INFO - [no-session] - [sess_06d12a204084] Successfully extracted invoice data
+2025-11-24 16:04:44 - src.agents.extraction_agent - INFO - [no-session] - [sess_06d12a204084] Normalized data: {
+  "passenger_name": "MOHIT",
+  "origin": "COIMBATORE",
+  "destination": "CHENNAI",
+  "travel_date": "2025-11-24",
+  "fare": 500.0,
+  "confidence": 0.98,
+  "notes": "All fields extracted clearly"
+}
+2025-11-24 16:04:44 - src.agents.orchestrator - INFO - [no-session] - [sess_06d12a204084] Extraction complete (confidence: 0.98)
+2025-11-24 16:04:44 - src.agents.orchestrator - INFO - [no-session] - [sess_06d12a204084] Matching employee: MOHIT
+2025-11-24 16:04:44 - src.agents.excel_agent - INFO - [no-session] - [sess_06d12a204084] Matching employee: MOHIT
+2025-11-24 16:04:44 - src.services.excel_utils - INFO - [no-session] - Loaded Excel: prop_0f5fdb4a74fd.xlsx (2 rows, 6 columns)
+2025-11-24 16:04:44 - src.services.excel_utils - DEBUG - [no-session] - Columns: ['employee_level', 'name', 'from', 'to', 'date', 'fare']
+2025-11-24 16:04:44 - src.services.excel_utils - DEBUG - [no-session] - All required columns found
+2025-11-24 16:04:44 - src.services.excel_utils - DEBUG - [no-session] - Employee data normalized
+2025-11-24 16:04:44 - src.services.excel_utils - DEBUG - [no-session] - Found employee: {'employee_level': 'l1', 'name': 'Mohit', 'from': 'Coimbatore', 'to': 'Chennai', 'date': '24-11-25', 'fare': 500}
+2025-11-24 16:04:44 - src.agents.excel_agent - INFO - [no-session] - [sess_06d12a204084] Found exact match
+2025-11-24 16:04:44 - src.agents.excel_agent - WARNING - [no-session] - Fare limit missing or zero for Mohit, using fallback
+2025-11-24 16:04:44 - src.agents.excel_agent - INFO - [no-session] - Using default fare limit for level 'l1': 5000.0
+2025-11-24 16:04:44 - src.agents.excel_agent - DEBUG - [no-session] - Built match result: {'match_found': True, 'employee_name': 'Mohit', 'employee_level': 'l1', 'fare_limit': 5000.0, 'match_confidence': 1.0, 'match_type': 'exact', 'all_candidates': []}
+2025-11-24 16:04:44 - src.agents.orchestrator - INFO - [no-session] - [sess_06d12a204084] Employee matched: Mohit (confidence: 1.00)
+2025-11-24 16:04:44 - src.agents.orchestrator - INFO - [no-session] - [sess_06d12a204084] Validating against policy...
+2025-11-24 16:04:44 - src.agents.policy_agent - INFO - [no-session] - [sess_06d12a204084] Validating invoice for MOHIT
+2025-11-24 16:04:44 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 5 relevant rules for query
+2025-11-24 16:04:44 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: Travel invoice validation context:
+- Employee Level: l1
+- Fare Amount: 500.0
+- Fare Limit: 5000.0
+- ...
+2025-11-24 16:04:44 - src.agents.policy_agent - INFO - [no-session] - [sess_06d12a204084] Retrieved 5 relevant rules
+2025-11-24 16:04:44 - src.agents.policy_agent - INFO - [no-session] - [sess_06d12a204084] Calling LLM for validation decision...
+2025-11-24 16:04:44 - src.agents.llm_client - INFO - [no-session] - Sending request to Ollama: http://192.168.10.200:11434/api/generate
+2025-11-24 16:04:44 - src.agents.llm_client - DEBUG - [no-session] - Payload: {
+  "model": "gemma3:27b",
+  "prompt": "Analyze this travel invoice validation case:\n\nINVOICE DATA:\n- Passenger: MOHIT\n- Route: COIMBATORE \u2192 CHENNAI\n- Date: 2025-11-24\n- Fare: \u20b9500.00\n- Extraction Confidence: 0.98\n\nEMPLOYEE DATA:\n- Match Found: True\n- Employee Name: Mohit\n- Employee Level: l1\n- Fare Limit: \u20b95000.00\n- Match Confidence: 1.00\n\nRELEVANT BUSINESS RULES:\n- ==================================================\n\n- Travel must match approved itinerary from proposal.\n- Name on invoice must match employee records.\n- Travel date must be within \u00b13 days of approved proposal.\n- Claims beyond limits require manager approval.\n- Duplicate invoices are strictly rejected.\n- Missing GST or missing ticket number reduces confidence score.\n- Hand-written bills are accepted only for cab/auto with company stamp.\n- are accepted only for cab/auto with company stamp.\n\n====================================================\nSECTION 7 \u2014 EXCEPTIONS\n====================================================\n\n- Medical emergency travel automatically shifts validation to \"pending approval\".\n- Weather delays or train cancellations can exceed budget by 20%.\n- If employee level information is missing, default to L3 for calculation.\n- ==================================================\n\nMeal Allowance Per Day:\n- L1: \u20b9250\n- L2: \u20b9300\n- L3: \u20b9400\n- L4: \u20b9600\n- L5: \u20b9800\n\nGeneral Meal Rules:\n- Snacks are not considered meals.\n- Bills must contain GST number and date.\n\n====================================================\nSECTION 5 \u2014 SPECIAL TRAVEL RULES\n====================================================\n- ==================================================\n\n[Cab / Taxi Fare Limits]\n- L1: Maximum claim allowed \u20b9250 per trip\n- L2: Maximum claim allowed \u20b9350 per trip\n- L3: Maximum claim allowed \u20b9450 per trip\n- L4: Maximum claim allowed \u20b9600 per trip\n- L5: Maximum claim allowed \u20b91000 per trip\n\n[Auto-Rickshaw]\n- All levels: Max claim \u20b9150 per trip\n- ==================================================\n\nOne-Day Return Policy:\n- If total travel duration is less than 24 hours, hotel stay cannot be claimed.\n- Only local travel and meals can be reimbursed.\n- For same-day return, only one meal allowance applies.\n\nMaximum Business Trip Budget:\n- L1: \u20b91200 per day\n- L2: \u20b92000 per day\n- L3: \u20b93000 per day\n- L4: \u20b95000 per day\n- L5: \u20b910000 per day (flexible)\n\nAUTOMATED CHECKS:\nViolations detected:\n- None\n\nTASK:\nBased on the above information, determine if this invoice should be APPROVED or REJECTED.\n\nConsider:\n1. Is the fare within acceptable limits for the employee level?\n2. Are all required fields present and valid?\n3. Is the employee match reliable?\n4. Are there any policy violations?\n\nRespond with ONLY a JSON object in this format:\n{\n    \"validation_status\": \"approved\" or \"rejected\",\n    \"confidence\": 0.85,\n    \"remarks\": \"concise explanation of decision\"\n}\n\nYour decision:",
+  "stream": false,
+  "options": {
+    "temperature": 0.2
+  },
+  "system": "You are a travel expense validation expert.\nAnalyze the invoice data, employee information, and business rules to make a validation decision.\nYou must respond with valid JSON only.",
+  "format": "json"
+}
+2025-11-24 16:04:56 - src.agents.llm_client - INFO - [no-session] - Received response from Ollama (length: 212)
+2025-11-24 16:04:56 - src.agents.llm_client - DEBUG - [no-session] - Response: {
+    "validation_status": "approved",
+    "confidence": 0.95,
+    "remarks": "Invoice fare is within the employee's level (L1) limit. Employee name matches with high confidence. No policy violations detected."
+}
+2025-11-24 16:04:56 - src.agents.policy_agent - DEBUG - [no-session] - [sess_06d12a204084] LLM validation response: {
+    "validation_status": "approved",
+    "confidence": 0.95,
+    "remarks": "Invoice fare is within the employee's level (L1) limit. Employee name matches with high confidence. No policy violations detected."
+}
+2025-11-24 16:04:56 - src.agents.policy_agent - INFO - [no-session] - [sess_06d12a204084] Validation complete: approved (confidence: 0.95)
+2025-11-24 16:04:56 - src.agents.orchestrator - INFO - [no-session] - [sess_06d12a204084] Policy validation complete: approved
+2025-11-24 16:04:56 - src.agents.orchestrator - INFO - [no-session] - [sess_06d12a204084] Final response built
+2025-11-24 16:04:56 - src.agents.orchestrator - DEBUG - [no-session] - [sess_06d12a204084] Response: {'name': 'MOHIT', 'from': 'COIMBATORE', 'to': 'CHENNAI', 'date': '2025-11-24', 'fare': 500.0, 'confidence': 0.97, 'validation_status': 'approved', 'remarks': "Invoice fare is within the employee's level (L1) limit. Employee name matches with high confidence. No policy violations detected.", 'session_id': 'sess_06d12a204084'}
+2025-11-24 16:04:56 - src.agents.orchestrator - INFO - [no-session] - Closed session: sess_06d12a204084
+2025-11-24 16:04:56 - src.agents.orchestrator - INFO - [no-session] - [sess_06d12a204084] Validation complete: approved
+2025-11-24 16:04:56 - src.routes.process_routes - INFO - [no-session] - Validation completed: approved
+2025-11-24 16:04:56 - src.main - INFO - [no-session] - Request 385b51bd completed: 200 (32.11s)
+2025-11-24 16:04:57 - src.main - INFO - [no-session] - Request 348887eb: GET /health
+2025-11-24 16:04:57 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:04:57 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 1 relevant rules for query
+2025-11-24 16:04:57 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: test...
+2025-11-24 16:04:57 - src.main - INFO - [no-session] - Request 348887eb completed: 200 (0.30s)
+2025-11-24 16:05:13 - src.main - INFO - [no-session] - Request 3e74e229: GET /health
+2025-11-24 16:05:13 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:05:13 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 1 relevant rules for query
+2025-11-24 16:05:13 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: test...
+2025-11-24 16:05:13 - src.main - INFO - [no-session] - Request 3e74e229 completed: 200 (0.54s)
+2025-11-24 16:05:15 - src.main - INFO - [no-session] - Request c59e869d: POST /api/user-chat
+2025-11-24 16:05:15 - src.routes.chat_routes - INFO - [no-session] - Chat request for session 647cbca2-cced-41d2-8b4e-b7a1341e43a2: why is the document accepted
+2025-11-24 16:05:15 - src.agents.orchestrator - INFO - [no-session] - [647cbca2-cced-41d2-8b4e-b7a1341e43a2] Chat request: why is the document accepted
+2025-11-24 16:05:15 - src.agents.orchestrator - ERROR - [no-session] - [647cbca2-cced-41d2-8b4e-b7a1341e43a2] Chat failed: Session 647cbca2-cced-41d2-8b4e-b7a1341e43a2 not found. Please process validation first.
+Traceback (most recent call last):
+  File "/home/mohitchandran/Desktop/LIC_POC/src/agents/orchestrator.py", line 448, in chat_with_context
+    raise Exception(f"Session {session_id} not found. Please process validation first.")
+Exception: Session 647cbca2-cced-41d2-8b4e-b7a1341e43a2 not found. Please process validation first.
+2025-11-24 16:05:15 - src.routes.chat_routes - ERROR - [no-session] - Chat endpoint error: Chat request failed: Session 647cbca2-cced-41d2-8b4e-b7a1341e43a2 not found. Please process validation first.
+Traceback (most recent call last):
+  File "/home/mohitchandran/Desktop/LIC_POC/src/agents/orchestrator.py", line 448, in chat_with_context
+    raise Exception(f"Session {session_id} not found. Please process validation first.")
+Exception: Session 647cbca2-cced-41d2-8b4e-b7a1341e43a2 not found. Please process validation first.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mohitchandran/Desktop/LIC_POC/src/routes/chat_routes.py", line 65, in user_chat
+    result = await orchestrator.chat_with_context(
+  File "/home/mohitchandran/Desktop/LIC_POC/src/agents/orchestrator.py", line 567, in chat_with_context
+    raise Exception(f"Chat request failed: {str(e)}")
+Exception: Chat request failed: Session 647cbca2-cced-41d2-8b4e-b7a1341e43a2 not found. Please process validation first.
+2025-11-24 16:05:15 - src.main - INFO - [no-session] - Request c59e869d completed: 500 (0.01s)
+2025-11-24 16:05:15 - src.main - INFO - [no-session] - Request 9b7d19bd: GET /health
+2025-11-24 16:05:16 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:05:16 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 1 relevant rules for query
+2025-11-24 16:05:16 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: test...
+2025-11-24 16:05:16 - src.main - INFO - [no-session] - Request 9b7d19bd completed: 200 (0.31s)
+2025-11-24 16:05:49 - src.main - INFO - [no-session] - Request d6891518: POST /api/upload-invoice
+2025-11-24 16:05:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_part_begin with no data
+2025-11-24 16:05:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_field with data[36:55]
+2025-11-24 16:05:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_value with data[57:113]
+2025-11-24 16:05:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_end with no data
+2025-11-24 16:05:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_field with data[115:127]
+2025-11-24 16:05:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_value with data[129:144]
+2025-11-24 16:05:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_end with no data
+2025-11-24 16:05:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_headers_finished with no data
+2025-11-24 16:05:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_part_data with data[148:50353]
+2025-11-24 16:05:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_part_end with no data
+2025-11-24 16:05:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_end with no data
+2025-11-24 16:05:49 - src.routes.upload_routes - INFO - [no-session] - Received invoice upload: mohit_dummyticket.pdf (session: 647cbca2-cced-41d2-8b4e-b7a1341e43a2)
+2025-11-24 16:05:49 - src.services.file_storage - INFO - [no-session] - Saved invoice: inv_35d82f06c8fb (50205 bytes)
+2025-11-24 16:05:49 - src.routes.upload_routes - INFO - [no-session] - Invoice saved: inv_35d82f06c8fb
+2025-11-24 16:05:49 - src.main - INFO - [no-session] - Request d6891518 completed: 200 (0.01s)
+2025-11-24 16:05:49 - src.main - INFO - [no-session] - Request dd7e3693: POST /api/upload-proposal
+2025-11-24 16:05:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_part_begin with no data
+2025-11-24 16:05:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_field with data[36:55]
+2025-11-24 16:05:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_value with data[57:119]
+2025-11-24 16:05:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_end with no data
+2025-11-24 16:05:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_field with data[121:133]
+2025-11-24 16:05:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_value with data[135:162]
+2025-11-24 16:05:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_end with no data
+2025-11-24 16:05:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_headers_finished with no data
+2025-11-24 16:05:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_part_data with data[166:5130]
+2025-11-24 16:05:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_part_end with no data
+2025-11-24 16:05:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_end with no data
+2025-11-24 16:05:49 - src.routes.upload_routes - INFO - [no-session] - Received proposal upload: dummy_travel_proposals.xlsx (session: 647cbca2-cced-41d2-8b4e-b7a1341e43a2)
+2025-11-24 16:05:49 - src.services.file_storage - INFO - [no-session] - Saved proposal: prop_8c7312d08fa2 (4964 bytes)
+2025-11-24 16:05:49 - src.routes.upload_routes - INFO - [no-session] - Proposal saved: prop_8c7312d08fa2
+2025-11-24 16:05:49 - src.main - INFO - [no-session] - Request dd7e3693 completed: 200 (0.02s)
+2025-11-24 16:05:49 - src.main - INFO - [no-session] - Request 08c2e945: POST /api/process-validation
+2025-11-24 16:05:49 - src.routes.process_routes - INFO - [no-session] - Processing validation: invoice=inv_35d82f06c8fb, proposal=prop_8c7312d08fa2, session=647cbca2-cced-41d2-8b4e-b7a1341e43a2
+2025-11-24 16:05:49 - src.agents.orchestrator - INFO - [no-session] - Created session: sess_910f291ab73a
+2025-11-24 16:05:49 - src.agents.orchestrator - INFO - [no-session] - [sess_910f291ab73a] Starting validation: invoice=inv_35d82f06c8fb, proposal=prop_8c7312d08fa2
+2025-11-24 16:05:50 - src.agents.orchestrator - INFO - [no-session] - [sess_910f291ab73a] Loading files...
+2025-11-24 16:05:50 - src.services.file_storage - DEBUG - [no-session] - Found invoice: /home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_35d82f06c8fb.pdf
+2025-11-24 16:05:50 - src.services.file_storage - DEBUG - [no-session] - Found proposal: /home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_8c7312d08fa2.xlsx
+2025-11-24 16:05:50 - src.agents.orchestrator - INFO - [no-session] - [sess_910f291ab73a] Files loaded successfully
+2025-11-24 16:05:50 - src.agents.orchestrator - INFO - [no-session] - [sess_910f291ab73a] Extracting invoice data...
+2025-11-24 16:05:50 - src.agents.extraction_agent - INFO - [no-session] - [sess_910f291ab73a] Extracting data from invoice: inv_35d82f06c8fb.pdf
+2025-11-24 16:05:50 - src.services.extractor_utils - INFO - [no-session] - Converted PDF page 0 to image (528997 bytes)
+2025-11-24 16:05:50 - PIL.PngImagePlugin - DEBUG - [no-session] - STREAM b'IHDR' 16 13
+2025-11-24 16:05:50 - PIL.PngImagePlugin - DEBUG - [no-session] - STREAM b'pHYs' 41 9
+2025-11-24 16:05:50 - PIL.PngImagePlugin - DEBUG - [no-session] - STREAM b'IDAT' 62 528919
+2025-11-24 16:05:50 - src.services.extractor_utils - INFO - [no-session] - Resized image for VLM: 2134x2134 -> 1536x1536
+2025-11-24 16:05:50 - src.services.extractor_utils - INFO - [no-session] - Preprocessed image: 528997 bytes -> 156363 bytes (reduction: 70.4%)
+2025-11-24 16:05:50 - src.agents.extraction_agent - INFO - [no-session] - [sess_910f291ab73a] Calling VLM (gemma3:27b) for extraction...
+2025-11-24 16:05:50 - src.agents.extraction_agent - INFO - [no-session] - [sess_910f291ab73a] Processing image: inv_35d82f06c8fb.pdf (156363 bytes)
+2025-11-24 16:05:50 - src.agents.llm_client - INFO - [no-session] - Sending vision request to Ollama with gemma3:27b (image size: 156363 bytes)
+2025-11-24 16:05:50 - src.agents.llm_client - INFO - [no-session] - Using timeout: 60s for vision request
+2025-11-24 16:05:50 - src.agents.llm_client - DEBUG - [no-session] - Prompt: You are analyzing a TRAVEL INVOICE IMAGE. Look at the image carefully and extract these EXACT fields:
+
+📋 REQUIRED FIELDS TO EXTRACT:
+================================
+
+1. **Passenger Name** (passenger_...
+2025-11-24 16:06:07 - src.agents.llm_client - INFO - [no-session] - Received vision response from gemma3:27b
+2025-11-24 16:06:07 - src.agents.llm_client - DEBUG - [no-session] - Response: ```json
+{
+    "passenger_name": "MOHIT",
+    "origin": "COIMBATORE",
+    "destination": "CHENNAI",
+    "travel_date": "2025-11-24",
+    "fare": 500.00,
+    "confidence": 0.98,
+    "notes": "All fields extracted clearly"
+}
+```
+2025-11-24 16:06:07 - src.agents.extraction_agent - INFO - [no-session] - [sess_910f291ab73a] VLM response length: 225 characters
+2025-11-24 16:06:07 - src.agents.extraction_agent - INFO - [no-session] - [sess_910f291ab73a] Raw VLM response (full): ```json
+{
+    "passenger_name": "MOHIT",
+    "origin": "COIMBATORE",
+    "destination": "CHENNAI",
+    "travel_date": "2025-11-24",
+    "fare": 500.00,
+    "confidence": 0.98,
+    "notes": "All fields extracted clearly"
+}
+```
+2025-11-24 16:06:07 - src.agents.extraction_agent - INFO - [no-session] - [sess_910f291ab73a] Parsed JSON: {
+  "passenger_name": "MOHIT",
+  "origin": "COIMBATORE",
+  "destination": "CHENNAI",
+  "travel_date": "2025-11-24",
+  "fare": 500.0,
+  "confidence": 0.98,
+  "notes": "All fields extracted clearly"
+}
+2025-11-24 16:06:07 - src.agents.extraction_agent - INFO - [no-session] - [sess_910f291ab73a] Successfully extracted invoice data
+2025-11-24 16:06:07 - src.agents.extraction_agent - INFO - [no-session] - [sess_910f291ab73a] Normalized data: {
+  "passenger_name": "MOHIT",
+  "origin": "COIMBATORE",
+  "destination": "CHENNAI",
+  "travel_date": "2025-11-24",
+  "fare": 500.0,
+  "confidence": 0.98,
+  "notes": "All fields extracted clearly"
+}
+2025-11-24 16:06:07 - src.agents.orchestrator - INFO - [no-session] - [sess_910f291ab73a] Extraction complete (confidence: 0.98)
+2025-11-24 16:06:07 - src.agents.orchestrator - INFO - [no-session] - [sess_910f291ab73a] Matching employee: MOHIT
+2025-11-24 16:06:07 - src.agents.excel_agent - INFO - [no-session] - [sess_910f291ab73a] Matching employee: MOHIT
+2025-11-24 16:06:07 - src.services.excel_utils - INFO - [no-session] - Loaded Excel: prop_8c7312d08fa2.xlsx (2 rows, 6 columns)
+2025-11-24 16:06:07 - src.services.excel_utils - DEBUG - [no-session] - Columns: ['employee_level', 'name', 'from', 'to', 'date', 'fare']
+2025-11-24 16:06:07 - src.services.excel_utils - DEBUG - [no-session] - All required columns found
+2025-11-24 16:06:07 - src.services.excel_utils - DEBUG - [no-session] - Employee data normalized
+2025-11-24 16:06:07 - src.services.excel_utils - DEBUG - [no-session] - Found employee: {'employee_level': 'l1', 'name': 'Mohit', 'from': 'Coimbatore', 'to': 'Chennai', 'date': '24-11-25', 'fare': 500}
+2025-11-24 16:06:07 - src.agents.excel_agent - INFO - [no-session] - [sess_910f291ab73a] Found exact match
+2025-11-24 16:06:07 - src.agents.excel_agent - WARNING - [no-session] - Fare limit missing or zero for Mohit, using fallback
+2025-11-24 16:06:07 - src.agents.excel_agent - INFO - [no-session] - Using default fare limit for level 'l1': 5000.0
+2025-11-24 16:06:07 - src.agents.excel_agent - DEBUG - [no-session] - Built match result: {'match_found': True, 'employee_name': 'Mohit', 'employee_level': 'l1', 'fare_limit': 5000.0, 'match_confidence': 1.0, 'match_type': 'exact', 'all_candidates': []}
+2025-11-24 16:06:07 - src.agents.orchestrator - INFO - [no-session] - [sess_910f291ab73a] Employee matched: Mohit (confidence: 1.00)
+2025-11-24 16:06:07 - src.agents.orchestrator - INFO - [no-session] - [sess_910f291ab73a] Validating against policy...
+2025-11-24 16:06:07 - src.agents.policy_agent - INFO - [no-session] - [sess_910f291ab73a] Validating invoice for MOHIT
+2025-11-24 16:06:08 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 5 relevant rules for query
+2025-11-24 16:06:08 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: Travel invoice validation context:
+- Employee Level: l1
+- Fare Amount: 500.0
+- Fare Limit: 5000.0
+- ...
+2025-11-24 16:06:08 - src.agents.policy_agent - INFO - [no-session] - [sess_910f291ab73a] Retrieved 5 relevant rules
+2025-11-24 16:06:08 - src.agents.policy_agent - INFO - [no-session] - [sess_910f291ab73a] Calling LLM for validation decision...
+2025-11-24 16:06:08 - src.agents.llm_client - INFO - [no-session] - Sending request to Ollama: http://192.168.10.200:11434/api/generate
+2025-11-24 16:06:08 - src.agents.llm_client - DEBUG - [no-session] - Payload: {
+  "model": "gemma3:27b",
+  "prompt": "Analyze this travel invoice validation case:\n\nINVOICE DATA:\n- Passenger: MOHIT\n- Route: COIMBATORE \u2192 CHENNAI\n- Date: 2025-11-24\n- Fare: \u20b9500.00\n- Extraction Confidence: 0.98\n\nEMPLOYEE DATA:\n- Match Found: True\n- Employee Name: Mohit\n- Employee Level: l1\n- Fare Limit: \u20b95000.00\n- Match Confidence: 1.00\n\nRELEVANT BUSINESS RULES:\n- ==================================================\n\n- Travel must match approved itinerary from proposal.\n- Name on invoice must match employee records.\n- Travel date must be within \u00b13 days of approved proposal.\n- Claims beyond limits require manager approval.\n- Duplicate invoices are strictly rejected.\n- Missing GST or missing ticket number reduces confidence score.\n- Hand-written bills are accepted only for cab/auto with company stamp.\n- are accepted only for cab/auto with company stamp.\n\n====================================================\nSECTION 7 \u2014 EXCEPTIONS\n====================================================\n\n- Medical emergency travel automatically shifts validation to \"pending approval\".\n- Weather delays or train cancellations can exceed budget by 20%.\n- If employee level information is missing, default to L3 for calculation.\n- ==================================================\n\nMeal Allowance Per Day:\n- L1: \u20b9250\n- L2: \u20b9300\n- L3: \u20b9400\n- L4: \u20b9600\n- L5: \u20b9800\n\nGeneral Meal Rules:\n- Snacks are not considered meals.\n- Bills must contain GST number and date.\n\n====================================================\nSECTION 5 \u2014 SPECIAL TRAVEL RULES\n====================================================\n- ==================================================\n\n[Cab / Taxi Fare Limits]\n- L1: Maximum claim allowed \u20b9250 per trip\n- L2: Maximum claim allowed \u20b9350 per trip\n- L3: Maximum claim allowed \u20b9450 per trip\n- L4: Maximum claim allowed \u20b9600 per trip\n- L5: Maximum claim allowed \u20b91000 per trip\n\n[Auto-Rickshaw]\n- All levels: Max claim \u20b9150 per trip\n- ==================================================\n\nOne-Day Return Policy:\n- If total travel duration is less than 24 hours, hotel stay cannot be claimed.\n- Only local travel and meals can be reimbursed.\n- For same-day return, only one meal allowance applies.\n\nMaximum Business Trip Budget:\n- L1: \u20b91200 per day\n- L2: \u20b92000 per day\n- L3: \u20b93000 per day\n- L4: \u20b95000 per day\n- L5: \u20b910000 per day (flexible)\n\nAUTOMATED CHECKS:\nViolations detected:\n- None\n\nTASK:\nBased on the above information, determine if this invoice should be APPROVED or REJECTED.\n\nConsider:\n1. Is the fare within acceptable limits for the employee level?\n2. Are all required fields present and valid?\n3. Is the employee match reliable?\n4. Are there any policy violations?\n\nRespond with ONLY a JSON object in this format:\n{\n    \"validation_status\": \"approved\" or \"rejected\",\n    \"confidence\": 0.85,\n    \"remarks\": \"concise explanation of decision\"\n}\n\nYour decision:",
+  "stream": false,
+  "options": {
+    "temperature": 0.2
+  },
+  "system": "You are a travel expense validation expert.\nAnalyze the invoice data, employee information, and business rules to make a validation decision.\nYou must respond with valid JSON only.",
+  "format": "json"
+}
+2025-11-24 16:06:20 - src.agents.llm_client - INFO - [no-session] - Received response from Ollama (length: 212)
+2025-11-24 16:06:20 - src.agents.llm_client - DEBUG - [no-session] - Response: {
+    "validation_status": "approved",
+    "confidence": 0.95,
+    "remarks": "Invoice fare is within the employee's level (L1) limit. Employee name matches with high confidence. No policy violations detected."
+}
+2025-11-24 16:06:20 - src.agents.policy_agent - DEBUG - [no-session] - [sess_910f291ab73a] LLM validation response: {
+    "validation_status": "approved",
+    "confidence": 0.95,
+    "remarks": "Invoice fare is within the employee's level (L1) limit. Employee name matches with high confidence. No policy violations detected."
+}
+2025-11-24 16:06:20 - src.agents.policy_agent - INFO - [no-session] - [sess_910f291ab73a] Validation complete: approved (confidence: 0.95)
+2025-11-24 16:06:20 - src.agents.orchestrator - INFO - [no-session] - [sess_910f291ab73a] Policy validation complete: approved
+2025-11-24 16:06:20 - src.agents.orchestrator - INFO - [no-session] - [sess_910f291ab73a] Final response built
+2025-11-24 16:06:20 - src.agents.orchestrator - DEBUG - [no-session] - [sess_910f291ab73a] Response: {'name': 'MOHIT', 'from': 'COIMBATORE', 'to': 'CHENNAI', 'date': '2025-11-24', 'fare': 500.0, 'confidence': 0.97, 'validation_status': 'approved', 'remarks': "Invoice fare is within the employee's level (L1) limit. Employee name matches with high confidence. No policy violations detected.", 'session_id': 'sess_910f291ab73a'}
+2025-11-24 16:06:20 - src.agents.orchestrator - INFO - [no-session] - Closed session: sess_910f291ab73a
+2025-11-24 16:06:20 - src.agents.orchestrator - INFO - [no-session] - [sess_910f291ab73a] Validation complete: approved
+2025-11-24 16:06:20 - src.routes.process_routes - INFO - [no-session] - Validation completed: approved
+2025-11-24 16:06:20 - src.main - INFO - [no-session] - Request 08c2e945 completed: 200 (30.15s)
+2025-11-24 16:06:20 - src.main - INFO - [no-session] - Shutting down application...
+2025-11-24 16:06:20 - src.main - INFO - [no-session] - Goodbye!
+2025-11-24 16:06:22 - root - INFO - [no-session] - Logging system initialized
+2025-11-24 16:06:22 - root - INFO - [no-session] - Log file: /home/mohitchandran/Desktop/LIC_POC/logs/app.log
+2025-11-24 16:06:22 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:06:22 - src.main - INFO - [no-session] - AI Travel Invoice Validator Starting...
+2025-11-24 16:06:22 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:06:22 - src.main - INFO - [no-session] - Checking Ollama connection...
+2025-11-24 16:06:22 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:06:22 - src.main - INFO - [no-session] - ✓ Ollama connected: http://192.168.10.200:11434
+2025-11-24 16:06:22 - src.main - INFO - [no-session] - ✓ Model available: gemma3:27b
+2025-11-24 16:06:22 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Using Ollama embedding model: mxbai-embed-large:latest
+2025-11-24 16:06:22 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Connected to collection: business_policies
+2025-11-24 16:06:22 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Rules retriever initialized successfully (10 documents)
+2025-11-24 16:06:22 - src.main - INFO - [no-session] - ✓ RAG system initialized
+2025-11-24 16:06:22 - src.main - INFO - [no-session] - Application ready!
+2025-11-24 16:06:22 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:06:24 - root - INFO - [no-session] - Logging system initialized
+2025-11-24 16:06:24 - root - INFO - [no-session] - Log file: /home/mohitchandran/Desktop/LIC_POC/logs/app.log
+2025-11-24 16:06:24 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:06:24 - src.main - INFO - [no-session] - AI Travel Invoice Validator Starting...
+2025-11-24 16:06:24 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:06:24 - src.main - INFO - [no-session] - Checking Ollama connection...
+2025-11-24 16:06:24 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:06:24 - src.main - INFO - [no-session] - ✓ Ollama connected: http://192.168.10.200:11434
+2025-11-24 16:06:24 - src.main - INFO - [no-session] - ✓ Model available: gemma3:27b
+2025-11-24 16:06:24 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Using Ollama embedding model: mxbai-embed-large:latest
+2025-11-24 16:06:24 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Connected to collection: business_policies
+2025-11-24 16:06:24 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Rules retriever initialized successfully (10 documents)
+2025-11-24 16:06:24 - src.main - INFO - [no-session] - ✓ RAG system initialized
+2025-11-24 16:06:24 - src.main - INFO - [no-session] - Application ready!
+2025-11-24 16:06:24 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:06:24 - src.main - INFO - [no-session] - Request 6a1ab277: GET /health
+2025-11-24 16:06:24 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:06:25 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 1 relevant rules for query
+2025-11-24 16:06:25 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: test...
+2025-11-24 16:06:25 - src.main - INFO - [no-session] - Request 6a1ab277 completed: 200 (0.27s)
+2025-11-24 16:06:54 - src.main - INFO - [no-session] - Shutting down application...
+2025-11-24 16:06:54 - src.main - INFO - [no-session] - Goodbye!
+2025-11-24 16:06:59 - root - INFO - [no-session] - Logging system initialized
+2025-11-24 16:06:59 - root - INFO - [no-session] - Log file: /home/mohitchandran/Desktop/LIC_POC/logs/app.log
+2025-11-24 16:06:59 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:06:59 - src.main - INFO - [no-session] - AI Travel Invoice Validator Starting...
+2025-11-24 16:06:59 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:06:59 - src.main - INFO - [no-session] - Checking Ollama connection...
+2025-11-24 16:06:59 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:06:59 - src.main - INFO - [no-session] - ✓ Ollama connected: http://192.168.10.200:11434
+2025-11-24 16:06:59 - src.main - INFO - [no-session] - ✓ Model available: gemma3:27b
+2025-11-24 16:06:59 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Using Ollama embedding model: mxbai-embed-large:latest
+2025-11-24 16:06:59 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Connected to collection: business_policies
+2025-11-24 16:06:59 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Rules retriever initialized successfully (10 documents)
+2025-11-24 16:06:59 - src.main - INFO - [no-session] - ✓ RAG system initialized
+2025-11-24 16:06:59 - src.main - INFO - [no-session] - Application ready!
+2025-11-24 16:06:59 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:07:02 - src.main - INFO - [no-session] - Request 04e946d8: GET /health
+2025-11-24 16:07:02 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:07:03 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 1 relevant rules for query
+2025-11-24 16:07:03 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: test...
+2025-11-24 16:07:03 - src.main - INFO - [no-session] - Request 04e946d8 completed: 200 (0.33s)
+2025-11-24 16:07:43 - src.main - INFO - [no-session] - Request dffa093e: GET /health
+2025-11-24 16:07:43 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:07:43 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 1 relevant rules for query
+2025-11-24 16:07:43 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: test...
+2025-11-24 16:07:43 - src.main - INFO - [no-session] - Request dffa093e completed: 200 (0.45s)
+2025-11-24 16:07:46 - src.main - INFO - [no-session] - Request 5ede0fda: GET /health
+2025-11-24 16:07:46 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:07:47 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 1 relevant rules for query
+2025-11-24 16:07:47 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: test...
+2025-11-24 16:07:47 - src.main - INFO - [no-session] - Request 5ede0fda completed: 200 (0.23s)
+2025-11-24 16:07:47 - src.main - INFO - [no-session] - Request 340e5566: POST /api/session
+2025-11-24 16:07:47 - src.routes.session_routes - INFO - [no-session] - Created session: d33d7138-b7df-4cee-878c-6892d3c37128
+2025-11-24 16:07:47 - src.main - INFO - [no-session] - Request 340e5566 completed: 200 (0.00s)
+2025-11-24 16:07:47 - src.main - INFO - [no-session] - Request 83001240: POST /api/upload-invoice
+2025-11-24 16:07:47 - python_multipart.multipart - DEBUG - [no-session] - Calling on_part_begin with no data
+2025-11-24 16:07:47 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_field with data[36:55]
+2025-11-24 16:07:47 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_value with data[57:113]
+2025-11-24 16:07:47 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_end with no data
+2025-11-24 16:07:47 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_field with data[115:127]
+2025-11-24 16:07:47 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_value with data[129:144]
+2025-11-24 16:07:47 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_end with no data
+2025-11-24 16:07:47 - python_multipart.multipart - DEBUG - [no-session] - Calling on_headers_finished with no data
+2025-11-24 16:07:47 - python_multipart.multipart - DEBUG - [no-session] - Calling on_part_data with data[148:50353]
+2025-11-24 16:07:47 - python_multipart.multipart - DEBUG - [no-session] - Calling on_part_end with no data
+2025-11-24 16:07:47 - python_multipart.multipart - DEBUG - [no-session] - Calling on_end with no data
+2025-11-24 16:07:47 - src.routes.upload_routes - INFO - [no-session] - Received invoice upload: mohit_dummyticket.pdf (session: d33d7138-b7df-4cee-878c-6892d3c37128)
+2025-11-24 16:07:47 - src.services.file_storage - INFO - [no-session] - Saved invoice: inv_6b25f5b2fc9d (50205 bytes)
+2025-11-24 16:07:47 - src.routes.upload_routes - INFO - [no-session] - Invoice saved: inv_6b25f5b2fc9d
+2025-11-24 16:07:47 - src.main - INFO - [no-session] - Request 83001240 completed: 200 (0.01s)
+2025-11-24 16:07:47 - src.main - INFO - [no-session] - Request 1ee64584: POST /api/upload-proposal
+2025-11-24 16:07:47 - python_multipart.multipart - DEBUG - [no-session] - Calling on_part_begin with no data
+2025-11-24 16:07:47 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_field with data[36:55]
+2025-11-24 16:07:47 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_value with data[57:119]
+2025-11-24 16:07:47 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_end with no data
+2025-11-24 16:07:47 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_field with data[121:133]
+2025-11-24 16:07:47 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_value with data[135:162]
+2025-11-24 16:07:47 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_end with no data
+2025-11-24 16:07:47 - python_multipart.multipart - DEBUG - [no-session] - Calling on_headers_finished with no data
+2025-11-24 16:07:47 - python_multipart.multipart - DEBUG - [no-session] - Calling on_part_data with data[166:5130]
+2025-11-24 16:07:47 - python_multipart.multipart - DEBUG - [no-session] - Calling on_part_end with no data
+2025-11-24 16:07:47 - python_multipart.multipart - DEBUG - [no-session] - Calling on_end with no data
+2025-11-24 16:07:47 - src.routes.upload_routes - INFO - [no-session] - Received proposal upload: dummy_travel_proposals.xlsx (session: d33d7138-b7df-4cee-878c-6892d3c37128)
+2025-11-24 16:07:47 - src.services.file_storage - INFO - [no-session] - Saved proposal: prop_c1cab11918aa (4964 bytes)
+2025-11-24 16:07:47 - src.routes.upload_routes - INFO - [no-session] - Proposal saved: prop_c1cab11918aa
+2025-11-24 16:07:47 - src.main - INFO - [no-session] - Request 1ee64584 completed: 200 (0.01s)
+2025-11-24 16:07:47 - src.main - INFO - [no-session] - Request b94fb303: POST /api/process-validation
+2025-11-24 16:07:47 - src.routes.process_routes - INFO - [no-session] - Processing validation: invoice=inv_6b25f5b2fc9d, proposal=prop_c1cab11918aa, session=d33d7138-b7df-4cee-878c-6892d3c37128
+2025-11-24 16:07:47 - src.agents.orchestrator - INFO - [no-session] - Registered existing session: d33d7138-b7df-4cee-878c-6892d3c37128
+2025-11-24 16:07:47 - src.agents.orchestrator - INFO - [no-session] - [d33d7138-b7df-4cee-878c-6892d3c37128] Starting validation: invoice=inv_6b25f5b2fc9d, proposal=prop_c1cab11918aa
+2025-11-24 16:07:47 - src.agents.orchestrator - INFO - [no-session] - [d33d7138-b7df-4cee-878c-6892d3c37128] Loading files...
+2025-11-24 16:07:47 - src.services.file_storage - DEBUG - [no-session] - Found invoice: /home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_6b25f5b2fc9d.pdf
+2025-11-24 16:07:47 - src.services.file_storage - DEBUG - [no-session] - Found proposal: /home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_c1cab11918aa.xlsx
+2025-11-24 16:07:47 - src.agents.orchestrator - INFO - [no-session] - [d33d7138-b7df-4cee-878c-6892d3c37128] Files loaded successfully
+2025-11-24 16:07:47 - src.agents.orchestrator - INFO - [no-session] - [d33d7138-b7df-4cee-878c-6892d3c37128] Extracting invoice data...
+2025-11-24 16:07:47 - src.agents.extraction_agent - INFO - [no-session] - [d33d7138-b7df-4cee-878c-6892d3c37128] Extracting data from invoice: inv_6b25f5b2fc9d.pdf
+2025-11-24 16:07:48 - src.services.extractor_utils - INFO - [no-session] - Converted PDF page 0 to image (528997 bytes)
+2025-11-24 16:07:48 - PIL.PngImagePlugin - DEBUG - [no-session] - STREAM b'IHDR' 16 13
+2025-11-24 16:07:48 - PIL.PngImagePlugin - DEBUG - [no-session] - STREAM b'pHYs' 41 9
+2025-11-24 16:07:48 - PIL.PngImagePlugin - DEBUG - [no-session] - STREAM b'IDAT' 62 528919
+2025-11-24 16:07:48 - src.services.extractor_utils - INFO - [no-session] - Resized image for VLM: 2134x2134 -> 1536x1536
+2025-11-24 16:07:48 - src.services.extractor_utils - INFO - [no-session] - Preprocessed image: 528997 bytes -> 156363 bytes (reduction: 70.4%)
+2025-11-24 16:07:48 - src.agents.extraction_agent - INFO - [no-session] - [d33d7138-b7df-4cee-878c-6892d3c37128] Calling VLM (gemma3:27b) for extraction...
+2025-11-24 16:07:48 - src.agents.extraction_agent - INFO - [no-session] - [d33d7138-b7df-4cee-878c-6892d3c37128] Processing image: inv_6b25f5b2fc9d.pdf (156363 bytes)
+2025-11-24 16:07:48 - src.agents.llm_client - INFO - [no-session] - Sending vision request to Ollama with gemma3:27b (image size: 156363 bytes)
+2025-11-24 16:07:48 - src.agents.llm_client - INFO - [no-session] - Using timeout: 60s for vision request
+2025-11-24 16:07:48 - src.agents.llm_client - DEBUG - [no-session] - Prompt: You are analyzing a TRAVEL INVOICE IMAGE. Look at the image carefully and extract these EXACT fields:
+
+📋 REQUIRED FIELDS TO EXTRACT:
+================================
+
+1. **Passenger Name** (passenger_...
+2025-11-24 16:08:06 - src.agents.llm_client - INFO - [no-session] - Received vision response from gemma3:27b
+2025-11-24 16:08:06 - src.agents.llm_client - DEBUG - [no-session] - Response: ```json
+{
+    "passenger_name": "MOHIT",
+    "origin": "COIMBATORE",
+    "destination": "CHENNAI",
+    "travel_date": "2025-11-24",
+    "fare": 500.00,
+    "confidence": 0.98,
+    "notes": "All fields extracted clearly"
+}
+```
+2025-11-24 16:08:06 - src.agents.extraction_agent - INFO - [no-session] - [d33d7138-b7df-4cee-878c-6892d3c37128] VLM response length: 225 characters
+2025-11-24 16:08:06 - src.agents.extraction_agent - INFO - [no-session] - [d33d7138-b7df-4cee-878c-6892d3c37128] Raw VLM response (full): ```json
+{
+    "passenger_name": "MOHIT",
+    "origin": "COIMBATORE",
+    "destination": "CHENNAI",
+    "travel_date": "2025-11-24",
+    "fare": 500.00,
+    "confidence": 0.98,
+    "notes": "All fields extracted clearly"
+}
+```
+2025-11-24 16:08:06 - src.agents.extraction_agent - INFO - [no-session] - [d33d7138-b7df-4cee-878c-6892d3c37128] Parsed JSON: {
+  "passenger_name": "MOHIT",
+  "origin": "COIMBATORE",
+  "destination": "CHENNAI",
+  "travel_date": "2025-11-24",
+  "fare": 500.0,
+  "confidence": 0.98,
+  "notes": "All fields extracted clearly"
+}
+2025-11-24 16:08:06 - src.agents.extraction_agent - INFO - [no-session] - [d33d7138-b7df-4cee-878c-6892d3c37128] Successfully extracted invoice data
+2025-11-24 16:08:06 - src.agents.extraction_agent - INFO - [no-session] - [d33d7138-b7df-4cee-878c-6892d3c37128] Normalized data: {
+  "passenger_name": "MOHIT",
+  "origin": "COIMBATORE",
+  "destination": "CHENNAI",
+  "travel_date": "2025-11-24",
+  "fare": 500.0,
+  "confidence": 0.98,
+  "notes": "All fields extracted clearly"
+}
+2025-11-24 16:08:06 - src.agents.orchestrator - INFO - [no-session] - [d33d7138-b7df-4cee-878c-6892d3c37128] Extraction complete (confidence: 0.98)
+2025-11-24 16:08:06 - src.agents.orchestrator - INFO - [no-session] - [d33d7138-b7df-4cee-878c-6892d3c37128] Matching employee: MOHIT
+2025-11-24 16:08:06 - src.agents.excel_agent - INFO - [no-session] - [d33d7138-b7df-4cee-878c-6892d3c37128] Matching employee: MOHIT
+2025-11-24 16:08:06 - src.services.excel_utils - INFO - [no-session] - Loaded Excel: prop_c1cab11918aa.xlsx (2 rows, 6 columns)
+2025-11-24 16:08:06 - src.services.excel_utils - DEBUG - [no-session] - Columns: ['employee_level', 'name', 'from', 'to', 'date', 'fare']
+2025-11-24 16:08:06 - src.services.excel_utils - DEBUG - [no-session] - All required columns found
+2025-11-24 16:08:06 - src.services.excel_utils - DEBUG - [no-session] - Employee data normalized
+2025-11-24 16:08:06 - src.services.excel_utils - DEBUG - [no-session] - Found employee: {'employee_level': 'l1', 'name': 'Mohit', 'from': 'Coimbatore', 'to': 'Chennai', 'date': '24-11-25', 'fare': 500}
+2025-11-24 16:08:06 - src.agents.excel_agent - INFO - [no-session] - [d33d7138-b7df-4cee-878c-6892d3c37128] Found exact match
+2025-11-24 16:08:06 - src.agents.excel_agent - WARNING - [no-session] - Fare limit missing or zero for Mohit, using fallback
+2025-11-24 16:08:06 - src.agents.excel_agent - INFO - [no-session] - Using default fare limit for level 'l1': 5000.0
+2025-11-24 16:08:06 - src.agents.excel_agent - DEBUG - [no-session] - Built match result: {'match_found': True, 'employee_name': 'Mohit', 'employee_level': 'l1', 'fare_limit': 5000.0, 'match_confidence': 1.0, 'match_type': 'exact', 'all_candidates': []}
+2025-11-24 16:08:06 - src.agents.orchestrator - INFO - [no-session] - [d33d7138-b7df-4cee-878c-6892d3c37128] Employee matched: Mohit (confidence: 1.00)
+2025-11-24 16:08:06 - src.agents.orchestrator - INFO - [no-session] - [d33d7138-b7df-4cee-878c-6892d3c37128] Validating against policy...
+2025-11-24 16:08:06 - src.agents.policy_agent - INFO - [no-session] - [d33d7138-b7df-4cee-878c-6892d3c37128] Validating invoice for MOHIT
+2025-11-24 16:08:06 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 5 relevant rules for query
+2025-11-24 16:08:06 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: Travel invoice validation context:
+- Employee Level: l1
+- Fare Amount: 500.0
+- Fare Limit: 5000.0
+- ...
+2025-11-24 16:08:06 - src.agents.policy_agent - INFO - [no-session] - [d33d7138-b7df-4cee-878c-6892d3c37128] Retrieved 5 relevant rules
+2025-11-24 16:08:06 - src.agents.policy_agent - INFO - [no-session] - [d33d7138-b7df-4cee-878c-6892d3c37128] Calling LLM for validation decision...
+2025-11-24 16:08:06 - src.agents.llm_client - INFO - [no-session] - Sending request to Ollama: http://192.168.10.200:11434/api/generate
+2025-11-24 16:08:06 - src.agents.llm_client - DEBUG - [no-session] - Payload: {
+  "model": "gemma3:27b",
+  "prompt": "Analyze this travel invoice validation case:\n\nINVOICE DATA:\n- Passenger: MOHIT\n- Route: COIMBATORE \u2192 CHENNAI\n- Date: 2025-11-24\n- Fare: \u20b9500.00\n- Extraction Confidence: 0.98\n\nEMPLOYEE DATA:\n- Match Found: True\n- Employee Name: Mohit\n- Employee Level: l1\n- Fare Limit: \u20b95000.00\n- Match Confidence: 1.00\n\nRELEVANT BUSINESS RULES:\n- ==================================================\n\n- Travel must match approved itinerary from proposal.\n- Name on invoice must match employee records.\n- Travel date must be within \u00b13 days of approved proposal.\n- Claims beyond limits require manager approval.\n- Duplicate invoices are strictly rejected.\n- Missing GST or missing ticket number reduces confidence score.\n- Hand-written bills are accepted only for cab/auto with company stamp.\n- are accepted only for cab/auto with company stamp.\n\n====================================================\nSECTION 7 \u2014 EXCEPTIONS\n====================================================\n\n- Medical emergency travel automatically shifts validation to \"pending approval\".\n- Weather delays or train cancellations can exceed budget by 20%.\n- If employee level information is missing, default to L3 for calculation.\n- ==================================================\n\nMeal Allowance Per Day:\n- L1: \u20b9250\n- L2: \u20b9300\n- L3: \u20b9400\n- L4: \u20b9600\n- L5: \u20b9800\n\nGeneral Meal Rules:\n- Snacks are not considered meals.\n- Bills must contain GST number and date.\n\n====================================================\nSECTION 5 \u2014 SPECIAL TRAVEL RULES\n====================================================\n- ==================================================\n\n[Cab / Taxi Fare Limits]\n- L1: Maximum claim allowed \u20b9250 per trip\n- L2: Maximum claim allowed \u20b9350 per trip\n- L3: Maximum claim allowed \u20b9450 per trip\n- L4: Maximum claim allowed \u20b9600 per trip\n- L5: Maximum claim allowed \u20b91000 per trip\n\n[Auto-Rickshaw]\n- All levels: Max claim \u20b9150 per trip\n- ==================================================\n\nOne-Day Return Policy:\n- If total travel duration is less than 24 hours, hotel stay cannot be claimed.\n- Only local travel and meals can be reimbursed.\n- For same-day return, only one meal allowance applies.\n\nMaximum Business Trip Budget:\n- L1: \u20b91200 per day\n- L2: \u20b92000 per day\n- L3: \u20b93000 per day\n- L4: \u20b95000 per day\n- L5: \u20b910000 per day (flexible)\n\nAUTOMATED CHECKS:\nViolations detected:\n- None\n\nTASK:\nBased on the above information, determine if this invoice should be APPROVED or REJECTED.\n\nConsider:\n1. Is the fare within acceptable limits for the employee level?\n2. Are all required fields present and valid?\n3. Is the employee match reliable?\n4. Are there any policy violations?\n\nRespond with ONLY a JSON object in this format:\n{\n    \"validation_status\": \"approved\" or \"rejected\",\n    \"confidence\": 0.85,\n    \"remarks\": \"concise explanation of decision\"\n}\n\nYour decision:",
+  "stream": false,
+  "options": {
+    "temperature": 0.2
+  },
+  "system": "You are a travel expense validation expert.\nAnalyze the invoice data, employee information, and business rules to make a validation decision.\nYou must respond with valid JSON only.",
+  "format": "json"
+}
+2025-11-24 16:08:20 - src.agents.llm_client - INFO - [no-session] - Received response from Ollama (length: 243)
+2025-11-24 16:08:20 - src.agents.llm_client - DEBUG - [no-session] - Response: {
+    "validation_status": "approved",
+    "confidence": 0.95,
+    "remarks": "Invoice fare is within the employee's level (L1) limit. Employee name matches with high confidence. No policy violations detected. Extraction confidence is high."
+}
+2025-11-24 16:08:20 - src.agents.policy_agent - DEBUG - [no-session] - [d33d7138-b7df-4cee-878c-6892d3c37128] LLM validation response: {
+    "validation_status": "approved",
+    "confidence": 0.95,
+    "remarks": "Invoice fare is within the employee's level (L1) limit. Employee name matches with high confidence. No policy violations detected. Extraction confidence is high."
+}
+2025-11-24 16:08:20 - src.agents.policy_agent - INFO - [no-session] - [d33d7138-b7df-4cee-878c-6892d3c37128] Validation complete: approved (confidence: 0.95)
+2025-11-24 16:08:20 - src.agents.orchestrator - INFO - [no-session] - [d33d7138-b7df-4cee-878c-6892d3c37128] Policy validation complete: approved
+2025-11-24 16:08:20 - src.agents.orchestrator - INFO - [no-session] - [d33d7138-b7df-4cee-878c-6892d3c37128] Final response built
+2025-11-24 16:08:20 - src.agents.orchestrator - DEBUG - [no-session] - [d33d7138-b7df-4cee-878c-6892d3c37128] Response: {'name': 'MOHIT', 'from': 'COIMBATORE', 'to': 'CHENNAI', 'date': '2025-11-24', 'fare': 500.0, 'confidence': 0.97, 'validation_status': 'approved', 'remarks': "Invoice fare is within the employee's level (L1) limit. Employee name matches with high confidence. No policy violations detected. Extraction confidence is high.", 'session_id': 'd33d7138-b7df-4cee-878c-6892d3c37128'}
+2025-11-24 16:08:20 - src.agents.orchestrator - INFO - [no-session] - Closed session: d33d7138-b7df-4cee-878c-6892d3c37128
+2025-11-24 16:08:20 - src.agents.orchestrator - INFO - [no-session] - [d33d7138-b7df-4cee-878c-6892d3c37128] Validation complete: approved
+2025-11-24 16:08:20 - src.routes.process_routes - INFO - [no-session] - Validation completed: approved
+2025-11-24 16:08:20 - src.main - INFO - [no-session] - Request b94fb303 completed: 200 (32.67s)
+2025-11-24 16:08:20 - src.main - INFO - [no-session] - Request 811fa264: GET /health
+2025-11-24 16:08:20 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:08:20 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 1 relevant rules for query
+2025-11-24 16:08:20 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: test...
+2025-11-24 16:08:20 - src.main - INFO - [no-session] - Request 811fa264 completed: 200 (0.23s)
+2025-11-24 16:10:23 - src.main - INFO - [no-session] - Shutting down application...
+2025-11-24 16:10:23 - src.main - INFO - [no-session] - Goodbye!
+2025-11-24 16:10:25 - root - INFO - [no-session] - Logging system initialized
+2025-11-24 16:10:25 - root - INFO - [no-session] - Log file: /home/mohitchandran/Desktop/LIC_POC/logs/app.log
+2025-11-24 16:10:25 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:10:25 - src.main - INFO - [no-session] - AI Travel Invoice Validator Starting...
+2025-11-24 16:10:25 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:10:25 - src.main - INFO - [no-session] - Checking Ollama connection...
+2025-11-24 16:10:25 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:10:25 - src.main - INFO - [no-session] - ✓ Ollama connected: http://192.168.10.200:11434
+2025-11-24 16:10:25 - src.main - INFO - [no-session] - ✓ Model available: gemma3:27b
+2025-11-24 16:10:25 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Using Ollama embedding model: mxbai-embed-large:latest
+2025-11-24 16:10:25 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Connected to collection: business_policies
+2025-11-24 16:10:25 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Rules retriever initialized successfully (10 documents)
+2025-11-24 16:10:25 - src.main - INFO - [no-session] - ✓ RAG system initialized
+2025-11-24 16:10:25 - src.main - INFO - [no-session] - Application ready!
+2025-11-24 16:10:25 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:10:36 - src.main - INFO - [no-session] - Request e77a38f7: GET /health
+2025-11-24 16:10:36 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:10:37 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 1 relevant rules for query
+2025-11-24 16:10:37 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: test...
+2025-11-24 16:10:37 - src.main - INFO - [no-session] - Request e77a38f7 completed: 200 (0.47s)
+2025-11-24 16:10:40 - src.main - INFO - [no-session] - Request 0f594aa7: POST /api/user-chat
+2025-11-24 16:10:40 - src.routes.chat_routes - INFO - [no-session] - Chat request for session d33d7138-b7df-4cee-878c-6892d3c37128: why is the doc approved
+2025-11-24 16:10:40 - src.agents.orchestrator - INFO - [no-session] - [d33d7138-b7df-4cee-878c-6892d3c37128] Chat request: why is the doc approved
+2025-11-24 16:10:40 - src.agents.orchestrator - ERROR - [no-session] - [d33d7138-b7df-4cee-878c-6892d3c37128] Chat failed: Session d33d7138-b7df-4cee-878c-6892d3c37128 not found. Please process validation first.
+Traceback (most recent call last):
+  File "/home/mohitchandran/Desktop/LIC_POC/src/agents/orchestrator.py", line 463, in chat_with_context
+    raise Exception(f"Session {session_id} not found. Please process validation first.")
+Exception: Session d33d7138-b7df-4cee-878c-6892d3c37128 not found. Please process validation first.
+2025-11-24 16:10:40 - src.routes.chat_routes - ERROR - [no-session] - Chat endpoint error: Chat request failed: Session d33d7138-b7df-4cee-878c-6892d3c37128 not found. Please process validation first.
+Traceback (most recent call last):
+  File "/home/mohitchandran/Desktop/LIC_POC/src/agents/orchestrator.py", line 463, in chat_with_context
+    raise Exception(f"Session {session_id} not found. Please process validation first.")
+Exception: Session d33d7138-b7df-4cee-878c-6892d3c37128 not found. Please process validation first.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mohitchandran/Desktop/LIC_POC/src/routes/chat_routes.py", line 65, in user_chat
+    result = await orchestrator.chat_with_context(
+  File "/home/mohitchandran/Desktop/LIC_POC/src/agents/orchestrator.py", line 582, in chat_with_context
+    raise Exception(f"Chat request failed: {str(e)}")
+Exception: Chat request failed: Session d33d7138-b7df-4cee-878c-6892d3c37128 not found. Please process validation first.
+2025-11-24 16:10:40 - src.main - INFO - [no-session] - Request 0f594aa7 completed: 500 (0.00s)
+2025-11-24 16:10:40 - src.main - INFO - [no-session] - Request 8a50ecad: GET /health
+2025-11-24 16:10:40 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:10:40 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 1 relevant rules for query
+2025-11-24 16:10:40 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: test...
+2025-11-24 16:10:40 - src.main - INFO - [no-session] - Request 8a50ecad completed: 200 (0.48s)
+2025-11-24 16:15:06 - src.main - INFO - [no-session] - Request 917bd449: POST /api/user-chat
+2025-11-24 16:15:06 - src.routes.chat_routes - INFO - [no-session] - Chat request for session d33d7138-b7df-4cee-878c-6892d3c37128: Why was this document accepted?
+2025-11-24 16:15:06 - src.agents.orchestrator - INFO - [no-session] - [d33d7138-b7df-4cee-878c-6892d3c37128] Chat request: Why was this document accepted?
+2025-11-24 16:15:06 - src.agents.orchestrator - ERROR - [no-session] - [d33d7138-b7df-4cee-878c-6892d3c37128] Chat failed: Session d33d7138-b7df-4cee-878c-6892d3c37128 not found. Please process validation first.
+Traceback (most recent call last):
+  File "/home/mohitchandran/Desktop/LIC_POC/src/agents/orchestrator.py", line 463, in chat_with_context
+    raise Exception(f"Session {session_id} not found. Please process validation first.")
+Exception: Session d33d7138-b7df-4cee-878c-6892d3c37128 not found. Please process validation first.
+2025-11-24 16:15:06 - src.routes.chat_routes - ERROR - [no-session] - Chat endpoint error: Chat request failed: Session d33d7138-b7df-4cee-878c-6892d3c37128 not found. Please process validation first.
+Traceback (most recent call last):
+  File "/home/mohitchandran/Desktop/LIC_POC/src/agents/orchestrator.py", line 463, in chat_with_context
+    raise Exception(f"Session {session_id} not found. Please process validation first.")
+Exception: Session d33d7138-b7df-4cee-878c-6892d3c37128 not found. Please process validation first.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mohitchandran/Desktop/LIC_POC/src/routes/chat_routes.py", line 65, in user_chat
+    result = await orchestrator.chat_with_context(
+  File "/home/mohitchandran/Desktop/LIC_POC/src/agents/orchestrator.py", line 582, in chat_with_context
+    raise Exception(f"Chat request failed: {str(e)}")
+Exception: Chat request failed: Session d33d7138-b7df-4cee-878c-6892d3c37128 not found. Please process validation first.
+2025-11-24 16:15:06 - src.main - INFO - [no-session] - Request 917bd449 completed: 500 (0.00s)
+2025-11-24 16:15:40 - src.main - INFO - [no-session] - Shutting down application...
+2025-11-24 16:15:40 - src.main - INFO - [no-session] - Goodbye!
+2025-11-24 16:15:42 - root - INFO - [no-session] - Logging system initialized
+2025-11-24 16:15:42 - root - INFO - [no-session] - Log file: /home/mohitchandran/Desktop/LIC_POC/logs/app.log
+2025-11-24 16:15:42 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:15:42 - src.main - INFO - [no-session] - AI Travel Invoice Validator Starting...
+2025-11-24 16:15:42 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:15:42 - src.main - INFO - [no-session] - Checking Ollama connection...
+2025-11-24 16:15:42 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:15:42 - src.main - INFO - [no-session] - ✓ Ollama connected: http://192.168.10.200:11434
+2025-11-24 16:15:42 - src.main - INFO - [no-session] - ✓ Model available: gemma3:27b
+2025-11-24 16:15:42 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Using Ollama embedding model: mxbai-embed-large:latest
+2025-11-24 16:15:42 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Connected to collection: business_policies
+2025-11-24 16:15:42 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Rules retriever initialized successfully (10 documents)
+2025-11-24 16:15:42 - src.main - INFO - [no-session] - ✓ RAG system initialized
+2025-11-24 16:15:42 - src.main - INFO - [no-session] - Application ready!
+2025-11-24 16:15:42 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:15:52 - src.main - INFO - [no-session] - Shutting down application...
+2025-11-24 16:15:52 - src.main - INFO - [no-session] - Goodbye!
+2025-11-24 16:15:54 - root - INFO - [no-session] - Logging system initialized
+2025-11-24 16:15:54 - root - INFO - [no-session] - Log file: /home/mohitchandran/Desktop/LIC_POC/logs/app.log
+2025-11-24 16:15:54 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:15:54 - src.main - INFO - [no-session] - AI Travel Invoice Validator Starting...
+2025-11-24 16:15:54 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:15:54 - src.main - INFO - [no-session] - Checking Ollama connection...
+2025-11-24 16:15:55 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:15:55 - src.main - INFO - [no-session] - ✓ Ollama connected: http://192.168.10.200:11434
+2025-11-24 16:15:55 - src.main - INFO - [no-session] - ✓ Model available: gemma3:27b
+2025-11-24 16:15:55 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Using Ollama embedding model: mxbai-embed-large:latest
+2025-11-24 16:15:55 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Connected to collection: business_policies
+2025-11-24 16:15:55 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Rules retriever initialized successfully (10 documents)
+2025-11-24 16:15:55 - src.main - INFO - [no-session] - ✓ RAG system initialized
+2025-11-24 16:15:55 - src.main - INFO - [no-session] - Application ready!
+2025-11-24 16:15:55 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:18:38 - src.main - INFO - [no-session] - Request 840b54fa: GET /health
+2025-11-24 16:18:39 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:18:39 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 1 relevant rules for query
+2025-11-24 16:18:39 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: test...
+2025-11-24 16:18:39 - src.main - INFO - [no-session] - Request 840b54fa completed: 200 (0.90s)
+2025-11-24 16:18:54 - src.main - INFO - [no-session] - Shutting down application...
+2025-11-24 16:18:54 - src.main - INFO - [no-session] - Goodbye!
+2025-11-24 16:19:09 - root - INFO - [no-session] - Logging system initialized
+2025-11-24 16:19:09 - root - INFO - [no-session] - Log file: /home/mohitchandran/Desktop/LIC_POC/logs/app.log
+2025-11-24 16:19:09 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:19:09 - src.main - INFO - [no-session] - AI Travel Invoice Validator Starting...
+2025-11-24 16:19:09 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:19:09 - src.main - INFO - [no-session] - Checking Ollama connection...
+2025-11-24 16:19:09 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:19:09 - src.main - INFO - [no-session] - ✓ Ollama connected: http://192.168.10.200:11434
+2025-11-24 16:19:09 - src.main - INFO - [no-session] - ✓ Model available: gemma3:27b
+2025-11-24 16:19:09 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Using Ollama embedding model: mxbai-embed-large:latest
+2025-11-24 16:19:09 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Connected to collection: business_policies
+2025-11-24 16:19:09 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Rules retriever initialized successfully (10 documents)
+2025-11-24 16:19:09 - src.main - INFO - [no-session] - ✓ RAG system initialized
+2025-11-24 16:19:09 - src.main - INFO - [no-session] - Application ready!
+2025-11-24 16:19:09 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:19:17 - src.main - INFO - [no-session] - Shutting down application...
+2025-11-24 16:19:17 - src.main - INFO - [no-session] - Goodbye!
+2025-11-24 16:19:19 - root - INFO - [no-session] - Logging system initialized
+2025-11-24 16:19:19 - root - INFO - [no-session] - Log file: /home/mohitchandran/Desktop/LIC_POC/logs/app.log
+2025-11-24 16:19:19 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:19:19 - src.main - INFO - [no-session] - AI Travel Invoice Validator Starting...
+2025-11-24 16:19:19 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:19:19 - src.main - INFO - [no-session] - Checking Ollama connection...
+2025-11-24 16:19:19 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:19:19 - src.main - INFO - [no-session] - ✓ Ollama connected: http://192.168.10.200:11434
+2025-11-24 16:19:19 - src.main - INFO - [no-session] - ✓ Model available: gemma3:27b
+2025-11-24 16:19:19 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Using Ollama embedding model: mxbai-embed-large:latest
+2025-11-24 16:19:19 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Connected to collection: business_policies
+2025-11-24 16:19:19 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Rules retriever initialized successfully (10 documents)
+2025-11-24 16:19:19 - src.main - INFO - [no-session] - ✓ RAG system initialized
+2025-11-24 16:19:19 - src.main - INFO - [no-session] - Application ready!
+2025-11-24 16:19:19 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:19:26 - src.main - INFO - [no-session] - Shutting down application...
+2025-11-24 16:19:26 - src.main - INFO - [no-session] - Goodbye!
+2025-11-24 16:19:28 - root - INFO - [no-session] - Logging system initialized
+2025-11-24 16:19:28 - root - INFO - [no-session] - Log file: /home/mohitchandran/Desktop/LIC_POC/logs/app.log
+2025-11-24 16:19:28 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:19:28 - src.main - INFO - [no-session] - AI Travel Invoice Validator Starting...
+2025-11-24 16:19:28 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:19:28 - src.main - INFO - [no-session] - Checking Ollama connection...
+2025-11-24 16:19:29 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:19:29 - src.main - INFO - [no-session] - ✓ Ollama connected: http://192.168.10.200:11434
+2025-11-24 16:19:29 - src.main - INFO - [no-session] - ✓ Model available: gemma3:27b
+2025-11-24 16:19:29 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Using Ollama embedding model: mxbai-embed-large:latest
+2025-11-24 16:19:29 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Connected to collection: business_policies
+2025-11-24 16:19:29 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Rules retriever initialized successfully (10 documents)
+2025-11-24 16:19:29 - src.main - INFO - [no-session] - ✓ RAG system initialized
+2025-11-24 16:19:29 - src.main - INFO - [no-session] - Application ready!
+2025-11-24 16:19:29 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:19:38 - src.main - INFO - [no-session] - Shutting down application...
+2025-11-24 16:19:38 - src.main - INFO - [no-session] - Goodbye!
+2025-11-24 16:19:40 - root - INFO - [no-session] - Logging system initialized
+2025-11-24 16:19:40 - root - INFO - [no-session] - Log file: /home/mohitchandran/Desktop/LIC_POC/logs/app.log
+2025-11-24 16:19:40 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:19:40 - src.main - INFO - [no-session] - AI Travel Invoice Validator Starting...
+2025-11-24 16:19:40 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:19:40 - src.main - INFO - [no-session] - Checking Ollama connection...
+2025-11-24 16:19:40 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:19:40 - src.main - INFO - [no-session] - ✓ Ollama connected: http://192.168.10.200:11434
+2025-11-24 16:19:40 - src.main - INFO - [no-session] - ✓ Model available: gemma3:27b
+2025-11-24 16:19:40 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Using Ollama embedding model: mxbai-embed-large:latest
+2025-11-24 16:19:40 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Connected to collection: business_policies
+2025-11-24 16:19:40 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Rules retriever initialized successfully (10 documents)
+2025-11-24 16:19:40 - src.main - INFO - [no-session] - ✓ RAG system initialized
+2025-11-24 16:19:40 - src.main - INFO - [no-session] - Application ready!
+2025-11-24 16:19:40 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:40:55 - src.main - INFO - [no-session] - Request db9e51a7: GET /health
+2025-11-24 16:40:55 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:40:57 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 1 relevant rules for query
+2025-11-24 16:40:57 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: test...
+2025-11-24 16:40:57 - src.main - INFO - [no-session] - Request db9e51a7 completed: 200 (1.24s)
+2025-11-24 16:41:01 - src.main - INFO - [no-session] - Shutting down application...
+2025-11-24 16:41:01 - src.main - INFO - [no-session] - Goodbye!
+2025-11-24 16:41:03 - root - INFO - [no-session] - Logging system initialized
+2025-11-24 16:41:03 - root - INFO - [no-session] - Log file: /home/mohitchandran/Desktop/LIC_POC/logs/app.log
+2025-11-24 16:41:03 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:41:03 - src.main - INFO - [no-session] - AI Travel Invoice Validator Starting...
+2025-11-24 16:41:03 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:41:03 - src.main - INFO - [no-session] - Checking Ollama connection...
+2025-11-24 16:41:03 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:41:03 - src.main - INFO - [no-session] - ✓ Ollama connected: http://192.168.10.200:11434
+2025-11-24 16:41:03 - src.main - INFO - [no-session] - ✓ Model available: gemma3:27b
+2025-11-24 16:41:03 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Using Ollama embedding model: mxbai-embed-large:latest
+2025-11-24 16:41:03 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Connected to collection: business_policies
+2025-11-24 16:41:03 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Rules retriever initialized successfully (10 documents)
+2025-11-24 16:41:03 - src.main - INFO - [no-session] - ✓ RAG system initialized
+2025-11-24 16:41:03 - src.main - INFO - [no-session] - Application ready!
+2025-11-24 16:41:03 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:44:33 - src.main - INFO - [no-session] - Shutting down application...
+2025-11-24 16:44:33 - src.main - INFO - [no-session] - Goodbye!
+2025-11-24 16:44:35 - root - INFO - [no-session] - Logging system initialized
+2025-11-24 16:44:35 - root - INFO - [no-session] - Log file: /home/mohitchandran/Desktop/LIC_POC/logs/app.log
+2025-11-24 16:44:35 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:44:35 - src.main - INFO - [no-session] - AI Travel Invoice Validator Starting...
+2025-11-24 16:44:35 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:44:35 - src.main - INFO - [no-session] - Checking Ollama connection...
+2025-11-24 16:44:35 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:44:35 - src.main - INFO - [no-session] - ✓ Ollama connected: http://192.168.10.200:11434
+2025-11-24 16:44:35 - src.main - INFO - [no-session] - ✓ Model available: gemma3:27b
+2025-11-24 16:44:35 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Using Ollama embedding model: mxbai-embed-large:latest
+2025-11-24 16:44:35 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Connected to collection: business_policies
+2025-11-24 16:44:35 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Rules retriever initialized successfully (10 documents)
+2025-11-24 16:44:35 - src.main - INFO - [no-session] - ✓ RAG system initialized
+2025-11-24 16:44:35 - src.main - INFO - [no-session] - Application ready!
+2025-11-24 16:44:35 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:44:36 - src.main - INFO - [no-session] - Shutting down application...
+2025-11-24 16:44:36 - src.main - INFO - [no-session] - Goodbye!
+2025-11-24 16:44:37 - root - INFO - [no-session] - Logging system initialized
+2025-11-24 16:44:37 - root - INFO - [no-session] - Log file: /home/mohitchandran/Desktop/LIC_POC/logs/app.log
+2025-11-24 16:44:37 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:44:37 - src.main - INFO - [no-session] - AI Travel Invoice Validator Starting...
+2025-11-24 16:44:37 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:44:37 - src.main - INFO - [no-session] - Checking Ollama connection...
+2025-11-24 16:44:38 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:44:38 - src.main - INFO - [no-session] - ✓ Ollama connected: http://192.168.10.200:11434
+2025-11-24 16:44:38 - src.main - INFO - [no-session] - ✓ Model available: gemma3:27b
+2025-11-24 16:44:38 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Using Ollama embedding model: mxbai-embed-large:latest
+2025-11-24 16:44:38 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Connected to collection: business_policies
+2025-11-24 16:44:38 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Rules retriever initialized successfully (10 documents)
+2025-11-24 16:44:38 - src.main - INFO - [no-session] - ✓ RAG system initialized
+2025-11-24 16:44:38 - src.main - INFO - [no-session] - Application ready!
+2025-11-24 16:44:38 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:44:58 - src.main - INFO - [no-session] - Request 1709de0b: GET /health
+2025-11-24 16:44:59 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:44:59 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 1 relevant rules for query
+2025-11-24 16:44:59 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: test...
+2025-11-24 16:44:59 - src.main - INFO - [no-session] - Request 1709de0b completed: 200 (0.23s)
+2025-11-24 16:45:02 - src.main - INFO - [no-session] - Request b1fbbbbb: GET /health
+2025-11-24 16:45:03 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:45:03 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 1 relevant rules for query
+2025-11-24 16:45:03 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: test...
+2025-11-24 16:45:03 - src.main - INFO - [no-session] - Request b1fbbbbb completed: 200 (0.58s)
+2025-11-24 16:45:06 - src.main - INFO - [no-session] - Request 3c473a3a: GET /health
+2025-11-24 16:45:06 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:45:06 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 1 relevant rules for query
+2025-11-24 16:45:06 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: test...
+2025-11-24 16:45:06 - src.main - INFO - [no-session] - Request 3c473a3a completed: 200 (0.53s)
+2025-11-24 16:45:07 - src.main - INFO - [no-session] - Request 078f9c29: POST /api/session
+2025-11-24 16:45:07 - src.routes.session_routes - INFO - [no-session] - Created session: dc647454-ac6b-41fd-8463-93107c379bdc
+2025-11-24 16:45:07 - src.main - INFO - [no-session] - Request 078f9c29 completed: 200 (0.00s)
+2025-11-24 16:45:07 - src.main - INFO - [no-session] - Request 99c0eb01: POST /api/upload-invoice
+2025-11-24 16:45:07 - python_multipart.multipart - DEBUG - [no-session] - Calling on_part_begin with no data
+2025-11-24 16:45:07 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_field with data[36:55]
+2025-11-24 16:45:07 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_value with data[57:113]
+2025-11-24 16:45:07 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_end with no data
+2025-11-24 16:45:07 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_field with data[115:127]
+2025-11-24 16:45:07 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_value with data[129:144]
+2025-11-24 16:45:07 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_end with no data
+2025-11-24 16:45:07 - python_multipart.multipart - DEBUG - [no-session] - Calling on_headers_finished with no data
+2025-11-24 16:45:07 - python_multipart.multipart - DEBUG - [no-session] - Calling on_part_data with data[148:50353]
+2025-11-24 16:45:07 - python_multipart.multipart - DEBUG - [no-session] - Calling on_part_end with no data
+2025-11-24 16:45:07 - python_multipart.multipart - DEBUG - [no-session] - Calling on_end with no data
+2025-11-24 16:45:07 - src.routes.upload_routes - INFO - [no-session] - Received invoice upload: mohit_dummyticket.pdf (session: dc647454-ac6b-41fd-8463-93107c379bdc)
+2025-11-24 16:45:07 - src.services.file_storage - INFO - [no-session] - Saved invoice: inv_ba42c1fb5165 (50205 bytes)
+2025-11-24 16:45:07 - src.routes.upload_routes - INFO - [no-session] - Invoice saved: inv_ba42c1fb5165
+2025-11-24 16:45:07 - src.main - INFO - [no-session] - Request 99c0eb01 completed: 200 (0.00s)
+2025-11-24 16:45:07 - src.main - INFO - [no-session] - Request c882ffe6: POST /api/upload-proposal
+2025-11-24 16:45:07 - python_multipart.multipart - DEBUG - [no-session] - Calling on_part_begin with no data
+2025-11-24 16:45:07 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_field with data[36:55]
+2025-11-24 16:45:07 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_value with data[57:119]
+2025-11-24 16:45:07 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_end with no data
+2025-11-24 16:45:07 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_field with data[121:133]
+2025-11-24 16:45:07 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_value with data[135:162]
+2025-11-24 16:45:07 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_end with no data
+2025-11-24 16:45:07 - python_multipart.multipart - DEBUG - [no-session] - Calling on_headers_finished with no data
+2025-11-24 16:45:07 - python_multipart.multipart - DEBUG - [no-session] - Calling on_part_data with data[166:5130]
+2025-11-24 16:45:07 - python_multipart.multipart - DEBUG - [no-session] - Calling on_part_end with no data
+2025-11-24 16:45:07 - python_multipart.multipart - DEBUG - [no-session] - Calling on_end with no data
+2025-11-24 16:45:07 - src.routes.upload_routes - INFO - [no-session] - Received proposal upload: dummy_travel_proposals.xlsx (session: dc647454-ac6b-41fd-8463-93107c379bdc)
+2025-11-24 16:45:07 - src.services.file_storage - INFO - [no-session] - Saved proposal: prop_c489dd7623dc (4964 bytes)
+2025-11-24 16:45:07 - src.routes.upload_routes - INFO - [no-session] - Proposal saved: prop_c489dd7623dc
+2025-11-24 16:45:07 - src.main - INFO - [no-session] - Request c882ffe6 completed: 200 (0.01s)
+2025-11-24 16:45:07 - src.main - INFO - [no-session] - Request 69c1e07f: POST /api/process-validation
+2025-11-24 16:45:07 - src.routes.process_routes - INFO - [no-session] - Processing validation: invoice=inv_ba42c1fb5165, proposal=prop_c489dd7623dc, session=dc647454-ac6b-41fd-8463-93107c379bdc
+2025-11-24 16:45:07 - src.agents.orchestrator - INFO - [no-session] - Registered existing session: dc647454-ac6b-41fd-8463-93107c379bdc
+2025-11-24 16:45:07 - src.agents.orchestrator - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Starting validation: invoice=inv_ba42c1fb5165, proposal=prop_c489dd7623dc
+2025-11-24 16:45:07 - src.agents.orchestrator - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Loading files...
+2025-11-24 16:45:07 - src.services.file_storage - DEBUG - [no-session] - Found invoice: /home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_ba42c1fb5165.pdf
+2025-11-24 16:45:07 - src.services.file_storage - DEBUG - [no-session] - Found proposal: /home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_c489dd7623dc.xlsx
+2025-11-24 16:45:07 - src.agents.orchestrator - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Files loaded successfully
+2025-11-24 16:45:07 - src.agents.orchestrator - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Extracting invoice data...
+2025-11-24 16:45:07 - src.agents.extraction_agent - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Extracting data from invoice: inv_ba42c1fb5165.pdf
+2025-11-24 16:45:07 - src.services.extractor_utils - INFO - [no-session] - Converted PDF page 0 to image (528997 bytes)
+2025-11-24 16:45:07 - PIL.PngImagePlugin - DEBUG - [no-session] - STREAM b'IHDR' 16 13
+2025-11-24 16:45:07 - PIL.PngImagePlugin - DEBUG - [no-session] - STREAM b'pHYs' 41 9
+2025-11-24 16:45:07 - PIL.PngImagePlugin - DEBUG - [no-session] - STREAM b'IDAT' 62 528919
+2025-11-24 16:45:07 - src.services.extractor_utils - INFO - [no-session] - Resized image for VLM: 2134x2134 -> 1536x1536
+2025-11-24 16:45:07 - src.services.extractor_utils - INFO - [no-session] - Preprocessed image: 528997 bytes -> 156363 bytes (reduction: 70.4%)
+2025-11-24 16:45:07 - src.agents.extraction_agent - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Calling VLM (gemma3:27b) for extraction...
+2025-11-24 16:45:07 - src.agents.extraction_agent - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Processing image: inv_ba42c1fb5165.pdf (156363 bytes)
+2025-11-24 16:45:07 - src.agents.llm_client - INFO - [no-session] - Sending vision request to Ollama with gemma3:27b (image size: 156363 bytes)
+2025-11-24 16:45:07 - src.agents.llm_client - INFO - [no-session] - Using timeout: 60s for vision request
+2025-11-24 16:45:07 - src.agents.llm_client - DEBUG - [no-session] - Prompt: You are analyzing a TRAVEL INVOICE IMAGE. Look at the image carefully and extract these EXACT fields:
+
+📋 REQUIRED FIELDS TO EXTRACT:
+================================
+
+1. **Passenger Name** (passenger_...
+2025-11-24 16:45:27 - src.agents.llm_client - INFO - [no-session] - Received vision response from gemma3:27b
+2025-11-24 16:45:27 - src.agents.llm_client - DEBUG - [no-session] - Response: ```json
+{
+    "passenger_name": "MOHIT",
+    "origin": "COIMBATORE",
+    "destination": "CHENNAI",
+    "travel_date": "2025-11-24",
+    "fare": 500.00,
+    "confidence": 0.98,
+    "notes": "All fields extracted clearly"
+}
+```
+2025-11-24 16:45:27 - src.agents.extraction_agent - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] VLM response length: 225 characters
+2025-11-24 16:45:27 - src.agents.extraction_agent - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Raw VLM response (full): ```json
+{
+    "passenger_name": "MOHIT",
+    "origin": "COIMBATORE",
+    "destination": "CHENNAI",
+    "travel_date": "2025-11-24",
+    "fare": 500.00,
+    "confidence": 0.98,
+    "notes": "All fields extracted clearly"
+}
+```
+2025-11-24 16:45:27 - src.agents.extraction_agent - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Parsed JSON: {
+  "passenger_name": "MOHIT",
+  "origin": "COIMBATORE",
+  "destination": "CHENNAI",
+  "travel_date": "2025-11-24",
+  "fare": 500.0,
+  "confidence": 0.98,
+  "notes": "All fields extracted clearly"
+}
+2025-11-24 16:45:27 - src.agents.extraction_agent - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Successfully extracted invoice data
+2025-11-24 16:45:27 - src.agents.extraction_agent - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Normalized data: {
+  "passenger_name": "MOHIT",
+  "origin": "COIMBATORE",
+  "destination": "CHENNAI",
+  "travel_date": "2025-11-24",
+  "fare": 500.0,
+  "confidence": 0.98,
+  "notes": "All fields extracted clearly"
+}
+2025-11-24 16:45:27 - src.agents.orchestrator - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Extraction complete (confidence: 0.98)
+2025-11-24 16:45:27 - src.agents.orchestrator - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Matching employee: MOHIT
+2025-11-24 16:45:27 - src.agents.excel_agent - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Matching employee: MOHIT
+2025-11-24 16:45:27 - src.services.excel_utils - INFO - [no-session] - Loaded Excel: prop_c489dd7623dc.xlsx (2 rows, 6 columns)
+2025-11-24 16:45:27 - src.services.excel_utils - DEBUG - [no-session] - Columns: ['employee_level', 'name', 'from', 'to', 'date', 'fare']
+2025-11-24 16:45:27 - src.services.excel_utils - DEBUG - [no-session] - All required columns found
+2025-11-24 16:45:27 - src.services.excel_utils - DEBUG - [no-session] - Employee data normalized
+2025-11-24 16:45:27 - src.services.excel_utils - DEBUG - [no-session] - Found employee: {'employee_level': 'l1', 'name': 'Mohit', 'from': 'Coimbatore', 'to': 'Chennai', 'date': '24-11-25', 'fare': 500}
+2025-11-24 16:45:27 - src.agents.excel_agent - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Found exact match
+2025-11-24 16:45:27 - src.agents.excel_agent - WARNING - [no-session] - Fare limit missing or zero for Mohit, using fallback
+2025-11-24 16:45:27 - src.agents.excel_agent - INFO - [no-session] - Using default fare limit for level 'l1': 5000.0
+2025-11-24 16:45:27 - src.agents.excel_agent - DEBUG - [no-session] - Built match result: {'match_found': True, 'employee_name': 'Mohit', 'employee_level': 'l1', 'fare_limit': 5000.0, 'match_confidence': 1.0, 'match_type': 'exact', 'all_candidates': []}
+2025-11-24 16:45:27 - src.agents.orchestrator - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Employee matched: Mohit (confidence: 1.00)
+2025-11-24 16:45:27 - src.agents.orchestrator - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Validating against policy...
+2025-11-24 16:45:27 - src.agents.policy_agent - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Validating invoice for MOHIT
+2025-11-24 16:45:27 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 5 relevant rules for query
+2025-11-24 16:45:27 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: Travel invoice validation context:
+- Employee Level: l1
+- Fare Amount: 500.0
+- Fare Limit: 5000.0
+- ...
+2025-11-24 16:45:27 - src.agents.policy_agent - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Retrieved 5 relevant rules
+2025-11-24 16:45:27 - src.agents.policy_agent - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Calling LLM for validation decision...
+2025-11-24 16:45:27 - src.agents.llm_client - INFO - [no-session] - Sending request to Ollama: http://192.168.10.200:11434/api/generate
+2025-11-24 16:45:27 - src.agents.llm_client - DEBUG - [no-session] - Payload: {
+  "model": "gemma3:27b",
+  "prompt": "Analyze this travel invoice validation case:\n\nINVOICE DATA:\n- Passenger: MOHIT\n- Route: COIMBATORE \u2192 CHENNAI\n- Date: 2025-11-24\n- Fare: \u20b9500.00\n- Extraction Confidence: 0.98\n\nEMPLOYEE DATA:\n- Match Found: True\n- Employee Name: Mohit\n- Employee Level: l1\n- Fare Limit: \u20b95000.00\n- Match Confidence: 1.00\n\nRELEVANT BUSINESS RULES:\n- ==================================================\n\n- Travel must match approved itinerary from proposal.\n- Name on invoice must match employee records.\n- Travel date must be within \u00b13 days of approved proposal.\n- Claims beyond limits require manager approval.\n- Duplicate invoices are strictly rejected.\n- Missing GST or missing ticket number reduces confidence score.\n- Hand-written bills are accepted only for cab/auto with company stamp.\n- are accepted only for cab/auto with company stamp.\n\n====================================================\nSECTION 7 \u2014 EXCEPTIONS\n====================================================\n\n- Medical emergency travel automatically shifts validation to \"pending approval\".\n- Weather delays or train cancellations can exceed budget by 20%.\n- If employee level information is missing, default to L3 for calculation.\n- ==================================================\n\nMeal Allowance Per Day:\n- L1: \u20b9250\n- L2: \u20b9300\n- L3: \u20b9400\n- L4: \u20b9600\n- L5: \u20b9800\n\nGeneral Meal Rules:\n- Snacks are not considered meals.\n- Bills must contain GST number and date.\n\n====================================================\nSECTION 5 \u2014 SPECIAL TRAVEL RULES\n====================================================\n- ==================================================\n\n[Cab / Taxi Fare Limits]\n- L1: Maximum claim allowed \u20b9250 per trip\n- L2: Maximum claim allowed \u20b9350 per trip\n- L3: Maximum claim allowed \u20b9450 per trip\n- L4: Maximum claim allowed \u20b9600 per trip\n- L5: Maximum claim allowed \u20b91000 per trip\n\n[Auto-Rickshaw]\n- All levels: Max claim \u20b9150 per trip\n- ==================================================\n\nOne-Day Return Policy:\n- If total travel duration is less than 24 hours, hotel stay cannot be claimed.\n- Only local travel and meals can be reimbursed.\n- For same-day return, only one meal allowance applies.\n\nMaximum Business Trip Budget:\n- L1: \u20b91200 per day\n- L2: \u20b92000 per day\n- L3: \u20b93000 per day\n- L4: \u20b95000 per day\n- L5: \u20b910000 per day (flexible)\n\nAUTOMATED CHECKS:\nViolations detected:\n- None\n\nTASK:\nBased on the above information, determine if this invoice should be APPROVED or REJECTED.\n\nConsider:\n1. Is the fare within acceptable limits for the employee level?\n2. Are all required fields present and valid?\n3. Is the employee match reliable?\n4. Are there any policy violations?\n\nRespond with ONLY a JSON object in this format:\n{\n    \"validation_status\": \"approved\" or \"rejected\",\n    \"confidence\": 0.85,\n    \"remarks\": \"concise explanation of decision\"\n}\n\nYour decision:",
+  "stream": false,
+  "options": {
+    "temperature": 0.2
+  },
+  "system": "You are a travel expense validation expert.\nAnalyze the invoice data, employee information, and business rules to make a validation decision.\nYou must respond with valid JSON only.",
+  "format": "json"
+}
+2025-11-24 16:45:39 - src.agents.llm_client - INFO - [no-session] - Received response from Ollama (length: 212)
+2025-11-24 16:45:39 - src.agents.llm_client - DEBUG - [no-session] - Response: {
+    "validation_status": "approved",
+    "confidence": 0.95,
+    "remarks": "Invoice fare is within the employee's level (L1) limit. Employee name matches with high confidence. No policy violations detected."
+}
+2025-11-24 16:45:39 - src.agents.policy_agent - DEBUG - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] LLM validation response: {
+    "validation_status": "approved",
+    "confidence": 0.95,
+    "remarks": "Invoice fare is within the employee's level (L1) limit. Employee name matches with high confidence. No policy violations detected."
+}
+2025-11-24 16:45:39 - src.agents.policy_agent - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Validation complete: approved (confidence: 0.95)
+2025-11-24 16:45:39 - src.agents.orchestrator - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Policy validation complete: approved
+2025-11-24 16:45:39 - src.agents.orchestrator - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Final response built
+2025-11-24 16:45:39 - src.agents.orchestrator - DEBUG - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Response: {'name': 'MOHIT', 'from': 'COIMBATORE', 'to': 'CHENNAI', 'date': '2025-11-24', 'fare': 500.0, 'confidence': 0.97, 'validation_status': 'approved', 'remarks': "Invoice fare is within the employee's level (L1) limit. Employee name matches with high confidence. No policy violations detected.", 'session_id': 'dc647454-ac6b-41fd-8463-93107c379bdc'}
+2025-11-24 16:45:39 - src.agents.orchestrator - INFO - [no-session] - Closed session: dc647454-ac6b-41fd-8463-93107c379bdc
+2025-11-24 16:45:39 - src.agents.orchestrator - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Validation complete: approved
+2025-11-24 16:45:39 - src.routes.process_routes - INFO - [no-session] - Validation completed: approved
+2025-11-24 16:45:39 - src.main - INFO - [no-session] - Request 69c1e07f completed: 200 (32.15s)
+2025-11-24 16:45:39 - src.main - INFO - [no-session] - Request 3bb81699: GET /health
+2025-11-24 16:45:39 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:45:39 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 1 relevant rules for query
+2025-11-24 16:45:39 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: test...
+2025-11-24 16:45:39 - src.main - INFO - [no-session] - Request 3bb81699 completed: 200 (0.25s)
+2025-11-24 16:45:57 - src.main - INFO - [no-session] - Request 85198ba8: GET /health
+2025-11-24 16:45:57 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:45:57 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 1 relevant rules for query
+2025-11-24 16:45:57 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: test...
+2025-11-24 16:45:57 - src.main - INFO - [no-session] - Request 85198ba8 completed: 200 (0.46s)
+2025-11-24 16:46:00 - src.main - INFO - [no-session] - Request 84fa4607: POST /api/user-chat
+2025-11-24 16:46:00 - src.routes.chat_routes - INFO - [no-session] - Chat request for session dc647454-ac6b-41fd-8463-93107c379bdc: why is the document accepted
+2025-11-24 16:46:00 - src.agents.orchestrator - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Chat request: why is the document accepted
+2025-11-24 16:46:00 - src.agents.llm_client - INFO - [no-session] - Sending request to Ollama: http://192.168.10.200:11434/api/generate
+2025-11-24 16:46:00 - src.agents.llm_client - DEBUG - [no-session] - Payload: {
+  "model": "gemma3:27b",
+  "prompt": "Here is the session data:\n\n\nEXTRACTED INVOICE DATA:\n- Passenger Name: MOHIT\n- Origin: COIMBATORE\n- Destination: CHENNAI\n- Travel Date: 2025-11-24\n- Fare: \u20b9500.0\n- Extraction Confidence: 98.0%\n\n\nEMPLOYEE DETAILS:\n- Name: N/A\n- Level: l1\n- Fare Limit: \u20b95,000.00\n\n\nVALIDATION RESULT:\n- Status: APPROVED\n- Remarks: Invoice fare is within the employee's level (L1) limit. Employee name matches with high confidence. No policy violations detected.\n\n\nUser's Question: why is the document accepted\n\nPlease answer based on the above information.",
+  "stream": false,
+  "options": {
+    "temperature": 0.3
+  },
+  "system": "You are an AI assistant helping users understand their travel invoice validation results.\n\nYou have access to the complete session data including:\n- Extracted invoice information (passenger, route, date, fare)\n- Employee details (name, level, fare limits)\n- Validation results (approved/rejected status)\n- Policy rules that were applied\n- Any policy violations found\n\nAnswer the user's question clearly and concisely based on the available data.\nIf the data needed to answer the question is not available, say so politely.\n\nBe helpful, accurate, and reference specific data points when answering."
+}
+2025-11-24 16:46:07 - src.agents.llm_client - INFO - [no-session] - Received response from Ollama (length: 243)
+2025-11-24 16:46:07 - src.agents.llm_client - DEBUG - [no-session] - Response: The document was accepted because the invoice fare of ₹500.0 falls within the fare limit of ₹5,000.0 for employees at level L1. Additionally, the system confirmed a high confidence match for the employee name and detected no policy violations.
+2025-11-24 16:46:07 - src.agents.orchestrator - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Chat response generated
+2025-11-24 16:46:07 - src.main - INFO - [no-session] - Request 84fa4607 completed: 200 (7.40s)
+2025-11-24 16:46:07 - src.main - INFO - [no-session] - Request ff654fe5: GET /health
+2025-11-24 16:46:07 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:46:07 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 1 relevant rules for query
+2025-11-24 16:46:07 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: test...
+2025-11-24 16:46:07 - src.main - INFO - [no-session] - Request ff654fe5 completed: 200 (0.24s)
+2025-11-24 16:46:15 - src.main - INFO - [no-session] - Request 862a2245: GET /health
+2025-11-24 16:46:15 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:46:16 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 1 relevant rules for query
+2025-11-24 16:46:16 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: test...
+2025-11-24 16:46:16 - src.main - INFO - [no-session] - Request 862a2245 completed: 200 (0.37s)
+2025-11-24 16:46:18 - src.main - INFO - [no-session] - Request e6de9e24: GET /health
+2025-11-24 16:46:19 - src.main - INFO - [no-session] - Request 48b77fa3: POST /api/upload-invoice
+2025-11-24 16:46:19 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:46:19 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 1 relevant rules for query
+2025-11-24 16:46:19 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: test...
+2025-11-24 16:46:19 - src.main - INFO - [no-session] - Request e6de9e24 completed: 200 (0.99s)
+2025-11-24 16:46:19 - python_multipart.multipart - DEBUG - [no-session] - Calling on_part_begin with no data
+2025-11-24 16:46:19 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_field with data[36:55]
+2025-11-24 16:46:19 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_value with data[57:113]
+2025-11-24 16:46:19 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_end with no data
+2025-11-24 16:46:19 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_field with data[115:127]
+2025-11-24 16:46:19 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_value with data[129:144]
+2025-11-24 16:46:19 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_end with no data
+2025-11-24 16:46:19 - python_multipart.multipart - DEBUG - [no-session] - Calling on_headers_finished with no data
+2025-11-24 16:46:19 - python_multipart.multipart - DEBUG - [no-session] - Calling on_part_data with data[148:50353]
+2025-11-24 16:46:19 - python_multipart.multipart - DEBUG - [no-session] - Calling on_part_end with no data
+2025-11-24 16:46:19 - python_multipart.multipart - DEBUG - [no-session] - Calling on_end with no data
+2025-11-24 16:46:19 - src.routes.upload_routes - INFO - [no-session] - Received invoice upload: mohit_dummyticket.pdf (session: dc647454-ac6b-41fd-8463-93107c379bdc)
+2025-11-24 16:46:19 - src.services.file_storage - INFO - [no-session] - Saved invoice: inv_337c84eb8a33 (50205 bytes)
+2025-11-24 16:46:19 - src.routes.upload_routes - INFO - [no-session] - Invoice saved: inv_337c84eb8a33
+2025-11-24 16:46:19 - src.main - INFO - [no-session] - Request 48b77fa3 completed: 200 (0.18s)
+2025-11-24 16:46:19 - src.main - INFO - [no-session] - Request 69bece9b: POST /api/upload-proposal
+2025-11-24 16:46:19 - python_multipart.multipart - DEBUG - [no-session] - Calling on_part_begin with no data
+2025-11-24 16:46:19 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_field with data[36:55]
+2025-11-24 16:46:19 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_value with data[57:107]
+2025-11-24 16:46:19 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_end with no data
+2025-11-24 16:46:19 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_field with data[109:121]
+2025-11-24 16:46:19 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_value with data[123:150]
+2025-11-24 16:46:19 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_end with no data
+2025-11-24 16:46:19 - python_multipart.multipart - DEBUG - [no-session] - Calling on_headers_finished with no data
+2025-11-24 16:46:19 - python_multipart.multipart - DEBUG - [no-session] - Calling on_part_data with data[154:8958]
+2025-11-24 16:46:19 - python_multipart.multipart - DEBUG - [no-session] - Calling on_part_end with no data
+2025-11-24 16:46:19 - python_multipart.multipart - DEBUG - [no-session] - Calling on_end with no data
+2025-11-24 16:46:19 - src.routes.upload_routes - INFO - [no-session] - Received proposal upload: proposal_2.xlsx (session: dc647454-ac6b-41fd-8463-93107c379bdc)
+2025-11-24 16:46:19 - src.services.file_storage - INFO - [no-session] - Saved proposal: prop_cabc72e847df (8804 bytes)
+2025-11-24 16:46:19 - src.routes.upload_routes - INFO - [no-session] - Proposal saved: prop_cabc72e847df
+2025-11-24 16:46:19 - src.main - INFO - [no-session] - Request 69bece9b completed: 200 (0.00s)
+2025-11-24 16:46:19 - src.main - INFO - [no-session] - Request 5a16d891: POST /api/process-validation
+2025-11-24 16:46:19 - src.routes.process_routes - INFO - [no-session] - Processing validation: invoice=inv_337c84eb8a33, proposal=prop_cabc72e847df, session=dc647454-ac6b-41fd-8463-93107c379bdc
+2025-11-24 16:46:19 - src.agents.orchestrator - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Starting validation: invoice=inv_337c84eb8a33, proposal=prop_cabc72e847df
+2025-11-24 16:46:19 - src.agents.orchestrator - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Loading files...
+2025-11-24 16:46:19 - src.services.file_storage - DEBUG - [no-session] - Found invoice: /home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_337c84eb8a33.pdf
+2025-11-24 16:46:19 - src.services.file_storage - DEBUG - [no-session] - Found proposal: /home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_cabc72e847df.xlsx
+2025-11-24 16:46:19 - src.agents.orchestrator - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Files loaded successfully
+2025-11-24 16:46:19 - src.agents.orchestrator - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Extracting invoice data...
+2025-11-24 16:46:19 - src.agents.extraction_agent - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Extracting data from invoice: inv_337c84eb8a33.pdf
+2025-11-24 16:46:20 - src.services.extractor_utils - INFO - [no-session] - Converted PDF page 0 to image (528997 bytes)
+2025-11-24 16:46:20 - PIL.PngImagePlugin - DEBUG - [no-session] - STREAM b'IHDR' 16 13
+2025-11-24 16:46:20 - PIL.PngImagePlugin - DEBUG - [no-session] - STREAM b'pHYs' 41 9
+2025-11-24 16:46:20 - PIL.PngImagePlugin - DEBUG - [no-session] - STREAM b'IDAT' 62 528919
+2025-11-24 16:46:20 - src.services.extractor_utils - INFO - [no-session] - Resized image for VLM: 2134x2134 -> 1536x1536
+2025-11-24 16:46:20 - src.services.extractor_utils - INFO - [no-session] - Preprocessed image: 528997 bytes -> 156363 bytes (reduction: 70.4%)
+2025-11-24 16:46:20 - src.agents.extraction_agent - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Calling VLM (gemma3:27b) for extraction...
+2025-11-24 16:46:20 - src.agents.extraction_agent - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Processing image: inv_337c84eb8a33.pdf (156363 bytes)
+2025-11-24 16:46:20 - src.agents.llm_client - INFO - [no-session] - Sending vision request to Ollama with gemma3:27b (image size: 156363 bytes)
+2025-11-24 16:46:20 - src.agents.llm_client - INFO - [no-session] - Using timeout: 60s for vision request
+2025-11-24 16:46:20 - src.agents.llm_client - DEBUG - [no-session] - Prompt: You are analyzing a TRAVEL INVOICE IMAGE. Look at the image carefully and extract these EXACT fields:
+
+📋 REQUIRED FIELDS TO EXTRACT:
+================================
+
+1. **Passenger Name** (passenger_...
+2025-11-24 16:46:38 - src.agents.llm_client - INFO - [no-session] - Received vision response from gemma3:27b
+2025-11-24 16:46:38 - src.agents.llm_client - DEBUG - [no-session] - Response: ```json
+{
+    "passenger_name": "MOHIT",
+    "origin": "COIMBATORE",
+    "destination": "CHENNAI",
+    "travel_date": "2025-11-24",
+    "fare": 500.00,
+    "confidence": 0.98,
+    "notes": "All fields extracted clearly"
+}
+```
+2025-11-24 16:46:38 - src.agents.extraction_agent - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] VLM response length: 225 characters
+2025-11-24 16:46:38 - src.agents.extraction_agent - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Raw VLM response (full): ```json
+{
+    "passenger_name": "MOHIT",
+    "origin": "COIMBATORE",
+    "destination": "CHENNAI",
+    "travel_date": "2025-11-24",
+    "fare": 500.00,
+    "confidence": 0.98,
+    "notes": "All fields extracted clearly"
+}
+```
+2025-11-24 16:46:38 - src.agents.extraction_agent - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Parsed JSON: {
+  "passenger_name": "MOHIT",
+  "origin": "COIMBATORE",
+  "destination": "CHENNAI",
+  "travel_date": "2025-11-24",
+  "fare": 500.0,
+  "confidence": 0.98,
+  "notes": "All fields extracted clearly"
+}
+2025-11-24 16:46:38 - src.agents.extraction_agent - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Successfully extracted invoice data
+2025-11-24 16:46:38 - src.agents.extraction_agent - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Normalized data: {
+  "passenger_name": "MOHIT",
+  "origin": "COIMBATORE",
+  "destination": "CHENNAI",
+  "travel_date": "2025-11-24",
+  "fare": 500.0,
+  "confidence": 0.98,
+  "notes": "All fields extracted clearly"
+}
+2025-11-24 16:46:38 - src.agents.orchestrator - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Extraction complete (confidence: 0.98)
+2025-11-24 16:46:38 - src.agents.orchestrator - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Matching employee: MOHIT
+2025-11-24 16:46:38 - src.agents.excel_agent - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Matching employee: MOHIT
+2025-11-24 16:46:38 - src.services.excel_utils - INFO - [no-session] - Loaded Excel: prop_cabc72e847df.xlsx (2 rows, 6 columns)
+2025-11-24 16:46:38 - src.services.excel_utils - DEBUG - [no-session] - Columns: ['employee_level', 'name', 'from', 'to', 'date', 'fare']
+2025-11-24 16:46:38 - src.services.excel_utils - DEBUG - [no-session] - All required columns found
+2025-11-24 16:46:38 - src.services.excel_utils - DEBUG - [no-session] - Employee data normalized
+2025-11-24 16:46:38 - src.services.excel_utils - DEBUG - [no-session] - No exact match found for: MOHIT
+2025-11-24 16:46:38 - src.agents.excel_agent - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Exact match not found, trying fuzzy match...
+2025-11-24 16:46:38 - src.services.excel_utils - DEBUG - [no-session] - Extracted 2 employee names
+2025-11-24 16:46:38 - src.agents.excel_agent - DEBUG - [no-session] - Fuzzy matches: [('Dev Tarun', 14), ('Pranay', 0)]
+2025-11-24 16:46:38 - src.agents.excel_agent - WARNING - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] No match found for: MOHIT
+2025-11-24 16:46:38 - src.agents.orchestrator - WARNING - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Employee not matched
+2025-11-24 16:46:38 - src.agents.orchestrator - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Validating against policy...
+2025-11-24 16:46:38 - src.agents.policy_agent - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Validating invoice for MOHIT
+2025-11-24 16:46:38 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 5 relevant rules for query
+2025-11-24 16:46:38 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: Travel invoice validation context:
+- Employee Level: unknown
+- Fare Amount: 500.0
+- Fare Limit: 0.0
+...
+2025-11-24 16:46:38 - src.agents.policy_agent - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Retrieved 5 relevant rules
+2025-11-24 16:46:38 - src.agents.policy_agent - WARNING - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Critical rule violation detected
+2025-11-24 16:46:38 - src.agents.orchestrator - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Policy validation complete: rejected
+2025-11-24 16:46:38 - src.agents.orchestrator - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Final response built
+2025-11-24 16:46:38 - src.agents.orchestrator - DEBUG - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Response: {'name': 'MOHIT', 'from': 'COIMBATORE', 'to': 'CHENNAI', 'date': '2025-11-24', 'fare': 500.0, 'confidence': 0.67, 'validation_status': 'rejected', 'remarks': 'Employee not found in travel proposal', 'session_id': 'dc647454-ac6b-41fd-8463-93107c379bdc'}
+2025-11-24 16:46:38 - src.agents.orchestrator - INFO - [no-session] - Closed session: dc647454-ac6b-41fd-8463-93107c379bdc
+2025-11-24 16:46:38 - src.agents.orchestrator - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Validation complete: rejected
+2025-11-24 16:46:38 - src.routes.process_routes - INFO - [no-session] - Validation completed: rejected
+2025-11-24 16:46:38 - src.main - INFO - [no-session] - Request 5a16d891 completed: 200 (18.59s)
+2025-11-24 16:46:38 - src.main - INFO - [no-session] - Request c0e2bd35: GET /health
+2025-11-24 16:46:38 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:46:38 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 1 relevant rules for query
+2025-11-24 16:46:38 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: test...
+2025-11-24 16:46:38 - src.main - INFO - [no-session] - Request c0e2bd35 completed: 200 (0.23s)
+2025-11-24 16:46:50 - src.main - INFO - [no-session] - Request f12477c9: GET /health
+2025-11-24 16:46:50 - src.main - INFO - [no-session] - Request 38f62c26: POST /api/user-chat
+2025-11-24 16:46:50 - src.routes.chat_routes - INFO - [no-session] - Chat request for session dc647454-ac6b-41fd-8463-93107c379bdc: why is the document not accepted
+2025-11-24 16:46:50 - src.agents.orchestrator - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Chat request: why is the document not accepted
+2025-11-24 16:46:50 - src.agents.orchestrator - ERROR - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Chat failed: 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/home/mohitchandran/Desktop/LIC_POC/src/agents/orchestrator.py", line 560, in chat_with_context
+    {chr(10).join([f"- {v.get('description', 'N/A')}" for v in violations])}
+  File "/home/mohitchandran/Desktop/LIC_POC/src/agents/orchestrator.py", line 560, in <listcomp>
+    {chr(10).join([f"- {v.get('description', 'N/A')}" for v in violations])}
+AttributeError: 'str' object has no attribute 'get'
+2025-11-24 16:46:50 - src.routes.chat_routes - ERROR - [no-session] - Chat endpoint error: Chat request failed: 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/home/mohitchandran/Desktop/LIC_POC/src/agents/orchestrator.py", line 560, in chat_with_context
+    {chr(10).join([f"- {v.get('description', 'N/A')}" for v in violations])}
+  File "/home/mohitchandran/Desktop/LIC_POC/src/agents/orchestrator.py", line 560, in <listcomp>
+    {chr(10).join([f"- {v.get('description', 'N/A')}" for v in violations])}
+AttributeError: 'str' object has no attribute 'get'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mohitchandran/Desktop/LIC_POC/src/routes/chat_routes.py", line 65, in user_chat
+    result = await orchestrator.chat_with_context(
+  File "/home/mohitchandran/Desktop/LIC_POC/src/agents/orchestrator.py", line 625, in chat_with_context
+    raise Exception(f"Chat request failed: {str(e)}")
+Exception: Chat request failed: 'str' object has no attribute 'get'
+2025-11-24 16:46:50 - src.main - INFO - [no-session] - Request 38f62c26 completed: 500 (0.01s)
+2025-11-24 16:46:50 - src.main - INFO - [no-session] - Request 5a0fd79f: GET /health
+2025-11-24 16:46:50 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:46:51 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 1 relevant rules for query
+2025-11-24 16:46:51 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: test...
+2025-11-24 16:46:51 - src.main - INFO - [no-session] - Request f12477c9 completed: 200 (0.48s)
+2025-11-24 16:46:51 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:46:51 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 1 relevant rules for query
+2025-11-24 16:46:51 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: test...
+2025-11-24 16:46:51 - src.main - INFO - [no-session] - Request 5a0fd79f completed: 200 (0.44s)
+2025-11-24 16:46:54 - src.main - INFO - [no-session] - Request 801576bd: POST /api/user-chat
+2025-11-24 16:46:54 - src.routes.chat_routes - INFO - [no-session] - Chat request for session dc647454-ac6b-41fd-8463-93107c379bdc: why is the document not accepted
+2025-11-24 16:46:54 - src.agents.orchestrator - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Chat request: why is the document not accepted
+2025-11-24 16:46:54 - src.agents.orchestrator - ERROR - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Chat failed: 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/home/mohitchandran/Desktop/LIC_POC/src/agents/orchestrator.py", line 560, in chat_with_context
+    {chr(10).join([f"- {v.get('description', 'N/A')}" for v in violations])}
+  File "/home/mohitchandran/Desktop/LIC_POC/src/agents/orchestrator.py", line 560, in <listcomp>
+    {chr(10).join([f"- {v.get('description', 'N/A')}" for v in violations])}
+AttributeError: 'str' object has no attribute 'get'
+2025-11-24 16:46:54 - src.routes.chat_routes - ERROR - [no-session] - Chat endpoint error: Chat request failed: 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/home/mohitchandran/Desktop/LIC_POC/src/agents/orchestrator.py", line 560, in chat_with_context
+    {chr(10).join([f"- {v.get('description', 'N/A')}" for v in violations])}
+  File "/home/mohitchandran/Desktop/LIC_POC/src/agents/orchestrator.py", line 560, in <listcomp>
+    {chr(10).join([f"- {v.get('description', 'N/A')}" for v in violations])}
+AttributeError: 'str' object has no attribute 'get'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mohitchandran/Desktop/LIC_POC/src/routes/chat_routes.py", line 65, in user_chat
+    result = await orchestrator.chat_with_context(
+  File "/home/mohitchandran/Desktop/LIC_POC/src/agents/orchestrator.py", line 625, in chat_with_context
+    raise Exception(f"Chat request failed: {str(e)}")
+Exception: Chat request failed: 'str' object has no attribute 'get'
+2025-11-24 16:46:54 - src.main - INFO - [no-session] - Request 801576bd completed: 500 (0.01s)
+2025-11-24 16:46:54 - src.main - INFO - [no-session] - Request bf7378a1: GET /health
+2025-11-24 16:46:55 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:46:55 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 1 relevant rules for query
+2025-11-24 16:46:55 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: test...
+2025-11-24 16:46:55 - src.main - INFO - [no-session] - Request bf7378a1 completed: 200 (0.48s)
+2025-11-24 16:47:03 - src.main - INFO - [no-session] - Request 1585fe63: GET /health
+2025-11-24 16:47:03 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:47:03 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 1 relevant rules for query
+2025-11-24 16:47:03 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: test...
+2025-11-24 16:47:03 - src.main - INFO - [no-session] - Request 1585fe63 completed: 200 (0.54s)
+2025-11-24 16:47:05 - src.main - INFO - [no-session] - Request 91145c71: POST /api/user-chat
+2025-11-24 16:47:05 - src.routes.chat_routes - INFO - [no-session] - Chat request for session dc647454-ac6b-41fd-8463-93107c379bdc: why is the document not accepted
+2025-11-24 16:47:05 - src.agents.orchestrator - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Chat request: why is the document not accepted
+2025-11-24 16:47:05 - src.agents.orchestrator - ERROR - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Chat failed: 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/home/mohitchandran/Desktop/LIC_POC/src/agents/orchestrator.py", line 560, in chat_with_context
+    {chr(10).join([f"- {v.get('description', 'N/A')}" for v in violations])}
+  File "/home/mohitchandran/Desktop/LIC_POC/src/agents/orchestrator.py", line 560, in <listcomp>
+    {chr(10).join([f"- {v.get('description', 'N/A')}" for v in violations])}
+AttributeError: 'str' object has no attribute 'get'
+2025-11-24 16:47:05 - src.routes.chat_routes - ERROR - [no-session] - Chat endpoint error: Chat request failed: 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/home/mohitchandran/Desktop/LIC_POC/src/agents/orchestrator.py", line 560, in chat_with_context
+    {chr(10).join([f"- {v.get('description', 'N/A')}" for v in violations])}
+  File "/home/mohitchandran/Desktop/LIC_POC/src/agents/orchestrator.py", line 560, in <listcomp>
+    {chr(10).join([f"- {v.get('description', 'N/A')}" for v in violations])}
+AttributeError: 'str' object has no attribute 'get'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mohitchandran/Desktop/LIC_POC/src/routes/chat_routes.py", line 65, in user_chat
+    result = await orchestrator.chat_with_context(
+  File "/home/mohitchandran/Desktop/LIC_POC/src/agents/orchestrator.py", line 625, in chat_with_context
+    raise Exception(f"Chat request failed: {str(e)}")
+Exception: Chat request failed: 'str' object has no attribute 'get'
+2025-11-24 16:47:05 - src.main - INFO - [no-session] - Request 91145c71 completed: 500 (0.01s)
+2025-11-24 16:47:05 - src.main - INFO - [no-session] - Request 236797da: GET /health
+2025-11-24 16:47:05 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:47:05 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 1 relevant rules for query
+2025-11-24 16:47:05 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: test...
+2025-11-24 16:47:05 - src.main - INFO - [no-session] - Request 236797da completed: 200 (0.57s)
+2025-11-24 16:52:22 - src.main - INFO - [no-session] - Shutting down application...
+2025-11-24 16:52:22 - src.main - INFO - [no-session] - Goodbye!
+2025-11-24 16:52:24 - root - INFO - [no-session] - Logging system initialized
+2025-11-24 16:52:24 - root - INFO - [no-session] - Log file: /home/mohitchandran/Desktop/LIC_POC/logs/app.log
+2025-11-24 16:52:24 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:52:24 - src.main - INFO - [no-session] - AI Travel Invoice Validator Starting...
+2025-11-24 16:52:24 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:52:24 - src.main - INFO - [no-session] - Checking Ollama connection...
+2025-11-24 16:52:24 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:52:24 - src.main - INFO - [no-session] - ✓ Ollama connected: http://192.168.10.200:11434
+2025-11-24 16:52:24 - src.main - INFO - [no-session] - ✓ Model available: gemma3:27b
+2025-11-24 16:52:24 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Using Ollama embedding model: mxbai-embed-large:latest
+2025-11-24 16:52:24 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Connected to collection: business_policies
+2025-11-24 16:52:24 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Rules retriever initialized successfully (10 documents)
+2025-11-24 16:52:24 - src.main - INFO - [no-session] - ✓ RAG system initialized
+2025-11-24 16:52:24 - src.main - INFO - [no-session] - Application ready!
+2025-11-24 16:52:24 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:52:34 - src.main - INFO - [no-session] - Shutting down application...
+2025-11-24 16:52:34 - src.main - INFO - [no-session] - Goodbye!
+2025-11-24 16:52:35 - root - INFO - [no-session] - Logging system initialized
+2025-11-24 16:52:35 - root - INFO - [no-session] - Log file: /home/mohitchandran/Desktop/LIC_POC/logs/app.log
+2025-11-24 16:52:35 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:52:35 - src.main - INFO - [no-session] - AI Travel Invoice Validator Starting...
+2025-11-24 16:52:35 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:52:35 - src.main - INFO - [no-session] - Checking Ollama connection...
+2025-11-24 16:52:35 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:52:35 - src.main - INFO - [no-session] - ✓ Ollama connected: http://192.168.10.200:11434
+2025-11-24 16:52:35 - src.main - INFO - [no-session] - ✓ Model available: gemma3:27b
+2025-11-24 16:52:35 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Using Ollama embedding model: mxbai-embed-large:latest
+2025-11-24 16:52:35 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Connected to collection: business_policies
+2025-11-24 16:52:35 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Rules retriever initialized successfully (10 documents)
+2025-11-24 16:52:35 - src.main - INFO - [no-session] - ✓ RAG system initialized
+2025-11-24 16:52:35 - src.main - INFO - [no-session] - Application ready!
+2025-11-24 16:52:35 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:53:33 - src.main - INFO - [no-session] - Shutting down application...
+2025-11-24 16:53:33 - src.main - INFO - [no-session] - Goodbye!
+2025-11-24 16:53:35 - root - INFO - [no-session] - Logging system initialized
+2025-11-24 16:53:35 - root - INFO - [no-session] - Log file: /home/mohitchandran/Desktop/LIC_POC/logs/app.log
+2025-11-24 16:53:35 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:53:35 - src.main - INFO - [no-session] - AI Travel Invoice Validator Starting...
+2025-11-24 16:53:35 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:53:35 - src.main - INFO - [no-session] - Checking Ollama connection...
+2025-11-24 16:53:35 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:53:35 - src.main - INFO - [no-session] - ✓ Ollama connected: http://192.168.10.200:11434
+2025-11-24 16:53:35 - src.main - INFO - [no-session] - ✓ Model available: gemma3:27b
+2025-11-24 16:53:35 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Using Ollama embedding model: mxbai-embed-large:latest
+2025-11-24 16:53:35 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Connected to collection: business_policies
+2025-11-24 16:53:35 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Rules retriever initialized successfully (10 documents)
+2025-11-24 16:53:35 - src.main - INFO - [no-session] - ✓ RAG system initialized
+2025-11-24 16:53:35 - src.main - INFO - [no-session] - Application ready!
+2025-11-24 16:53:35 - src.main - INFO - [no-session] - ================================================================================
+2025-11-24 16:53:42 - src.main - INFO - [no-session] - Request fc411c97: GET /health
+2025-11-24 16:53:42 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 16:53:43 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 1 relevant rules for query
+2025-11-24 16:53:43 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: test...
+2025-11-24 16:53:43 - src.main - INFO - [no-session] - Request fc411c97 completed: 200 (0.95s)
+2025-11-24 17:07:46 - src.main - INFO - [no-session] - Request 9d8c165a: POST /api/user-chat
+2025-11-24 17:07:46 - src.routes.chat_routes - INFO - [no-session] - Chat request for session dc647454-ac6b-41fd-8463-93107c379bdc: Why was this document rejected?
+2025-11-24 17:07:46 - src.agents.orchestrator - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Chat request: Why was this document rejected?
+2025-11-24 17:07:46 - src.agents.llm_client - INFO - [no-session] - Sending request to Ollama: http://192.168.10.200:11434/api/generate
+2025-11-24 17:07:46 - src.agents.llm_client - DEBUG - [no-session] - Payload: {
+  "model": "gemma3:27b",
+  "prompt": "Here is the session data:\n\n\nEXTRACTED INVOICE DATA:\n- Passenger Name: MOHIT\n- Origin: COIMBATORE\n- Destination: CHENNAI\n- Travel Date: 2025-11-24\n- Fare: \u20b9500.0\n- Extraction Confidence: 98.0%\n\n\nEMPLOYEE DETAILS:\n- Name: N/A\n- Level: unknown\n- Fare Limit: \u20b90.00\n\n\nVALIDATION RESULT:\n- Status: REJECTED\n- Remarks: Employee not found in travel proposal\n\n\nPOLICY RULES APPLIED:\n- Employee identification\n- Required invoice fields\n- Fare limit validation\n- Data quality check\n- Employee match quality\n\n\nPOLICY VIOLATIONS:\n- Employee not found in proposal\n- Low employee match confidence: 0.00\n\n\nUser's Question: Why was this document rejected?\n\nPlease answer based on the above information.",
+  "stream": false,
+  "options": {
+    "temperature": 0.3
+  },
+  "system": "You are an AI assistant helping users understand their travel invoice validation results.\n\nYou have access to the complete session data including:\n- Extracted invoice information (passenger, route, date, fare)\n- Employee details (name, level, fare limits)\n- Validation results (approved/rejected status)\n- Policy rules that were applied\n- Any policy violations found\n\nAnswer the user's question clearly and concisely based on the available data.\nIf the data needed to answer the question is not available, say so politely.\n\nBe helpful, accurate, and reference specific data points when answering."
+}
+2025-11-24 17:07:57 - src.agents.llm_client - INFO - [no-session] - Received response from Ollama (length: 377)
+2025-11-24 17:07:57 - src.agents.llm_client - DEBUG - [no-session] - Response: This document was rejected because the employee, MOHIT, was not found in the travel proposal. The validation results show a policy violation: “Employee not found in proposal” and a low employee match confidence of 0.00. Additionally, the Employee Details section shows the employee name as “N/A” and level as “unknown”, confirming the system couldn't identify the employee.
+
+
+
+
+2025-11-24 17:07:57 - src.agents.orchestrator - INFO - [no-session] - [dc647454-ac6b-41fd-8463-93107c379bdc] Chat response generated
+2025-11-24 17:07:57 - src.main - INFO - [no-session] - Request 9d8c165a completed: 200 (11.00s)
+2025-11-24 17:09:07 - src.main - INFO - [no-session] - Request ed6cf9cd: GET /health
+2025-11-24 17:09:07 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 17:09:08 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 1 relevant rules for query
+2025-11-24 17:09:08 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: test...
+2025-11-24 17:09:08 - src.main - INFO - [no-session] - Request ed6cf9cd completed: 200 (0.89s)
+2025-11-24 17:09:41 - src.main - INFO - [no-session] - Request cc4f3557: GET /health
+2025-11-24 17:09:42 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 17:09:42 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 1 relevant rules for query
+2025-11-24 17:09:42 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: test...
+2025-11-24 17:09:42 - src.main - INFO - [no-session] - Request cc4f3557 completed: 200 (0.48s)
+2025-11-24 17:09:44 - src.main - INFO - [no-session] - Request c137aa85: GET /health
+2025-11-24 17:09:44 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 17:09:45 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 1 relevant rules for query
+2025-11-24 17:09:45 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: test...
+2025-11-24 17:09:45 - src.main - INFO - [no-session] - Request c137aa85 completed: 200 (0.21s)
+2025-11-24 17:09:48 - src.main - INFO - [no-session] - Request 9023279d: GET /health
+2025-11-24 17:09:48 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 17:09:48 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 1 relevant rules for query
+2025-11-24 17:09:48 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: test...
+2025-11-24 17:09:48 - src.main - INFO - [no-session] - Request 9023279d completed: 200 (0.50s)
+2025-11-24 17:09:49 - src.main - INFO - [no-session] - Request f9054602: POST /api/session
+2025-11-24 17:09:49 - src.routes.session_routes - INFO - [no-session] - Created session: 3109c8ee-6739-484a-bf61-49ebc5f3c605
+2025-11-24 17:09:49 - src.main - INFO - [no-session] - Request f9054602 completed: 200 (0.00s)
+2025-11-24 17:09:49 - src.main - INFO - [no-session] - Request 9191e691: POST /api/upload-invoice
+2025-11-24 17:09:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_part_begin with no data
+2025-11-24 17:09:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_field with data[36:55]
+2025-11-24 17:09:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_value with data[57:113]
+2025-11-24 17:09:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_end with no data
+2025-11-24 17:09:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_field with data[115:127]
+2025-11-24 17:09:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_value with data[129:144]
+2025-11-24 17:09:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_end with no data
+2025-11-24 17:09:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_headers_finished with no data
+2025-11-24 17:09:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_part_data with data[148:50353]
+2025-11-24 17:09:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_part_end with no data
+2025-11-24 17:09:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_end with no data
+2025-11-24 17:09:49 - src.routes.upload_routes - INFO - [no-session] - Received invoice upload: mohit_dummyticket.pdf (session: 3109c8ee-6739-484a-bf61-49ebc5f3c605)
+2025-11-24 17:09:49 - src.services.file_storage - INFO - [no-session] - Saved invoice: inv_db4c3c467dc0 (50205 bytes)
+2025-11-24 17:09:49 - src.routes.upload_routes - INFO - [no-session] - Invoice saved: inv_db4c3c467dc0
+2025-11-24 17:09:49 - src.main - INFO - [no-session] - Request 9191e691 completed: 200 (0.00s)
+2025-11-24 17:09:49 - src.main - INFO - [no-session] - Request 3af0cf73: POST /api/upload-proposal
+2025-11-24 17:09:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_part_begin with no data
+2025-11-24 17:09:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_field with data[36:55]
+2025-11-24 17:09:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_value with data[57:107]
+2025-11-24 17:09:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_end with no data
+2025-11-24 17:09:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_field with data[109:121]
+2025-11-24 17:09:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_value with data[123:150]
+2025-11-24 17:09:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_header_end with no data
+2025-11-24 17:09:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_headers_finished with no data
+2025-11-24 17:09:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_part_data with data[154:8958]
+2025-11-24 17:09:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_part_end with no data
+2025-11-24 17:09:49 - python_multipart.multipart - DEBUG - [no-session] - Calling on_end with no data
+2025-11-24 17:09:49 - src.routes.upload_routes - INFO - [no-session] - Received proposal upload: proposal_2.xlsx (session: 3109c8ee-6739-484a-bf61-49ebc5f3c605)
+2025-11-24 17:09:49 - src.services.file_storage - INFO - [no-session] - Saved proposal: prop_2c3699a5bda0 (8804 bytes)
+2025-11-24 17:09:49 - src.routes.upload_routes - INFO - [no-session] - Proposal saved: prop_2c3699a5bda0
+2025-11-24 17:09:49 - src.main - INFO - [no-session] - Request 3af0cf73 completed: 200 (0.01s)
+2025-11-24 17:09:49 - src.main - INFO - [no-session] - Request 644c1450: POST /api/process-validation
+2025-11-24 17:09:49 - src.routes.process_routes - INFO - [no-session] - Processing validation: invoice=inv_db4c3c467dc0, proposal=prop_2c3699a5bda0, session=3109c8ee-6739-484a-bf61-49ebc5f3c605
+2025-11-24 17:09:49 - src.agents.orchestrator - INFO - [no-session] - Registered existing session: 3109c8ee-6739-484a-bf61-49ebc5f3c605
+2025-11-24 17:09:49 - src.agents.orchestrator - INFO - [no-session] - [3109c8ee-6739-484a-bf61-49ebc5f3c605] Starting validation: invoice=inv_db4c3c467dc0, proposal=prop_2c3699a5bda0
+2025-11-24 17:09:49 - src.agents.orchestrator - INFO - [no-session] - [3109c8ee-6739-484a-bf61-49ebc5f3c605] Loading files...
+2025-11-24 17:09:49 - src.services.file_storage - DEBUG - [no-session] - Found invoice: /home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_db4c3c467dc0.pdf
+2025-11-24 17:09:49 - src.services.file_storage - DEBUG - [no-session] - Found proposal: /home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_2c3699a5bda0.xlsx
+2025-11-24 17:09:49 - src.agents.orchestrator - INFO - [no-session] - [3109c8ee-6739-484a-bf61-49ebc5f3c605] Files loaded successfully
+2025-11-24 17:09:49 - src.agents.orchestrator - INFO - [no-session] - [3109c8ee-6739-484a-bf61-49ebc5f3c605] Extracting invoice data...
+2025-11-24 17:09:49 - src.agents.extraction_agent - INFO - [no-session] - [3109c8ee-6739-484a-bf61-49ebc5f3c605] Extracting data from invoice: inv_db4c3c467dc0.pdf
+2025-11-24 17:09:49 - src.services.extractor_utils - INFO - [no-session] - Converted PDF page 0 to image (528997 bytes)
+2025-11-24 17:09:49 - PIL.PngImagePlugin - DEBUG - [no-session] - STREAM b'IHDR' 16 13
+2025-11-24 17:09:49 - PIL.PngImagePlugin - DEBUG - [no-session] - STREAM b'pHYs' 41 9
+2025-11-24 17:09:49 - PIL.PngImagePlugin - DEBUG - [no-session] - STREAM b'IDAT' 62 528919
+2025-11-24 17:09:49 - src.services.extractor_utils - INFO - [no-session] - Resized image for VLM: 2134x2134 -> 1536x1536
+2025-11-24 17:09:49 - src.services.extractor_utils - INFO - [no-session] - Preprocessed image: 528997 bytes -> 156363 bytes (reduction: 70.4%)
+2025-11-24 17:09:49 - src.agents.extraction_agent - INFO - [no-session] - [3109c8ee-6739-484a-bf61-49ebc5f3c605] Calling VLM (gemma3:27b) for extraction...
+2025-11-24 17:09:49 - src.agents.extraction_agent - INFO - [no-session] - [3109c8ee-6739-484a-bf61-49ebc5f3c605] Processing image: inv_db4c3c467dc0.pdf (156363 bytes)
+2025-11-24 17:09:49 - src.agents.llm_client - INFO - [no-session] - Sending vision request to Ollama with gemma3:27b (image size: 156363 bytes)
+2025-11-24 17:09:49 - src.agents.llm_client - INFO - [no-session] - Using timeout: 60s for vision request
+2025-11-24 17:09:49 - src.agents.llm_client - DEBUG - [no-session] - Prompt: You are analyzing a TRAVEL INVOICE IMAGE. Look at the image carefully and extract these EXACT fields:
+
+📋 REQUIRED FIELDS TO EXTRACT:
+================================
+
+1. **Passenger Name** (passenger_...
+2025-11-24 17:10:07 - src.agents.llm_client - INFO - [no-session] - Received vision response from gemma3:27b
+2025-11-24 17:10:07 - src.agents.llm_client - DEBUG - [no-session] - Response: ```json
+{
+    "passenger_name": "MOHIT",
+    "origin": "COIMBATORE",
+    "destination": "CHENNAI",
+    "travel_date": "2025-11-24",
+    "fare": 500.00,
+    "confidence": 0.98,
+    "notes": "All fields extracted clearly"
+}
+```
+2025-11-24 17:10:07 - src.agents.extraction_agent - INFO - [no-session] - [3109c8ee-6739-484a-bf61-49ebc5f3c605] VLM response length: 225 characters
+2025-11-24 17:10:07 - src.agents.extraction_agent - INFO - [no-session] - [3109c8ee-6739-484a-bf61-49ebc5f3c605] Raw VLM response (full): ```json
+{
+    "passenger_name": "MOHIT",
+    "origin": "COIMBATORE",
+    "destination": "CHENNAI",
+    "travel_date": "2025-11-24",
+    "fare": 500.00,
+    "confidence": 0.98,
+    "notes": "All fields extracted clearly"
+}
+```
+2025-11-24 17:10:07 - src.agents.extraction_agent - INFO - [no-session] - [3109c8ee-6739-484a-bf61-49ebc5f3c605] Parsed JSON: {
+  "passenger_name": "MOHIT",
+  "origin": "COIMBATORE",
+  "destination": "CHENNAI",
+  "travel_date": "2025-11-24",
+  "fare": 500.0,
+  "confidence": 0.98,
+  "notes": "All fields extracted clearly"
+}
+2025-11-24 17:10:07 - src.agents.extraction_agent - INFO - [no-session] - [3109c8ee-6739-484a-bf61-49ebc5f3c605] Successfully extracted invoice data
+2025-11-24 17:10:07 - src.agents.extraction_agent - INFO - [no-session] - [3109c8ee-6739-484a-bf61-49ebc5f3c605] Normalized data: {
+  "passenger_name": "MOHIT",
+  "origin": "COIMBATORE",
+  "destination": "CHENNAI",
+  "travel_date": "2025-11-24",
+  "fare": 500.0,
+  "confidence": 0.98,
+  "notes": "All fields extracted clearly"
+}
+2025-11-24 17:10:07 - src.agents.orchestrator - INFO - [no-session] - [3109c8ee-6739-484a-bf61-49ebc5f3c605] Extraction complete (confidence: 0.98)
+2025-11-24 17:10:07 - src.agents.orchestrator - INFO - [no-session] - [3109c8ee-6739-484a-bf61-49ebc5f3c605] Matching employee: MOHIT
+2025-11-24 17:10:07 - src.agents.excel_agent - INFO - [no-session] - [3109c8ee-6739-484a-bf61-49ebc5f3c605] Matching employee: MOHIT
+2025-11-24 17:10:07 - src.services.excel_utils - INFO - [no-session] - Loaded Excel: prop_2c3699a5bda0.xlsx (2 rows, 6 columns)
+2025-11-24 17:10:07 - src.services.excel_utils - DEBUG - [no-session] - Columns: ['employee_level', 'name', 'from', 'to', 'date', 'fare']
+2025-11-24 17:10:07 - src.services.excel_utils - DEBUG - [no-session] - All required columns found
+2025-11-24 17:10:07 - src.services.excel_utils - DEBUG - [no-session] - Employee data normalized
+2025-11-24 17:10:07 - src.services.excel_utils - DEBUG - [no-session] - No exact match found for: MOHIT
+2025-11-24 17:10:07 - src.agents.excel_agent - INFO - [no-session] - [3109c8ee-6739-484a-bf61-49ebc5f3c605] Exact match not found, trying fuzzy match...
+2025-11-24 17:10:07 - src.services.excel_utils - DEBUG - [no-session] - Extracted 2 employee names
+2025-11-24 17:10:07 - src.agents.excel_agent - DEBUG - [no-session] - Fuzzy matches: [('Dev Tarun', 14), ('Pranay', 0)]
+2025-11-24 17:10:07 - src.agents.excel_agent - WARNING - [no-session] - [3109c8ee-6739-484a-bf61-49ebc5f3c605] No match found for: MOHIT
+2025-11-24 17:10:07 - src.agents.orchestrator - WARNING - [no-session] - [3109c8ee-6739-484a-bf61-49ebc5f3c605] Employee not matched
+2025-11-24 17:10:07 - src.agents.orchestrator - INFO - [no-session] - [3109c8ee-6739-484a-bf61-49ebc5f3c605] Validating against policy...
+2025-11-24 17:10:07 - src.agents.policy_agent - INFO - [no-session] - [3109c8ee-6739-484a-bf61-49ebc5f3c605] Validating invoice for MOHIT
+2025-11-24 17:10:07 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 5 relevant rules for query
+2025-11-24 17:10:07 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: Travel invoice validation context:
+- Employee Level: unknown
+- Fare Amount: 500.0
+- Fare Limit: 0.0
+...
+2025-11-24 17:10:07 - src.agents.policy_agent - INFO - [no-session] - [3109c8ee-6739-484a-bf61-49ebc5f3c605] Retrieved 5 relevant rules
+2025-11-24 17:10:07 - src.agents.policy_agent - WARNING - [no-session] - [3109c8ee-6739-484a-bf61-49ebc5f3c605] Critical rule violation detected
+2025-11-24 17:10:07 - src.agents.orchestrator - INFO - [no-session] - [3109c8ee-6739-484a-bf61-49ebc5f3c605] Policy validation complete: rejected
+2025-11-24 17:10:07 - src.agents.orchestrator - INFO - [no-session] - [3109c8ee-6739-484a-bf61-49ebc5f3c605] Final response built
+2025-11-24 17:10:07 - src.agents.orchestrator - DEBUG - [no-session] - [3109c8ee-6739-484a-bf61-49ebc5f3c605] Response: {'name': 'MOHIT', 'from': 'COIMBATORE', 'to': 'CHENNAI', 'date': '2025-11-24', 'fare': 500.0, 'confidence': 0.67, 'validation_status': 'rejected', 'remarks': 'Employee not found in travel proposal', 'session_id': '3109c8ee-6739-484a-bf61-49ebc5f3c605'}
+2025-11-24 17:10:07 - src.agents.orchestrator - INFO - [no-session] - Closed session: 3109c8ee-6739-484a-bf61-49ebc5f3c605
+2025-11-24 17:10:07 - src.agents.orchestrator - INFO - [no-session] - [3109c8ee-6739-484a-bf61-49ebc5f3c605] Validation complete: rejected
+2025-11-24 17:10:07 - src.routes.process_routes - INFO - [no-session] - Validation completed: rejected
+2025-11-24 17:10:07 - src.main - INFO - [no-session] - Request 644c1450 completed: 200 (18.40s)
+2025-11-24 17:10:07 - src.main - INFO - [no-session] - Request e637fe3b: GET /health
+2025-11-24 17:10:07 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 17:10:08 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 1 relevant rules for query
+2025-11-24 17:10:08 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: test...
+2025-11-24 17:10:08 - src.main - INFO - [no-session] - Request e637fe3b completed: 200 (0.24s)
+2025-11-24 17:10:15 - src.main - INFO - [no-session] - Request 5915f664: GET /health
+2025-11-24 17:10:16 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 17:10:16 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 1 relevant rules for query
+2025-11-24 17:10:16 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: test...
+2025-11-24 17:10:16 - src.main - INFO - [no-session] - Request 5915f664 completed: 200 (0.52s)
+2025-11-24 17:10:20 - src.main - INFO - [no-session] - Request 89f7186a: POST /api/user-chat
+2025-11-24 17:10:20 - src.routes.chat_routes - INFO - [no-session] - Chat request for session 3109c8ee-6739-484a-bf61-49ebc5f3c605: why is the document not accepted
+2025-11-24 17:10:20 - src.agents.orchestrator - INFO - [no-session] - [3109c8ee-6739-484a-bf61-49ebc5f3c605] Chat request: why is the document not accepted
+2025-11-24 17:10:20 - src.agents.llm_client - INFO - [no-session] - Sending request to Ollama: http://192.168.10.200:11434/api/generate
+2025-11-24 17:10:20 - src.agents.llm_client - DEBUG - [no-session] - Payload: {
+  "model": "gemma3:27b",
+  "prompt": "Here is the session data:\n\n\nEXTRACTED INVOICE DATA:\n- Passenger Name: MOHIT\n- Origin: COIMBATORE\n- Destination: CHENNAI\n- Travel Date: 2025-11-24\n- Fare: \u20b9500.0\n- Extraction Confidence: 98.0%\n\n\nEMPLOYEE DETAILS:\n- Name: N/A\n- Level: unknown\n- Fare Limit: \u20b90.00\n\n\nVALIDATION RESULT:\n- Status: REJECTED\n- Remarks: Employee not found in travel proposal\n\n\nPOLICY RULES APPLIED:\n- Employee identification\n- Required invoice fields\n- Fare limit validation\n- Data quality check\n- Employee match quality\n\n\nPOLICY VIOLATIONS:\n- Employee not found in proposal\n- Low employee match confidence: 0.00\n\n\nUser's Question: why is the document not accepted\n\nPlease answer based on the above information.",
+  "stream": false,
+  "options": {
+    "temperature": 0.3
+  },
+  "system": "You are an AI assistant helping users understand their travel invoice validation results.\n\nYou have access to the complete session data including:\n- Extracted invoice information (passenger, route, date, fare)\n- Employee details (name, level, fare limits)\n- Validation results (approved/rejected status)\n- Policy rules that were applied\n- Any policy violations found\n\nAnswer the user's question clearly and concisely based on the available data.\nIf the data needed to answer the question is not available, say so politely.\n\nBe helpful, accurate, and reference specific data points when answering."
+}
+2025-11-24 17:10:21 - src.main - INFO - [no-session] - Request 788ca3f4: POST /api/user-chat
+2025-11-24 17:10:21 - src.routes.chat_routes - INFO - [no-session] - Chat request for session 3109c8ee-6739-484a-bf61-49ebc5f3c605: why is the document not accepted
+2025-11-24 17:10:21 - src.agents.orchestrator - INFO - [no-session] - [3109c8ee-6739-484a-bf61-49ebc5f3c605] Chat request: why is the document not accepted
+2025-11-24 17:10:21 - src.agents.llm_client - INFO - [no-session] - Sending request to Ollama: http://192.168.10.200:11434/api/generate
+2025-11-24 17:10:21 - src.agents.llm_client - DEBUG - [no-session] - Payload: {
+  "model": "gemma3:27b",
+  "prompt": "Here is the session data:\n\n\nEXTRACTED INVOICE DATA:\n- Passenger Name: MOHIT\n- Origin: COIMBATORE\n- Destination: CHENNAI\n- Travel Date: 2025-11-24\n- Fare: \u20b9500.0\n- Extraction Confidence: 98.0%\n\n\nEMPLOYEE DETAILS:\n- Name: N/A\n- Level: unknown\n- Fare Limit: \u20b90.00\n\n\nVALIDATION RESULT:\n- Status: REJECTED\n- Remarks: Employee not found in travel proposal\n\n\nPOLICY RULES APPLIED:\n- Employee identification\n- Required invoice fields\n- Fare limit validation\n- Data quality check\n- Employee match quality\n\n\nPOLICY VIOLATIONS:\n- Employee not found in proposal\n- Low employee match confidence: 0.00\n\n\nUser's Question: why is the document not accepted\n\nPlease answer based on the above information.",
+  "stream": false,
+  "options": {
+    "temperature": 0.3
+  },
+  "system": "You are an AI assistant helping users understand their travel invoice validation results.\n\nYou have access to the complete session data including:\n- Extracted invoice information (passenger, route, date, fare)\n- Employee details (name, level, fare limits)\n- Validation results (approved/rejected status)\n- Policy rules that were applied\n- Any policy violations found\n\nAnswer the user's question clearly and concisely based on the available data.\nIf the data needed to answer the question is not available, say so politely.\n\nBe helpful, accurate, and reference specific data points when answering."
+}
+2025-11-24 17:10:22 - src.main - INFO - [no-session] - Request 3b39a54b: POST /api/user-chat
+2025-11-24 17:10:22 - src.routes.chat_routes - INFO - [no-session] - Chat request for session 3109c8ee-6739-484a-bf61-49ebc5f3c605: why is the document not accepted
+2025-11-24 17:10:22 - src.agents.orchestrator - INFO - [no-session] - [3109c8ee-6739-484a-bf61-49ebc5f3c605] Chat request: why is the document not accepted
+2025-11-24 17:10:22 - src.agents.llm_client - INFO - [no-session] - Sending request to Ollama: http://192.168.10.200:11434/api/generate
+2025-11-24 17:10:22 - src.agents.llm_client - DEBUG - [no-session] - Payload: {
+  "model": "gemma3:27b",
+  "prompt": "Here is the session data:\n\n\nEXTRACTED INVOICE DATA:\n- Passenger Name: MOHIT\n- Origin: COIMBATORE\n- Destination: CHENNAI\n- Travel Date: 2025-11-24\n- Fare: \u20b9500.0\n- Extraction Confidence: 98.0%\n\n\nEMPLOYEE DETAILS:\n- Name: N/A\n- Level: unknown\n- Fare Limit: \u20b90.00\n\n\nVALIDATION RESULT:\n- Status: REJECTED\n- Remarks: Employee not found in travel proposal\n\n\nPOLICY RULES APPLIED:\n- Employee identification\n- Required invoice fields\n- Fare limit validation\n- Data quality check\n- Employee match quality\n\n\nPOLICY VIOLATIONS:\n- Employee not found in proposal\n- Low employee match confidence: 0.00\n\n\nUser's Question: why is the document not accepted\n\nPlease answer based on the above information.",
+  "stream": false,
+  "options": {
+    "temperature": 0.3
+  },
+  "system": "You are an AI assistant helping users understand their travel invoice validation results.\n\nYou have access to the complete session data including:\n- Extracted invoice information (passenger, route, date, fare)\n- Employee details (name, level, fare limits)\n- Validation results (approved/rejected status)\n- Policy rules that were applied\n- Any policy violations found\n\nAnswer the user's question clearly and concisely based on the available data.\nIf the data needed to answer the question is not available, say so politely.\n\nBe helpful, accurate, and reference specific data points when answering."
+}
+2025-11-24 17:10:22 - src.main - INFO - [no-session] - Request 33bb67d0: POST /api/user-chat
+2025-11-24 17:10:22 - src.routes.chat_routes - INFO - [no-session] - Chat request for session 3109c8ee-6739-484a-bf61-49ebc5f3c605: why is the document not accepted
+2025-11-24 17:10:22 - src.agents.orchestrator - INFO - [no-session] - [3109c8ee-6739-484a-bf61-49ebc5f3c605] Chat request: why is the document not accepted
+2025-11-24 17:10:22 - src.agents.llm_client - INFO - [no-session] - Sending request to Ollama: http://192.168.10.200:11434/api/generate
+2025-11-24 17:10:22 - src.agents.llm_client - DEBUG - [no-session] - Payload: {
+  "model": "gemma3:27b",
+  "prompt": "Here is the session data:\n\n\nEXTRACTED INVOICE DATA:\n- Passenger Name: MOHIT\n- Origin: COIMBATORE\n- Destination: CHENNAI\n- Travel Date: 2025-11-24\n- Fare: \u20b9500.0\n- Extraction Confidence: 98.0%\n\n\nEMPLOYEE DETAILS:\n- Name: N/A\n- Level: unknown\n- Fare Limit: \u20b90.00\n\n\nVALIDATION RESULT:\n- Status: REJECTED\n- Remarks: Employee not found in travel proposal\n\n\nPOLICY RULES APPLIED:\n- Employee identification\n- Required invoice fields\n- Fare limit validation\n- Data quality check\n- Employee match quality\n\n\nPOLICY VIOLATIONS:\n- Employee not found in proposal\n- Low employee match confidence: 0.00\n\n\nUser's Question: why is the document not accepted\n\nPlease answer based on the above information.",
+  "stream": false,
+  "options": {
+    "temperature": 0.3
+  },
+  "system": "You are an AI assistant helping users understand their travel invoice validation results.\n\nYou have access to the complete session data including:\n- Extracted invoice information (passenger, route, date, fare)\n- Employee details (name, level, fare limits)\n- Validation results (approved/rejected status)\n- Policy rules that were applied\n- Any policy violations found\n\nAnswer the user's question clearly and concisely based on the available data.\nIf the data needed to answer the question is not available, say so politely.\n\nBe helpful, accurate, and reference specific data points when answering."
+}
+2025-11-24 17:10:22 - src.main - INFO - [no-session] - Request fb763950: POST /api/user-chat
+2025-11-24 17:10:22 - src.routes.chat_routes - INFO - [no-session] - Chat request for session 3109c8ee-6739-484a-bf61-49ebc5f3c605: why is the document not accepted
+2025-11-24 17:10:22 - src.agents.orchestrator - INFO - [no-session] - [3109c8ee-6739-484a-bf61-49ebc5f3c605] Chat request: why is the document not accepted
+2025-11-24 17:10:22 - src.agents.llm_client - INFO - [no-session] - Sending request to Ollama: http://192.168.10.200:11434/api/generate
+2025-11-24 17:10:22 - src.agents.llm_client - DEBUG - [no-session] - Payload: {
+  "model": "gemma3:27b",
+  "prompt": "Here is the session data:\n\n\nEXTRACTED INVOICE DATA:\n- Passenger Name: MOHIT\n- Origin: COIMBATORE\n- Destination: CHENNAI\n- Travel Date: 2025-11-24\n- Fare: \u20b9500.0\n- Extraction Confidence: 98.0%\n\n\nEMPLOYEE DETAILS:\n- Name: N/A\n- Level: unknown\n- Fare Limit: \u20b90.00\n\n\nVALIDATION RESULT:\n- Status: REJECTED\n- Remarks: Employee not found in travel proposal\n\n\nPOLICY RULES APPLIED:\n- Employee identification\n- Required invoice fields\n- Fare limit validation\n- Data quality check\n- Employee match quality\n\n\nPOLICY VIOLATIONS:\n- Employee not found in proposal\n- Low employee match confidence: 0.00\n\n\nUser's Question: why is the document not accepted\n\nPlease answer based on the above information.",
+  "stream": false,
+  "options": {
+    "temperature": 0.3
+  },
+  "system": "You are an AI assistant helping users understand their travel invoice validation results.\n\nYou have access to the complete session data including:\n- Extracted invoice information (passenger, route, date, fare)\n- Employee details (name, level, fare limits)\n- Validation results (approved/rejected status)\n- Policy rules that were applied\n- Any policy violations found\n\nAnswer the user's question clearly and concisely based on the available data.\nIf the data needed to answer the question is not available, say so politely.\n\nBe helpful, accurate, and reference specific data points when answering."
+}
+2025-11-24 17:10:29 - src.agents.llm_client - INFO - [no-session] - Received response from Ollama (length: 326)
+2025-11-24 17:10:29 - src.agents.llm_client - DEBUG - [no-session] - Response: The document was rejected because the employee, MOHIT, was not found in the travel proposal. The validation process flagged a policy violation: "Employee not found in proposal" and a low employee match confidence of 0.00. 
+
+Essentially, the system couldn't verify that this expense was submitted by an authorized employee.
+
+
+
+
+2025-11-24 17:10:29 - src.agents.orchestrator - INFO - [no-session] - [3109c8ee-6739-484a-bf61-49ebc5f3c605] Chat response generated
+2025-11-24 17:10:29 - src.main - INFO - [no-session] - Request 89f7186a completed: 200 (8.66s)
+2025-11-24 17:10:34 - src.agents.llm_client - INFO - [no-session] - Received response from Ollama (length: 321)
+2025-11-24 17:10:34 - src.agents.llm_client - DEBUG - [no-session] - Response: The document was rejected because the employee, MOHIT, was not found in the travel proposal. The validation process flagged a policy violation: “Employee not found in proposal” and a low employee match confidence of 0.00. 
+
+Essentially, the system couldn't verify that this expense was submitted for a valid employee.
+
+
+
+
+2025-11-24 17:10:34 - src.agents.orchestrator - INFO - [no-session] - [3109c8ee-6739-484a-bf61-49ebc5f3c605] Chat response generated
+2025-11-24 17:10:34 - src.main - INFO - [no-session] - Request 788ca3f4 completed: 200 (12.92s)
+2025-11-24 17:10:39 - src.agents.llm_client - INFO - [no-session] - Received response from Ollama (length: 313)
+2025-11-24 17:10:39 - src.agents.llm_client - DEBUG - [no-session] - Response: The document was rejected because the employee, MOHIT, was not found in the travel proposal. The validation process flagged a violation: "Employee not found in proposal" and a low employee match confidence of 0.00. 
+
+Essentially, the system couldn't identify a matching employee record for this expense claim.
+
+
+
+
+2025-11-24 17:10:39 - src.agents.orchestrator - INFO - [no-session] - [3109c8ee-6739-484a-bf61-49ebc5f3c605] Chat response generated
+2025-11-24 17:10:39 - src.main - INFO - [no-session] - Request 3b39a54b completed: 200 (17.74s)
+2025-11-24 17:10:45 - src.agents.llm_client - INFO - [no-session] - Received response from Ollama (length: 321)
+2025-11-24 17:10:45 - src.agents.llm_client - DEBUG - [no-session] - Response: The document was rejected because the employee, MOHIT, was not found in the travel proposal. The validation process flagged a policy violation: “Employee not found in proposal” and a low employee match confidence of 0.00. 
+
+Essentially, the system couldn't verify that this expense was submitted for a valid employee.
+
+
+
+
+2025-11-24 17:10:45 - src.agents.orchestrator - INFO - [no-session] - [3109c8ee-6739-484a-bf61-49ebc5f3c605] Chat response generated
+2025-11-24 17:10:45 - src.main - INFO - [no-session] - Request 33bb67d0 completed: 200 (22.81s)
+2025-11-24 17:10:50 - src.agents.llm_client - INFO - [no-session] - Received response from Ollama (length: 329)
+2025-11-24 17:10:50 - src.agents.llm_client - DEBUG - [no-session] - Response: The document was rejected because the employee, MOHIT, was not found in the travel proposal. The validation process flagged a policy violation: “Employee not found in proposal” and a low employee match confidence of 0.00. 
+
+Essentially, the system couldn't verify the employee's identity against the provided travel proposal.
+
+
+
+
+2025-11-24 17:10:50 - src.agents.orchestrator - INFO - [no-session] - [3109c8ee-6739-484a-bf61-49ebc5f3c605] Chat response generated
+2025-11-24 17:10:50 - src.main - INFO - [no-session] - Request fb763950 completed: 200 (27.93s)
+2025-11-24 17:10:50 - src.main - INFO - [no-session] - Request d5fc2b80: GET /health
+2025-11-24 17:10:50 - src.agents.llm_client - INFO - [no-session] - Health check passed: gemma3:27b is available
+2025-11-24 17:10:50 - src.agents.rules_rag.query_vectorstore - INFO - [no-session] - Retrieved 1 relevant rules for query
+2025-11-24 17:10:50 - src.agents.rules_rag.query_vectorstore - DEBUG - [no-session] - Query: test...
+2025-11-24 17:10:50 - src.main - INFO - [no-session] - Request d5fc2b80 completed: 200 (0.24s)

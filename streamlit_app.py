@@ -243,6 +243,89 @@ if st.button("🚀 Process & Validate", type="primary", use_container_width=True
             st.success("✅ Processing completed!")
             print(f"[LOG] All steps completed successfully")
 
+# Chat section - Ask questions about validation
+if st.session_state.validation_results and st.session_state.session_id:
+    st.markdown("---")
+    st.header("💬 Ask Questions About Your Validation")
+    
+    st.write("You can ask questions about the validation results, extracted data, or policies.")
+    
+    # Initialize chat history in session state
+    if 'chat_history' not in st.session_state:
+        st.session_state.chat_history = []
+    
+    # Example questions
+    with st.expander("💡 Example Questions"):
+        st.markdown("""
+        - Why was this document rejected?
+        - What is the maximum fare for my employee level?
+        - Where is the employee traveling to?
+        - What was the extracted fare amount?
+        - What policies were checked?
+        - What is the passenger name?
+        - When is the travel date?
+        """)
+    
+    # Chat input
+    user_question = st.text_input(
+        "Your question:",
+        placeholder="e.g., Why was my document rejected?",
+        key="chat_input"
+    )
+    
+    col_ask, col_clear = st.columns([3, 1])
+    
+    with col_ask:
+        if st.button("🤔 Ask", type="primary", use_container_width=True):
+            if user_question:
+                with st.spinner("Thinking..."):
+                    print(f"[LOG] Asking question: {user_question}")
+                    
+                    try:
+                        # Call chat API
+                        response = requests.post(
+                            f"{API_BASE_URL}/user-chat?session_id={st.session_state.session_id}",
+                            json={"question": user_question}
+                        )
+                        
+                        if response.status_code == 200:
+                            result = response.json()
+                            answer = result['answer']
+                            
+                            # Add to chat history
+                            st.session_state.chat_history.append({
+                                'question': user_question,
+                                'answer': answer
+                            })
+                            
+                            print(f"[LOG] Answer received: {len(answer)} chars")
+                            st.rerun()
+                        else:
+                            st.error(f"Chat request failed: {response.text}")
+                            print(f"[LOG ERROR] Chat failed: {response.text}")
+                    
+                    except Exception as e:
+                        st.error(f"Error: {str(e)}")
+                        print(f"[LOG ERROR] Chat exception: {str(e)}")
+            else:
+                st.warning("Please enter a question")
+    
+    with col_clear:
+        if st.button("🗑️ Clear", use_container_width=True):
+            st.session_state.chat_history = []
+            st.rerun()
+    
+    # Display chat history
+    if st.session_state.chat_history:
+        st.markdown("---")
+        st.subheader("💬 Chat History")
+        
+        for i, chat in enumerate(reversed(st.session_state.chat_history)):
+            with st.container():
+                st.markdown(f"**Q{len(st.session_state.chat_history) - i}:** {chat['question']}")
+                st.info(chat['answer'])
+                st.markdown("")
+
 # Display results (Summary Section - Details already shown above during processing)
 if st.session_state.validation_results:
     st.markdown("---")

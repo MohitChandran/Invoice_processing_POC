@@ -64,14 +64,16 @@ async def process_validation(
         
         logger.info(f"Processing validation: invoice={invoice_id}, proposal={proposal_id}, session={session_id}")
         
-        # Run orchestrator
+        # Run orchestrator (pass session_id if available)
         result = await orchestrator.process_validation(
             invoice_id=invoice_id,
-            proposal_id=proposal_id
+            proposal_id=proposal_id,
+            session_id=session_id
         )
         
-        # Add session_id to result
-        result["session_id"] = session_id
+        # Ensure session_id is in result (orchestrator should set it, but ensure it's there)
+        if session_id:
+            result["session_id"] = session_id
         
         logger.info(f"Validation completed: {result['validation_status']}")
         

@@ -13,7 +13,7 @@ import time
 import uuid
 
 from src.config.settings import settings
-from src.routes import upload_routes, process_routes, session_routes
+from src.routes import upload_routes, process_routes, session_routes, chat_routes
 from src.agents.llm_client import ollama_client
 
 
@@ -180,6 +180,7 @@ async def global_exception_handler(request: Request, exc: Exception):
 app.include_router(session_routes.router)
 app.include_router(upload_routes.router)
 app.include_router(process_routes.router)
+app.include_router(chat_routes.router)
 
 
 # Health check endpoint
@@ -193,7 +194,8 @@ async def root():
         "endpoints": {
             "upload_invoice": "/api/upload-invoice",
             "upload_proposal": "/api/upload-proposal",
-            "process_validation": "/api/process-validation"
+            "process_validation": "/api/process-validation",
+            "user_chat": "/api/user-chat"
         }
     }
 

@@ -1,0 +1,273 @@
+{
+  "dc647454-ac6b-41fd-8463-93107c379bdc": {
+    "session_id": "dc647454-ac6b-41fd-8463-93107c379bdc",
+    "created_at": 1763982907.2446811,
+    "status": "completed",
+    "steps": [
+      {
+        "step": "load_files",
+        "timestamp": 1763982907.2483444,
+        "data": {
+          "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_ba42c1fb5165.pdf",
+          "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_c489dd7623dc.xlsx"
+        }
+      },
+      {
+        "step": "extract_invoice",
+        "timestamp": 1763982927.1024976,
+        "data": {
+          "extracted_data": {
+            "passenger_name": "MOHIT",
+            "origin": "COIMBATORE",
+            "destination": "CHENNAI",
+            "travel_date": "2025-11-24",
+            "fare": 500.0,
+            "confidence": 0.98,
+            "notes": "All fields extracted clearly"
+          }
+        }
+      },
+      {
+        "step": "match_employee",
+        "timestamp": 1763982927.2213001,
+        "data": {
+          "employee_data": {
+            "match_found": true,
+            "employee_name": "Mohit",
+            "employee_level": "l1",
+            "fare_limit": 5000.0,
+            "match_confidence": 1.0,
+            "match_type": "exact",
+            "all_candidates": []
+          }
+        }
+      },
+      {
+        "step": "validate_policy",
+        "timestamp": 1763982939.3895242,
+        "data": {
+          "validation_result": {
+            "validation_status": "approved",
+            "confidence": 0.95,
+            "remarks": "Invoice fare is within the employee's level (L1) limit. Employee name matches with high confidence. No policy violations detected.",
+            "rules_applied": [
+              "Employee identification",
+              "Required invoice fields",
+              "Fare limit validation",
+              "Data quality check",
+              "Employee match quality"
+            ],
+            "violations": []
+          }
+        }
+      },
+      {
+        "step": "load_files",
+        "timestamp": 1763982979.9191039,
+        "data": {
+          "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_337c84eb8a33.pdf",
+          "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_cabc72e847df.xlsx"
+        }
+      },
+      {
+        "step": "extract_invoice",
+        "timestamp": 1763982998.2791834,
+        "data": {
+          "extracted_data": {
+            "passenger_name": "MOHIT",
+            "origin": "COIMBATORE",
+            "destination": "CHENNAI",
+            "travel_date": "2025-11-24",
+            "fare": 500.0,
+            "confidence": 0.98,
+            "notes": "All fields extracted clearly"
+          }
+        }
+      },
+      {
+        "step": "match_employee",
+        "timestamp": 1763982998.3356133,
+        "data": {
+          "employee_data": {
+            "match_found": false,
+            "employee_name": "MOHIT",
+            "employee_level": "unknown",
+            "fare_limit": 0.0,
+            "match_confidence": 0.0,
+            "match_type": "none",
+            "all_candidates": [],
+            "error": "No matching employee found in proposal"
+          }
+        }
+      },
+      {
+        "step": "validate_policy",
+        "timestamp": 1763982998.4982889,
+        "data": {
+          "validation_result": {
+            "validation_status": "rejected",
+            "confidence": 0.95,
+            "remarks": "Employee not found in travel proposal",
+            "rules_applied": [
+              "Employee identification",
+              "Required invoice fields",
+              "Fare limit validation",
+              "Data quality check",
+              "Employee match quality"
+            ],
+            "violations": [
+              "Employee not found in proposal",
+              "Low employee match confidence: 0.00"
+            ]
+          }
+        }
+      }
+    ],
+    "data": {
+      "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_337c84eb8a33.pdf",
+      "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_cabc72e847df.xlsx",
+      "extracted_data": {
+        "passenger_name": "MOHIT",
+        "origin": "COIMBATORE",
+        "destination": "CHENNAI",
+        "travel_date": "2025-11-24",
+        "fare": 500.0,
+        "confidence": 0.98,
+        "notes": "All fields extracted clearly"
+      },
+      "employee_data": {
+        "match_found": false,
+        "employee_name": "MOHIT",
+        "employee_level": "unknown",
+        "fare_limit": 0.0,
+        "match_confidence": 0.0,
+        "match_type": "none",
+        "all_candidates": [],
+        "error": "No matching employee found in proposal"
+      },
+      "validation_result": {
+        "validation_status": "rejected",
+        "confidence": 0.95,
+        "remarks": "Employee not found in travel proposal",
+        "rules_applied": [
+          "Employee identification",
+          "Required invoice fields",
+          "Fare limit validation",
+          "Data quality check",
+          "Employee match quality"
+        ],
+        "violations": [
+          "Employee not found in proposal",
+          "Low employee match confidence: 0.00"
+        ]
+      }
+    }
+  },
+  "3109c8ee-6739-484a-bf61-49ebc5f3c605": {
+    "session_id": "3109c8ee-6739-484a-bf61-49ebc5f3c605",
+    "created_at": 1763984389.4458997,
+    "status": "completed",
+    "steps": [
+      {
+        "step": "load_files",
+        "timestamp": 1763984389.4508839,
+        "data": {
+          "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_db4c3c467dc0.pdf",
+          "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_2c3699a5bda0.xlsx"
+        }
+      },
+      {
+        "step": "extract_invoice",
+        "timestamp": 1763984407.568725,
+        "data": {
+          "extracted_data": {
+            "passenger_name": "MOHIT",
+            "origin": "COIMBATORE",
+            "destination": "CHENNAI",
+            "travel_date": "2025-11-24",
+            "fare": 500.0,
+            "confidence": 0.98,
+            "notes": "All fields extracted clearly"
+          }
+        }
+      },
+      {
+        "step": "match_employee",
+        "timestamp": 1763984407.6802325,
+        "data": {
+          "employee_data": {
+            "match_found": false,
+            "employee_name": "MOHIT",
+            "employee_level": "unknown",
+            "fare_limit": 0.0,
+            "match_confidence": 0.0,
+            "match_type": "none",
+            "all_candidates": [],
+            "error": "No matching employee found in proposal"
+          }
+        }
+      },
+      {
+        "step": "validate_policy",
+        "timestamp": 1763984407.8414533,
+        "data": {
+          "validation_result": {
+            "validation_status": "rejected",
+            "confidence": 0.95,
+            "remarks": "Employee not found in travel proposal",
+            "rules_applied": [
+              "Employee identification",
+              "Required invoice fields",
+              "Fare limit validation",
+              "Data quality check",
+              "Employee match quality"
+            ],
+            "violations": [
+              "Employee not found in proposal",
+              "Low employee match confidence: 0.00"
+            ]
+          }
+        }
+      }
+    ],
+    "data": {
+      "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_db4c3c467dc0.pdf",
+      "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_2c3699a5bda0.xlsx",
+      "extracted_data": {
+        "passenger_name": "MOHIT",
+        "origin": "COIMBATORE",
+        "destination": "CHENNAI",
+        "travel_date": "2025-11-24",
+        "fare": 500.0,
+        "confidence": 0.98,
+        "notes": "All fields extracted clearly"
+      },
+      "employee_data": {
+        "match_found": false,
+        "employee_name": "MOHIT",
+        "employee_level": "unknown",
+        "fare_limit": 0.0,
+        "match_confidence": 0.0,
+        "match_type": "none",
+        "all_candidates": [],
+        "error": "No matching employee found in proposal"
+      },
+      "validation_result": {
+        "validation_status": "rejected",
+        "confidence": 0.95,
+        "remarks": "Employee not found in travel proposal",
+        "rules_applied": [
+          "Employee identification",
+          "Required invoice fields",
+          "Fare limit validation",
+          "Data quality check",
+          "Employee match quality"
+        ],
+        "violations": [
+          "Employee not found in proposal",
+          "Low employee match confidence: 0.00"
+        ]
+      }
+    }
+  }
+}
