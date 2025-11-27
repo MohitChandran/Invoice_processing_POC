@@ -14,7 +14,7 @@ class Settings(BaseSettings):
     """Application settings with environment variable support."""
     
     # Ollama Configuration
-    OLLAMA_URL: str = "http://192.168.10.200:11434"
+    OLLAMA_URL: str = "http://192.168.10.200:11434"  # Remote Ollama server
     MODEL_NAME: str = "gemma3:27b"  # Text LLM for policy validation
     VISION_MODEL: str = "gemma3:27b"  # Vision-Language Model for invoice extraction (supports vision!)
     LLM_TIMEOUT: int = 120  # seconds

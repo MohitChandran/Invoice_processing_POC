@@ -52,6 +52,83 @@ async def upload_invoice(file: UploadFile = File(...), session_id: str = Query(N
         raise HTTPException(status_code=500, detail=str(e))
 
 
+@router.post("/upload-invoices-batch")
+async def upload_invoices_batch(
+    files: list[UploadFile] = File(..., description="Multiple invoice files"),
+    session_id: str = Query(None, description="Optional session identifier")
+):
+    """
+    Upload multiple invoice files at once.
+    
+    Args:
+        files: List of invoice files (PDFs or images)
+        session_id: Optional session identifier
+        
+    Returns:
+        Dict with:
+            - total: Total number of files
+            - uploaded: Number successfully uploaded
+            - file_ids: List of file IDs
+            - results: Detailed results for each file
+    """
+    try:
+        logger.info(f"Received batch invoice upload: {len(files)} files (session: {session_id})")
+        print(f"\n📤 Uploading {len(files)} invoice files...")
+        
+        upload_results = []
+        file_ids = []
+        uploaded_count = 0
+        
+        for idx, file in enumerate(files, 1):
+            try:
+                if not file.filename:
+                    raise ValueError("Filename is required")
+                
+                # Save file
+                file_id, file_path = await file_storage.save_invoice(file)
+                file_ids.append(file_id)
+                uploaded_count += 1
+                
+                upload_results.append({
+                    'filename': file.filename,
+                    'file_id': file_id,
+                    'status': 'success',
+                    'index': idx
+                })
+                
+                print(f"✅ {idx}/{len(files)}: {file.filename} → {file_id}")
+                
+            except Exception as e:
+                logger.error(f"Failed to upload file {file.filename}: {str(e)}")
+                upload_results.append({
+                    'filename': file.filename,
+                    'file_id': None,
+                    'status': 'error',
+                    'error': str(e),
+                    'index': idx
+                })
+                print(f"❌ {idx}/{len(files)}: {file.filename} failed - {str(e)}")
+        
+        # Update session if provided
+        if session_id and file_ids:
+            session_routes.update_session(session_id, invoice_ids=file_ids)
+        
+        print(f"✅ Batch upload completed: {uploaded_count}/{len(files)} successful\n")
+        logger.info(f"Batch upload completed: {uploaded_count}/{len(files)}")
+        
+        return {
+            'total': len(files),
+            'uploaded': uploaded_count,
+            'failed': len(files) - uploaded_count,
+            'file_ids': file_ids,
+            'results': upload_results
+        }
+        
+    except Exception as e:
+        logger.error(f"Batch invoice upload failed: {str(e)}", exc_info=True)
+        raise HTTPException(status_code=500, detail=str(e))
+
+
 @router.post("/upload-proposal", response_model=UploadResponse)
 async def upload_proposal(file: UploadFile = File(...), session_id: str = Query(None)):
     """

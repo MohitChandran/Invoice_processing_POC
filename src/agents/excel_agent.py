@@ -17,6 +17,17 @@ logger = logging.getLogger(__name__)
 class ExcelAgent:
     """Agent for matching invoice data with Excel proposal."""
     
+    # Valid relations for approval
+    VALID_RELATIONS = [
+        'self',      # Primary employee
+        'wife',
+        'husband', 
+        'son',
+        'daughter',
+        'mother',
+        'father'
+    ]
+    
     def __init__(self):
         self.fuzzy_threshold = settings.FUZZY_MATCH_THRESHOLD
     
@@ -66,12 +77,17 @@ class ExcelAgent:
             
             if exact_match:
                 logger.info(f"{log_prefix}Found exact match")
-                return self._build_match_result(
+                
+                # Always build the match result first to extract all fields
+                result = self._build_match_result(
                     df=df,
                     matched_row=exact_match,
                     match_type='exact',
                     confidence=1.0
                 )
+                
+                # The _build_match_result already adds validation_error and auto_reject if needed
+                return result
             
             # Try fuzzy matching
             logger.info(f"{log_prefix}Exact match not found, trying fuzzy match...")
@@ -80,6 +96,11 @@ class ExcelAgent:
             if fuzzy_result['match_found']:
                 logger.info(f"{log_prefix}Found fuzzy match: {fuzzy_result['employee_name']} "
                           f"(confidence: {fuzzy_result['match_confidence']:.2f})")
+                
+                # Check if fuzzy result has auto_reject flag
+                if fuzzy_result.get('auto_reject'):
+                    logger.warning(f"{log_prefix}Fuzzy match rejected due to validation: {fuzzy_result.get('validation_error')}")
+                
                 return fuzzy_result
             
             # No match found
@@ -131,13 +152,20 @@ class ExcelAgent:
                     'all_candidates': []
                 }
             
-            # Perform fuzzy matching
-            matches = process.extract(target_name, all_names, scorer=fuzz.token_sort_ratio, limit=5)
+            # Normalize target name and all names to lowercase for case-insensitive matching
+            target_name_lower = target_name.lower()
+            all_names_lower = [name.lower() for name in all_names]
+            
+            # Perform fuzzy matching on lowercase names
+            matches = process.extract(target_name_lower, all_names_lower, scorer=fuzz.token_sort_ratio, limit=5)
             
             logger.debug(f"Fuzzy matches: {matches}")
             
-            # Check best match
-            best_match_name, best_score = matches[0]
+            # Check best match (map back to original name)
+            best_match_name_lower, best_score = matches[0]
+            # Find the original name from the lowercase match
+            best_match_index = all_names_lower.index(best_match_name_lower)
+            best_match_name = all_names[best_match_index]
             
             if best_score >= self.fuzzy_threshold:
                 # Good match found
@@ -148,10 +176,13 @@ class ExcelAgent:
                     ambiguous = False
                     candidates = []
                     
-                    for match_name, score in matches:
+                    for match_name_lower, score in matches:
                         if score >= self.fuzzy_threshold:
+                            # Map back to original name
+                            match_index = all_names_lower.index(match_name_lower)
+                            original_name = all_names[match_index]
                             candidates.append({
-                                'name': match_name,
+                                'name': original_name,
                                 'score': score / 100.0
                             })
                     
@@ -171,7 +202,13 @@ class ExcelAgent:
                     
                     return result
             
-            # No good match
+            # No good match - map lowercase names back to original
+            candidates_list = []
+            for match_name_lower, score in matches[:3]:
+                match_index = all_names_lower.index(match_name_lower)
+                original_name = all_names[match_index]
+                candidates_list.append({'name': original_name, 'score': score / 100.0})
+            
             return {
                 'match_found': False,
                 'employee_name': target_name,
@@ -179,7 +216,7 @@ class ExcelAgent:
                 'fare_limit': 0.0,
                 'match_confidence': best_score / 100.0,
                 'match_type': 'none',
-                'all_candidates': [{'name': m[0], 'score': m[1] / 100.0} for m in matches[:3]]
+                'all_candidates': candidates_list
             }
             
         except Exception as e:
@@ -250,6 +287,91 @@ class ExcelAgent:
                 # Use fallback based on level
                 fare_limit = self._get_default_fare_limit(employee_level)
             
+            # Extract relation_member (person name)
+            relation_member_col = None
+            for col in df.columns:
+                if 'relation_member' in col or 'member_name' in col or 'dependent_name' in col:
+                    relation_member_col = col
+                    break
+            
+            relation_member = 'N/A'
+            if relation_member_col and matched_row.get(relation_member_col):
+                relation_member = str(matched_row[relation_member_col]).strip()
+            
+            # Extract relation
+            relation_col = None
+            for col in df.columns:
+                if 'relation' in col and 'member' not in col:
+                    relation_col = col
+                    break
+            
+            relation = 'N/A'
+            if relation_col and matched_row.get(relation_col):
+                relation = str(matched_row[relation_col]).strip()
+            
+            # Extract status
+            status_col = None
+            for col in df.columns:
+                if 'status' in col:
+                    status_col = col
+                    break
+            
+            status = 'N/A'
+            if status_col and matched_row.get(status_col):
+                status = str(matched_row[status_col]).strip()
+            
+            # Extract travel details from Excel (NEW FIELDS)
+            # Extract 'from' location
+            from_col = None
+            for col in df.columns:
+                if col in ['from', 'origin', 'departure', 'source']:
+                    from_col = col
+                    break
+            
+            excel_from = 'N/A'
+            if from_col and matched_row.get(from_col):
+                excel_from = str(matched_row[from_col]).strip()
+            
+            # Extract 'to' location
+            to_col = None
+            for col in df.columns:
+                if col in ['to', 'destination', 'arrival']:
+                    to_col = col
+                    break
+            
+            excel_to = 'N/A'
+            if to_col and matched_row.get(to_col):
+                excel_to = str(matched_row[to_col]).strip()
+            
+            # Extract fare from Excel
+            fare_col = None
+            for col in df.columns:
+                if col == 'fare' or 'fare' in col and 'limit' not in col:
+                    fare_col = col
+                    break
+            
+            excel_fare = 0.0
+            if fare_col:
+                try:
+                    excel_fare = float(matched_row.get(fare_col, 0.0))
+                except (ValueError, TypeError):
+                    logger.warning(f"Could not parse fare: {matched_row.get(fare_col)}")
+                    excel_fare = 0.0
+            
+            # Extract mode of transport
+            mode_col = None
+            for col in df.columns:
+                if 'mode' in col or 'transport' in col or col == 'mode_of_transport':
+                    mode_col = col
+                    break
+            
+            excel_mode = 'N/A'
+            if mode_col and matched_row.get(mode_col):
+                excel_mode = str(matched_row[mode_col]).strip().lower()
+            
+            # Validate status and relation
+            validation_error = self._validate_employee_approval(matched_row)
+            
             result = {
                 'match_found': True,
                 'employee_name': employee_name,
@@ -257,8 +379,22 @@ class ExcelAgent:
                 'fare_limit': fare_limit,
                 'match_confidence': confidence,
                 'match_type': match_type,
-                'all_candidates': []
+                'all_candidates': [],
+                'relation_member': relation_member,
+                'relation': relation,
+                'status': status,
+                # Travel details from Excel for comparison
+                'excel_from': excel_from,
+                'excel_to': excel_to,
+                'excel_fare': excel_fare,
+                'excel_mode': excel_mode
             }
+            
+            # If validation failed, add error and rejection flag
+            if validation_error:
+                result['validation_error'] = validation_error
+                result['auto_reject'] = True
+                logger.warning(f"Match validation failed: {validation_error}")
             
             logger.debug(f"Built match result: {result}")
             
@@ -267,6 +403,162 @@ class ExcelAgent:
         except Exception as e:
             logger.error(f"Failed to build match result: {str(e)}", exc_info=True)
             raise
+    
+    def _validate_employee_approval(self, employee_row: Dict[str, Any], log_prefix: str = "") -> Optional[str]:
+        """
+        Validate employee status and relation before processing.
+        
+        Args:
+            employee_row: Employee data from Excel
+            log_prefix: Logging prefix
+            
+        Returns:
+            Error message if validation fails, None if valid
+        """
+        # Criteria 2: Check status column
+        status_col = None
+        for col in ['status', 'approval_status', 'employee_status']:
+            if col in employee_row:
+                status_col = col
+                break
+        
+        if status_col:
+            status_value = str(employee_row.get(status_col, '')).strip().lower()
+            if status_value not in ['approved', 'approve', 'active']:
+                logger.warning(f"{log_prefix}Employee status is '{status_value}' (not approved)")
+                return f"Employee status is '{status_value}'. Only approved employees can proceed."
+        
+        # Criteria 1: Check relation column
+        relation_col = None
+        for col in ['relation', 'relationship', 'relation_type']:
+            if col in employee_row:
+                relation_col = col
+                break
+        
+        if relation_col:
+            relation_value = str(employee_row.get(relation_col, '')).strip().lower()
+            
+            # Normalize relation value
+            valid_relations_lower = [r.lower() for r in self.VALID_RELATIONS]
+            
+            if relation_value and relation_value not in valid_relations_lower:
+                logger.warning(f"{log_prefix}Invalid relation: '{relation_value}'. Valid: {self.VALID_RELATIONS}")
+                return f"Relation '{relation_value}' is not valid. Must be one of: {', '.join(self.VALID_RELATIONS)}"
+        
+        # All validations passed
+        return None
+    
+    def compare_invoice_with_excel(
+        self,
+        invoice_data: Dict[str, Any],
+        excel_data: Dict[str, Any],
+        log_prefix: str = ""
+    ) -> Dict[str, Any]:
+        """
+        Compare extracted invoice data with Excel row data.
+        
+        Args:
+            invoice_data: Data extracted from invoice (from extraction_agent)
+            excel_data: Data from Excel row (from find_employee_match)
+            log_prefix: Logging prefix
+            
+        Returns:
+            Dict with:
+                - matches: bool (all fields match)
+                - mismatches: List[str] (list of mismatched fields with details)
+                - comparison_details: Dict (field-by-field comparison)
+        """
+        try:
+            mismatches = []
+            comparison_details = {}
+            
+            # Compare origin/from
+            invoice_from = str(invoice_data.get('origin', '')).strip().lower()
+            excel_from = str(excel_data.get('excel_from', '')).strip().lower()
+            
+            from_match = invoice_from == excel_from or excel_from == 'n/a'
+            comparison_details['from'] = {
+                'invoice': invoice_from,
+                'excel': excel_from,
+                'match': from_match
+            }
+            
+            if not from_match:
+                mismatches.append(f"Origin mismatch: Invoice='{invoice_from}' vs Excel='{excel_from}'")
+            
+            # Compare destination/to
+            invoice_to = str(invoice_data.get('destination', '')).strip().lower()
+            excel_to = str(excel_data.get('excel_to', '')).strip().lower()
+            
+            to_match = invoice_to == excel_to or excel_to == 'n/a'
+            comparison_details['to'] = {
+                'invoice': invoice_to,
+                'excel': excel_to,
+                'match': to_match
+            }
+            
+            if not to_match:
+                mismatches.append(f"Destination mismatch: Invoice='{invoice_to}' vs Excel='{excel_to}'")
+            
+            # Compare fare
+            invoice_fare = float(invoice_data.get('fare', 0.0))
+            excel_fare = float(excel_data.get('excel_fare', 0.0))
+            
+            # Allow small difference (up to 1 rupee for rounding)
+            fare_match = abs(invoice_fare - excel_fare) <= 1.0 or excel_fare == 0.0
+            comparison_details['fare'] = {
+                'invoice': invoice_fare,
+                'excel': excel_fare,
+                'match': fare_match
+            }
+            
+            if not fare_match:
+                mismatches.append(f"Fare mismatch: Invoice=₹{invoice_fare} vs Excel=₹{excel_fare}")
+            
+            # Compare mode of transport
+            invoice_mode = str(invoice_data.get('mode_of_transport', '')).strip().lower()
+            excel_mode = str(excel_data.get('excel_mode', '')).strip().lower()
+            
+            # Skip mode comparison if invoice doesn't have mode (extraction failed)
+            if invoice_mode in ['unknown', '', 'n/a']:
+                mode_match = True  # Don't reject if mode not extracted
+                logger.info(f"{log_prefix}Mode comparison skipped (invoice mode not extracted)")
+            else:
+                mode_match = invoice_mode == excel_mode or excel_mode == 'n/a'
+            
+            comparison_details['mode'] = {
+                'invoice': invoice_mode,
+                'excel': excel_mode,
+                'match': mode_match,
+                'skipped': invoice_mode in ['unknown', '', 'n/a']
+            }
+            
+            if not mode_match:
+                mismatches.append(f"Mode mismatch: Invoice='{invoice_mode}' vs Excel='{excel_mode}'")
+            
+            # Overall result
+            all_match = len(mismatches) == 0
+            
+            result = {
+                'matches': all_match,
+                'mismatches': mismatches,
+                'comparison_details': comparison_details
+            }
+            
+            if mismatches:
+                logger.warning(f"{log_prefix}Data comparison failed: {', '.join(mismatches)}")
+            else:
+                logger.info(f"{log_prefix}Invoice data matches Excel data")
+            
+            return result
+            
+        except Exception as e:
+            logger.error(f"{log_prefix}Comparison failed: {str(e)}", exc_info=True)
+            return {
+                'matches': False,
+                'mismatches': [f"Comparison error: {str(e)}"],
+                'comparison_details': {}
+            }
     
     def _get_default_fare_limit(self, employee_level: str) -> float:
         """

@@ -269,5 +269,5505 @@
         ]
       }
     }
+  },
+  "87f4994c-cf05-4fef-b82d-07f553392931": {
+    "session_id": "87f4994c-cf05-4fef-b82d-07f553392931",
+    "created_at": 1764061630.8729439,
+    "status": "active",
+    "steps": [
+      {
+        "step": "load_files",
+        "timestamp": 1764061630.8841035,
+        "data": {
+          "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_7d7d6d98ecf4.pdf",
+          "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_726f7326c9c0.xlsx"
+        }
+      }
+    ],
+    "data": {
+      "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_7d7d6d98ecf4.pdf",
+      "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_726f7326c9c0.xlsx"
+    }
+  },
+  "437ce55a-6d96-4d34-a209-61d0613445f8": {
+    "session_id": "437ce55a-6d96-4d34-a209-61d0613445f8",
+    "created_at": 1764061790.4985583,
+    "status": "completed",
+    "steps": [
+      {
+        "step": "load_files",
+        "timestamp": 1764061790.5040274,
+        "data": {
+          "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_b4914038b70e.pdf",
+          "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_6c1d2390eda5.xlsx"
+        }
+      },
+      {
+        "step": "extract_invoice",
+        "timestamp": 1764061813.8506827,
+        "data": {
+          "extracted_data": {
+            "passenger_name": "MOHIT",
+            "origin": "COIMBATORE",
+            "destination": "CHENNAI",
+            "travel_date": "2025-11-24",
+            "fare": 500.0,
+            "confidence": 0.98,
+            "notes": "All fields extracted clearly"
+          }
+        }
+      },
+      {
+        "step": "match_employee",
+        "timestamp": 1764061814.019043,
+        "data": {
+          "employee_data": {
+            "match_found": true,
+            "employee_name": "Mohit",
+            "employee_level": "l1",
+            "fare_limit": 5000.0,
+            "match_confidence": 1.0,
+            "match_type": "exact",
+            "all_candidates": []
+          }
+        }
+      },
+      {
+        "step": "validate_policy",
+        "timestamp": 1764061826.5498977,
+        "data": {
+          "validation_result": {
+            "validation_status": "approved",
+            "confidence": 0.95,
+            "remarks": "Invoice fare is within the employee's level (L1) limit. Employee name matches with high confidence. No policy violations detected. All required fields appear valid.",
+            "rules_applied": [
+              "Employee identification",
+              "Required invoice fields",
+              "Fare limit validation",
+              "Data quality check",
+              "Employee match quality"
+            ],
+            "violations": []
+          }
+        }
+      }
+    ],
+    "data": {
+      "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_b4914038b70e.pdf",
+      "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_6c1d2390eda5.xlsx",
+      "extracted_data": {
+        "passenger_name": "MOHIT",
+        "origin": "COIMBATORE",
+        "destination": "CHENNAI",
+        "travel_date": "2025-11-24",
+        "fare": 500.0,
+        "confidence": 0.98,
+        "notes": "All fields extracted clearly"
+      },
+      "employee_data": {
+        "match_found": true,
+        "employee_name": "Mohit",
+        "employee_level": "l1",
+        "fare_limit": 5000.0,
+        "match_confidence": 1.0,
+        "match_type": "exact",
+        "all_candidates": []
+      },
+      "validation_result": {
+        "validation_status": "approved",
+        "confidence": 0.95,
+        "remarks": "Invoice fare is within the employee's level (L1) limit. Employee name matches with high confidence. No policy violations detected. All required fields appear valid.",
+        "rules_applied": [
+          "Employee identification",
+          "Required invoice fields",
+          "Fare limit validation",
+          "Data quality check",
+          "Employee match quality"
+        ],
+        "violations": []
+      }
+    }
+  },
+  "c02b4b5e-68d9-4278-b324-152d3915eadf": {
+    "session_id": "c02b4b5e-68d9-4278-b324-152d3915eadf",
+    "created_at": 1764158518.6931958,
+    "status": "completed",
+    "steps": [
+      {
+        "step": "load_files",
+        "timestamp": 1764158518.69832,
+        "data": {
+          "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_6d903c7b73c9.pdf",
+          "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_7bc98c866306.xlsx"
+        }
+      },
+      {
+        "step": "extract_invoice",
+        "timestamp": 1764158542.1658123,
+        "data": {
+          "extracted_data": {
+            "passenger_name": "MOHIT",
+            "origin": "COIMBATORE",
+            "destination": "CHENNAI",
+            "travel_date": "2025-11-24",
+            "fare": 500.0,
+            "confidence": 0.98,
+            "notes": "All fields extracted clearly"
+          }
+        }
+      },
+      {
+        "step": "match_employee",
+        "timestamp": 1764158542.2946112,
+        "data": {
+          "employee_data": {
+            "match_found": true,
+            "employee_name": "Mohit",
+            "employee_level": "l1",
+            "fare_limit": 5000.0,
+            "match_confidence": 1.0,
+            "match_type": "exact",
+            "all_candidates": [],
+            "relation_member": "tony",
+            "relation": "father",
+            "status": "approved"
+          }
+        }
+      },
+      {
+        "step": "validate_policy",
+        "timestamp": 1764158555.066898,
+        "data": {
+          "validation_result": {
+            "validation_status": "approved",
+            "confidence": 0.95,
+            "remarks": "Invoice fare is within the employee's level (L1) limit. Employee name matches with high confidence. No policy violations detected. All required fields appear valid.",
+            "rules_applied": [
+              "Employee identification",
+              "Required invoice fields",
+              "Fare limit validation",
+              "Data quality check",
+              "Employee match quality"
+            ],
+            "violations": []
+          }
+        }
+      }
+    ],
+    "data": {
+      "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_6d903c7b73c9.pdf",
+      "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_7bc98c866306.xlsx",
+      "extracted_data": {
+        "passenger_name": "MOHIT",
+        "origin": "COIMBATORE",
+        "destination": "CHENNAI",
+        "travel_date": "2025-11-24",
+        "fare": 500.0,
+        "confidence": 0.98,
+        "notes": "All fields extracted clearly"
+      },
+      "employee_data": {
+        "match_found": true,
+        "employee_name": "Mohit",
+        "employee_level": "l1",
+        "fare_limit": 5000.0,
+        "match_confidence": 1.0,
+        "match_type": "exact",
+        "all_candidates": [],
+        "relation_member": "tony",
+        "relation": "father",
+        "status": "approved"
+      },
+      "validation_result": {
+        "validation_status": "approved",
+        "confidence": 0.95,
+        "remarks": "Invoice fare is within the employee's level (L1) limit. Employee name matches with high confidence. No policy violations detected. All required fields appear valid.",
+        "rules_applied": [
+          "Employee identification",
+          "Required invoice fields",
+          "Fare limit validation",
+          "Data quality check",
+          "Employee match quality"
+        ],
+        "violations": []
+      }
+    }
+  },
+  "fb6fd9a8-7ed3-4592-a4b4-7ae5aa6dc213": {
+    "session_id": "fb6fd9a8-7ed3-4592-a4b4-7ae5aa6dc213",
+    "created_at": 1764158599.6107435,
+    "status": "completed",
+    "steps": [
+      {
+        "step": "load_files",
+        "timestamp": 1764158599.6182323,
+        "data": {
+          "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_163315230a23.pdf",
+          "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_dc8a4fa1aa4d.xlsx"
+        }
+      },
+      {
+        "step": "extract_invoice",
+        "timestamp": 1764158618.042479,
+        "data": {
+          "extracted_data": {
+            "passenger_name": "MOHIT",
+            "origin": "COIMBATORE",
+            "destination": "CHENNAI",
+            "travel_date": "2025-11-24",
+            "fare": 500.0,
+            "confidence": 0.98,
+            "notes": "All fields extracted clearly"
+          }
+        }
+      },
+      {
+        "step": "match_employee",
+        "timestamp": 1764158618.0775282,
+        "data": {
+          "employee_data": {
+            "match_found": true,
+            "employee_name": "MOHIT",
+            "employee_level": "unknown",
+            "fare_limit": 0.0,
+            "match_confidence": 1.0,
+            "match_type": "exact",
+            "all_candidates": [],
+            "validation_error": "Relation 'girlfriend' is not valid. Must be one of: wife, husband, son, daughter, mother, father",
+            "auto_reject": true
+          }
+        }
+      },
+      {
+        "step": "auto_reject",
+        "timestamp": 1764158618.0788748,
+        "data": {
+          "validation_result": {
+            "name": "MOHIT",
+            "from": "COIMBATORE",
+            "to": "CHENNAI",
+            "date": "2025-11-24",
+            "fare": 500.0,
+            "employee_name": "MOHIT",
+            "employee_level": "unknown",
+            "fare_limit": 0.0,
+            "relation_member": "N/A",
+            "relation": "N/A",
+            "status": "N/A",
+            "validation_status": "rejected",
+            "validation_confidence": 1.0,
+            "remarks": "Relation 'girlfriend' is not valid. Must be one of: wife, husband, son, daughter, mother, father",
+            "violations": [
+              "Relation 'girlfriend' is not valid. Must be one of: wife, husband, son, daughter, mother, father"
+            ],
+            "rules_applied": [
+              "Employee status check",
+              "Relation validation"
+            ],
+            "session_id": "fb6fd9a8-7ed3-4592-a4b4-7ae5aa6dc213"
+          }
+        }
+      }
+    ],
+    "data": {
+      "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_163315230a23.pdf",
+      "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_dc8a4fa1aa4d.xlsx",
+      "extracted_data": {
+        "passenger_name": "MOHIT",
+        "origin": "COIMBATORE",
+        "destination": "CHENNAI",
+        "travel_date": "2025-11-24",
+        "fare": 500.0,
+        "confidence": 0.98,
+        "notes": "All fields extracted clearly"
+      },
+      "employee_data": {
+        "match_found": true,
+        "employee_name": "MOHIT",
+        "employee_level": "unknown",
+        "fare_limit": 0.0,
+        "match_confidence": 1.0,
+        "match_type": "exact",
+        "all_candidates": [],
+        "validation_error": "Relation 'girlfriend' is not valid. Must be one of: wife, husband, son, daughter, mother, father",
+        "auto_reject": true
+      },
+      "validation_result": {
+        "name": "MOHIT",
+        "from": "COIMBATORE",
+        "to": "CHENNAI",
+        "date": "2025-11-24",
+        "fare": 500.0,
+        "employee_name": "MOHIT",
+        "employee_level": "unknown",
+        "fare_limit": 0.0,
+        "relation_member": "N/A",
+        "relation": "N/A",
+        "status": "N/A",
+        "validation_status": "rejected",
+        "validation_confidence": 1.0,
+        "remarks": "Relation 'girlfriend' is not valid. Must be one of: wife, husband, son, daughter, mother, father",
+        "violations": [
+          "Relation 'girlfriend' is not valid. Must be one of: wife, husband, son, daughter, mother, father"
+        ],
+        "rules_applied": [
+          "Employee status check",
+          "Relation validation"
+        ],
+        "session_id": "fb6fd9a8-7ed3-4592-a4b4-7ae5aa6dc213"
+      }
+    }
+  },
+  "6558206a-64e5-44ce-b1ee-a90bcdbe4bd4": {
+    "session_id": "6558206a-64e5-44ce-b1ee-a90bcdbe4bd4",
+    "created_at": 1764159982.2013204,
+    "status": "completed",
+    "steps": [
+      {
+        "step": "load_files",
+        "timestamp": 1764159982.220393,
+        "data": {
+          "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_7f5e21864d0b.pdf",
+          "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_0af7adb091bd.xlsx"
+        }
+      },
+      {
+        "step": "extract_invoice",
+        "timestamp": 1764160010.141358,
+        "data": {
+          "extracted_data": {
+            "passenger_name": "MOHIT",
+            "origin": "COIMBATORE",
+            "destination": "CHENNAI",
+            "travel_date": "2025-11-24",
+            "fare": 500.0,
+            "confidence": 0.98,
+            "notes": "All fields extracted clearly"
+          }
+        }
+      },
+      {
+        "step": "match_employee",
+        "timestamp": 1764160010.3145416,
+        "data": {
+          "employee_data": {
+            "match_found": false,
+            "employee_name": "MOHIT",
+            "employee_level": "unknown",
+            "fare_limit": 0.0,
+            "match_confidence": 0.0,
+            "match_type": "none",
+            "all_candidates": [],
+            "error": "No matching employee found in proposal"
+          }
+        }
+      },
+      {
+        "step": "validate_policy",
+        "timestamp": 1764160010.6677816,
+        "data": {
+          "validation_result": {
+            "validation_status": "rejected",
+            "confidence": 0.95,
+            "remarks": "Employee not found in travel proposal",
+            "rules_applied": [
+              "Employee identification",
+              "Required invoice fields",
+              "Fare limit validation",
+              "Data quality check",
+              "Employee match quality"
+            ],
+            "violations": [
+              "Employee not found in proposal",
+              "Low employee match confidence: 0.00"
+            ]
+          }
+        }
+      },
+      {
+        "step": "load_files",
+        "timestamp": 1764160119.8579025,
+        "data": {
+          "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_d3b9fffe681a.pdf",
+          "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_8c09daa42e8a.xlsx"
+        }
+      },
+      {
+        "step": "extract_invoice",
+        "timestamp": 1764160138.1992142,
+        "data": {
+          "extracted_data": {
+            "passenger_name": "MOHIT",
+            "origin": "COIMBATORE",
+            "destination": "CHENNAI",
+            "travel_date": "2025-11-24",
+            "fare": 500.0,
+            "confidence": 0.98,
+            "notes": "All fields extracted clearly"
+          }
+        }
+      },
+      {
+        "step": "match_employee",
+        "timestamp": 1764160138.2502427,
+        "data": {
+          "employee_data": {
+            "match_found": true,
+            "employee_name": "MOHIT",
+            "employee_level": "unknown",
+            "fare_limit": 0.0,
+            "match_confidence": 1.0,
+            "match_type": "exact",
+            "all_candidates": [],
+            "validation_error": "Relation 'girlfriend' is not valid. Must be one of: wife, husband, son, daughter, mother, father",
+            "auto_reject": true
+          }
+        }
+      },
+      {
+        "step": "auto_reject",
+        "timestamp": 1764160138.2516925,
+        "data": {
+          "validation_result": {
+            "name": "MOHIT",
+            "from": "COIMBATORE",
+            "to": "CHENNAI",
+            "date": "2025-11-24",
+            "fare": 500.0,
+            "confidence": 1.0,
+            "employee_name": "MOHIT",
+            "employee_level": "unknown",
+            "fare_limit": 0.0,
+            "relation_member": "N/A",
+            "relation": "N/A",
+            "status": "N/A",
+            "validation_status": "rejected",
+            "remarks": "Relation 'girlfriend' is not valid. Must be one of: wife, husband, son, daughter, mother, father",
+            "violations": [
+              "Relation 'girlfriend' is not valid. Must be one of: wife, husband, son, daughter, mother, father"
+            ],
+            "rules_applied": [
+              "Employee status check",
+              "Relation validation"
+            ],
+            "session_id": "6558206a-64e5-44ce-b1ee-a90bcdbe4bd4"
+          }
+        }
+      },
+      {
+        "step": "load_files",
+        "timestamp": 1764160216.9170218,
+        "data": {
+          "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_5eba211127f6.pdf",
+          "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_812e2a31b1bd.xlsx"
+        }
+      },
+      {
+        "step": "extract_invoice",
+        "timestamp": 1764160235.4024756,
+        "data": {
+          "extracted_data": {
+            "passenger_name": "MOHIT",
+            "origin": "COIMBATORE",
+            "destination": "CHENNAI",
+            "travel_date": "2025-11-24",
+            "fare": 500.0,
+            "confidence": 0.98,
+            "notes": "All fields extracted clearly"
+          }
+        }
+      },
+      {
+        "step": "match_employee",
+        "timestamp": 1764160235.4502866,
+        "data": {
+          "employee_data": {
+            "match_found": true,
+            "employee_name": "Mohit",
+            "employee_level": "l1",
+            "fare_limit": 5000.0,
+            "match_confidence": 1.0,
+            "match_type": "exact",
+            "all_candidates": [],
+            "relation_member": "sanjana",
+            "relation": "mother",
+            "status": "approved"
+          }
+        }
+      },
+      {
+        "step": "validate_policy",
+        "timestamp": 1764160248.3983102,
+        "data": {
+          "validation_result": {
+            "validation_status": "approved",
+            "confidence": 0.95,
+            "remarks": "Invoice fare is within the employee's level (L1) limit. Employee name matches with high confidence. No policy violations detected. All required fields appear valid.",
+            "rules_applied": [
+              "Employee identification",
+              "Required invoice fields",
+              "Fare limit validation",
+              "Data quality check",
+              "Employee match quality"
+            ],
+            "violations": []
+          }
+        }
+      },
+      {
+        "step": "load_files",
+        "timestamp": 1764160288.0023606,
+        "data": {
+          "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_9a3044cfaf45.pdf",
+          "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_6f24bfeb7cbd.xlsx"
+        }
+      },
+      {
+        "step": "extract_invoice",
+        "timestamp": 1764160308.4680984,
+        "data": {
+          "extracted_data": {
+            "passenger_name": "MOHIT",
+            "origin": "COIMBATORE",
+            "destination": "CHENNAI",
+            "travel_date": "2025-11-24",
+            "fare": 500.0,
+            "confidence": 0.98,
+            "notes": "All fields extracted clearly"
+          }
+        }
+      },
+      {
+        "step": "match_employee",
+        "timestamp": 1764160308.5105572,
+        "data": {
+          "employee_data": {
+            "match_found": true,
+            "employee_name": "MOHIT",
+            "employee_level": "unknown",
+            "fare_limit": 0.0,
+            "match_confidence": 1.0,
+            "match_type": "exact",
+            "all_candidates": [],
+            "validation_error": "Employee status is 'rejected'. Only approved employees can proceed.",
+            "auto_reject": true
+          }
+        }
+      },
+      {
+        "step": "auto_reject",
+        "timestamp": 1764160308.5125387,
+        "data": {
+          "validation_result": {
+            "name": "MOHIT",
+            "from": "COIMBATORE",
+            "to": "CHENNAI",
+            "date": "2025-11-24",
+            "fare": 500.0,
+            "confidence": 1.0,
+            "employee_name": "MOHIT",
+            "employee_level": "unknown",
+            "fare_limit": 0.0,
+            "relation_member": "N/A",
+            "relation": "N/A",
+            "status": "N/A",
+            "validation_status": "rejected",
+            "remarks": "Employee status is 'rejected'. Only approved employees can proceed.",
+            "violations": [
+              "Employee status is 'rejected'. Only approved employees can proceed."
+            ],
+            "rules_applied": [
+              "Employee status check",
+              "Relation validation"
+            ],
+            "session_id": "6558206a-64e5-44ce-b1ee-a90bcdbe4bd4"
+          }
+        }
+      }
+    ],
+    "data": {
+      "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_9a3044cfaf45.pdf",
+      "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_6f24bfeb7cbd.xlsx",
+      "extracted_data": {
+        "passenger_name": "MOHIT",
+        "origin": "COIMBATORE",
+        "destination": "CHENNAI",
+        "travel_date": "2025-11-24",
+        "fare": 500.0,
+        "confidence": 0.98,
+        "notes": "All fields extracted clearly"
+      },
+      "employee_data": {
+        "match_found": true,
+        "employee_name": "MOHIT",
+        "employee_level": "unknown",
+        "fare_limit": 0.0,
+        "match_confidence": 1.0,
+        "match_type": "exact",
+        "all_candidates": [],
+        "validation_error": "Employee status is 'rejected'. Only approved employees can proceed.",
+        "auto_reject": true
+      },
+      "validation_result": {
+        "name": "MOHIT",
+        "from": "COIMBATORE",
+        "to": "CHENNAI",
+        "date": "2025-11-24",
+        "fare": 500.0,
+        "confidence": 1.0,
+        "employee_name": "MOHIT",
+        "employee_level": "unknown",
+        "fare_limit": 0.0,
+        "relation_member": "N/A",
+        "relation": "N/A",
+        "status": "N/A",
+        "validation_status": "rejected",
+        "remarks": "Employee status is 'rejected'. Only approved employees can proceed.",
+        "violations": [
+          "Employee status is 'rejected'. Only approved employees can proceed."
+        ],
+        "rules_applied": [
+          "Employee status check",
+          "Relation validation"
+        ],
+        "session_id": "6558206a-64e5-44ce-b1ee-a90bcdbe4bd4"
+      }
+    }
+  },
+  "690a3e37-fb7a-4b36-9eac-4636469f9fc4": {
+    "session_id": "690a3e37-fb7a-4b36-9eac-4636469f9fc4",
+    "created_at": 1764160846.2182226,
+    "status": "completed",
+    "steps": [
+      {
+        "step": "load_files",
+        "timestamp": 1764160846.230956,
+        "data": {
+          "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_f9571a61094f.pdf",
+          "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_aead852f64ba.xlsx"
+        }
+      },
+      {
+        "step": "extract_invoice",
+        "timestamp": 1764160869.0737464,
+        "data": {
+          "extracted_data": {
+            "passenger_name": "MOHIT",
+            "origin": "COIMBATORE",
+            "destination": "CHENNAI",
+            "travel_date": "2025-11-24",
+            "fare": 500.0,
+            "confidence": 0.98,
+            "notes": "All fields extracted clearly"
+          }
+        }
+      },
+      {
+        "step": "match_employee",
+        "timestamp": 1764160869.1924326,
+        "data": {
+          "employee_data": {
+            "match_found": true,
+            "employee_name": "Mohit",
+            "employee_level": "l1",
+            "fare_limit": 5000.0,
+            "match_confidence": 1.0,
+            "match_type": "exact",
+            "all_candidates": [],
+            "relation_member": "sanjana",
+            "relation": "mother",
+            "status": "rejected",
+            "validation_error": "Employee status is 'rejected'. Only approved employees can proceed.",
+            "auto_reject": true
+          }
+        }
+      },
+      {
+        "step": "auto_reject",
+        "timestamp": 1764160869.1941898,
+        "data": {
+          "validation_result": {
+            "name": "MOHIT",
+            "from": "COIMBATORE",
+            "to": "CHENNAI",
+            "date": "2025-11-24",
+            "fare": 500.0,
+            "confidence": 1.0,
+            "employee_name": "Mohit",
+            "employee_level": "l1",
+            "fare_limit": 5000.0,
+            "relation_member": "sanjana",
+            "relation": "mother",
+            "status": "rejected",
+            "validation_status": "rejected",
+            "remarks": "Employee status is 'rejected'. Only approved employees can proceed.",
+            "violations": [
+              "Employee status is 'rejected'. Only approved employees can proceed."
+            ],
+            "rules_applied": [
+              "Employee status check",
+              "Relation validation"
+            ],
+            "session_id": "690a3e37-fb7a-4b36-9eac-4636469f9fc4"
+          }
+        }
+      },
+      {
+        "step": "load_files",
+        "timestamp": 1764160902.590638,
+        "data": {
+          "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_e9accc0acd9b.pdf",
+          "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_ab8ee378fdc4.xlsx"
+        }
+      },
+      {
+        "step": "extract_invoice",
+        "timestamp": 1764160921.8068576,
+        "data": {
+          "extracted_data": {
+            "passenger_name": "MOHIT",
+            "origin": "COIMBATORE",
+            "destination": "CHENNAI",
+            "travel_date": "2025-11-24",
+            "fare": 500.0,
+            "confidence": 0.98,
+            "notes": "All fields extracted clearly"
+          }
+        }
+      },
+      {
+        "step": "match_employee",
+        "timestamp": 1764160921.8412921,
+        "data": {
+          "employee_data": {
+            "match_found": true,
+            "employee_name": "Mohit",
+            "employee_level": "l1",
+            "fare_limit": 5000.0,
+            "match_confidence": 1.0,
+            "match_type": "exact",
+            "all_candidates": [],
+            "relation_member": "sanjana",
+            "relation": "mother",
+            "status": "approved"
+          }
+        }
+      },
+      {
+        "step": "validate_policy",
+        "timestamp": 1764160934.7020996,
+        "data": {
+          "validation_result": {
+            "validation_status": "approved",
+            "confidence": 0.95,
+            "remarks": "Invoice fare is within the employee's level (L1) limit. Employee name matches with high confidence. No policy violations detected. Extraction confidence is high.",
+            "rules_applied": [
+              "Employee identification",
+              "Required invoice fields",
+              "Fare limit validation",
+              "Data quality check",
+              "Employee match quality"
+            ],
+            "violations": []
+          }
+        }
+      },
+      {
+        "step": "load_files",
+        "timestamp": 1764160995.92711,
+        "data": {
+          "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_5a4cbe0cf05a.pdf",
+          "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_5d8575416a00.xlsx"
+        }
+      },
+      {
+        "step": "extract_invoice",
+        "timestamp": 1764161014.1015027,
+        "data": {
+          "extracted_data": {
+            "passenger_name": "MOHIT",
+            "origin": "COIMBATORE",
+            "destination": "CHENNAI",
+            "travel_date": "2025-11-24",
+            "fare": 500.0,
+            "confidence": 0.98,
+            "notes": "All fields extracted clearly"
+          }
+        }
+      },
+      {
+        "step": "match_employee",
+        "timestamp": 1764161014.141286,
+        "data": {
+          "employee_data": {
+            "match_found": true,
+            "employee_name": "Mohit",
+            "employee_level": "l1",
+            "fare_limit": 5000.0,
+            "match_confidence": 1.0,
+            "match_type": "exact",
+            "all_candidates": [],
+            "relation_member": "sanjana",
+            "relation": "Girlfriend",
+            "status": "approved",
+            "validation_error": "Relation 'girlfriend' is not valid. Must be one of: wife, husband, son, daughter, mother, father",
+            "auto_reject": true
+          }
+        }
+      },
+      {
+        "step": "auto_reject",
+        "timestamp": 1764161014.1433237,
+        "data": {
+          "validation_result": {
+            "name": "MOHIT",
+            "from": "COIMBATORE",
+            "to": "CHENNAI",
+            "date": "2025-11-24",
+            "fare": 500.0,
+            "confidence": 1.0,
+            "employee_name": "Mohit",
+            "employee_level": "l1",
+            "fare_limit": 5000.0,
+            "relation_member": "sanjana",
+            "relation": "Girlfriend",
+            "status": "approved",
+            "validation_status": "rejected",
+            "remarks": "Relation 'girlfriend' is not valid. Must be one of: wife, husband, son, daughter, mother, father",
+            "violations": [
+              "Relation 'girlfriend' is not valid. Must be one of: wife, husband, son, daughter, mother, father"
+            ],
+            "rules_applied": [
+              "Employee status check",
+              "Relation validation"
+            ],
+            "session_id": "690a3e37-fb7a-4b36-9eac-4636469f9fc4"
+          }
+        }
+      }
+    ],
+    "data": {
+      "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_5a4cbe0cf05a.pdf",
+      "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_5d8575416a00.xlsx",
+      "extracted_data": {
+        "passenger_name": "MOHIT",
+        "origin": "COIMBATORE",
+        "destination": "CHENNAI",
+        "travel_date": "2025-11-24",
+        "fare": 500.0,
+        "confidence": 0.98,
+        "notes": "All fields extracted clearly"
+      },
+      "employee_data": {
+        "match_found": true,
+        "employee_name": "Mohit",
+        "employee_level": "l1",
+        "fare_limit": 5000.0,
+        "match_confidence": 1.0,
+        "match_type": "exact",
+        "all_candidates": [],
+        "relation_member": "sanjana",
+        "relation": "Girlfriend",
+        "status": "approved",
+        "validation_error": "Relation 'girlfriend' is not valid. Must be one of: wife, husband, son, daughter, mother, father",
+        "auto_reject": true
+      },
+      "validation_result": {
+        "name": "MOHIT",
+        "from": "COIMBATORE",
+        "to": "CHENNAI",
+        "date": "2025-11-24",
+        "fare": 500.0,
+        "confidence": 1.0,
+        "employee_name": "Mohit",
+        "employee_level": "l1",
+        "fare_limit": 5000.0,
+        "relation_member": "sanjana",
+        "relation": "Girlfriend",
+        "status": "approved",
+        "validation_status": "rejected",
+        "remarks": "Relation 'girlfriend' is not valid. Must be one of: wife, husband, son, daughter, mother, father",
+        "violations": [
+          "Relation 'girlfriend' is not valid. Must be one of: wife, husband, son, daughter, mother, father"
+        ],
+        "rules_applied": [
+          "Employee status check",
+          "Relation validation"
+        ],
+        "session_id": "690a3e37-fb7a-4b36-9eac-4636469f9fc4"
+      }
+    }
+  },
+  "sess_941000388b58": {
+    "session_id": "sess_941000388b58",
+    "created_at": 1764223273.9122667,
+    "status": "active",
+    "steps": [],
+    "data": {}
+  },
+  "sess_0b0a774f6c22": {
+    "session_id": "sess_0b0a774f6c22",
+    "created_at": 1764223273.928851,
+    "status": "active",
+    "steps": [],
+    "data": {}
+  },
+  "sess_1363a2ea39fe": {
+    "session_id": "sess_1363a2ea39fe",
+    "created_at": 1764226609.7865553,
+    "status": "active",
+    "steps": [
+      {
+        "step": "load_files",
+        "timestamp": 1764226609.793383,
+        "data": {
+          "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_82bf4e4672bb.png",
+          "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_cd18af767529.xlsx"
+        }
+      }
+    ],
+    "data": {
+      "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_82bf4e4672bb.png",
+      "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_cd18af767529.xlsx"
+    }
+  },
+  "sess_a1503cdcdf88": {
+    "session_id": "sess_a1503cdcdf88",
+    "created_at": 1764226612.32432,
+    "status": "active",
+    "steps": [
+      {
+        "step": "load_files",
+        "timestamp": 1764226612.3364506,
+        "data": {
+          "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_0aaaa0c23991.pdf",
+          "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_cd18af767529.xlsx"
+        }
+      }
+    ],
+    "data": {
+      "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_0aaaa0c23991.pdf",
+      "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_cd18af767529.xlsx"
+    }
+  },
+  "sess_13856edb0277": {
+    "session_id": "sess_13856edb0277",
+    "created_at": 1764227847.7776206,
+    "status": "completed",
+    "steps": [
+      {
+        "step": "load_files",
+        "timestamp": 1764227847.7949765,
+        "data": {
+          "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_24caf80bf2c9.png",
+          "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_7e2f1ce9e529.xlsx"
+        }
+      },
+      {
+        "step": "extract_invoice",
+        "timestamp": 1764227870.3491993,
+        "data": {
+          "extracted_data": {
+            "passenger_name": "UMA BHARATHI",
+            "origin": "COIMBATORE",
+            "destination": "CHENNAI",
+            "travel_date": "2025-11-24",
+            "fare": 500.0,
+            "mode_of_transport": "unknown",
+            "confidence": 0.35,
+            "notes": ""
+          }
+        }
+      },
+      {
+        "step": "match_employee",
+        "timestamp": 1764227870.474724,
+        "data": {
+          "employee_data": {
+            "match_found": true,
+            "employee_name": "Uma Bharathi",
+            "employee_level": "nan",
+            "fare_limit": 5000.0,
+            "match_confidence": 1.0,
+            "match_type": "exact",
+            "all_candidates": [],
+            "relation_member": "N/A",
+            "relation": "mother",
+            "status": "approved",
+            "excel_from": "Coimbatore",
+            "excel_to": "Chennai",
+            "excel_fare": 500.0,
+            "excel_mode": "air"
+          }
+        }
+      },
+      {
+        "step": "data_comparison_failed",
+        "timestamp": 1764227870.477827,
+        "data": {
+          "comparison_result": {
+            "matches": false,
+            "mismatches": [
+              "Mode mismatch: Invoice='unknown' vs Excel='air'"
+            ],
+            "comparison_details": {
+              "from": {
+                "invoice": "coimbatore",
+                "excel": "coimbatore",
+                "match": true
+              },
+              "to": {
+                "invoice": "chennai",
+                "excel": "chennai",
+                "match": true
+              },
+              "fare": {
+                "invoice": 500.0,
+                "excel": 500.0,
+                "match": true
+              },
+              "mode": {
+                "invoice": "unknown",
+                "excel": "air",
+                "match": false
+              }
+            }
+          },
+          "validation_result": {
+            "name": "UMA BHARATHI",
+            "from": "COIMBATORE",
+            "to": "CHENNAI",
+            "date": "2025-11-24",
+            "fare": 500.0,
+            "mode_of_transport": "unknown",
+            "confidence": 1.0,
+            "employee_name": "Uma Bharathi",
+            "employee_level": "nan",
+            "fare_limit": 5000.0,
+            "relation": "mother",
+            "status": "approved",
+            "validation_status": "rejected",
+            "remarks": "Invoice data does not match Excel data: Mode mismatch: Invoice='unknown' vs Excel='air'",
+            "violations": [
+              "Mode mismatch: Invoice='unknown' vs Excel='air'"
+            ],
+            "rules_applied": [
+              "Data comparison check"
+            ],
+            "comparison_details": {
+              "from": {
+                "invoice": "coimbatore",
+                "excel": "coimbatore",
+                "match": true
+              },
+              "to": {
+                "invoice": "chennai",
+                "excel": "chennai",
+                "match": true
+              },
+              "fare": {
+                "invoice": 500.0,
+                "excel": 500.0,
+                "match": true
+              },
+              "mode": {
+                "invoice": "unknown",
+                "excel": "air",
+                "match": false
+              }
+            },
+            "session_id": "sess_13856edb0277"
+          }
+        }
+      }
+    ],
+    "data": {
+      "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_24caf80bf2c9.png",
+      "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_7e2f1ce9e529.xlsx",
+      "extracted_data": {
+        "passenger_name": "UMA BHARATHI",
+        "origin": "COIMBATORE",
+        "destination": "CHENNAI",
+        "travel_date": "2025-11-24",
+        "fare": 500.0,
+        "mode_of_transport": "unknown",
+        "confidence": 0.35,
+        "notes": ""
+      },
+      "employee_data": {
+        "match_found": true,
+        "employee_name": "Uma Bharathi",
+        "employee_level": "nan",
+        "fare_limit": 5000.0,
+        "match_confidence": 1.0,
+        "match_type": "exact",
+        "all_candidates": [],
+        "relation_member": "N/A",
+        "relation": "mother",
+        "status": "approved",
+        "excel_from": "Coimbatore",
+        "excel_to": "Chennai",
+        "excel_fare": 500.0,
+        "excel_mode": "air"
+      },
+      "comparison_result": {
+        "matches": false,
+        "mismatches": [
+          "Mode mismatch: Invoice='unknown' vs Excel='air'"
+        ],
+        "comparison_details": {
+          "from": {
+            "invoice": "coimbatore",
+            "excel": "coimbatore",
+            "match": true
+          },
+          "to": {
+            "invoice": "chennai",
+            "excel": "chennai",
+            "match": true
+          },
+          "fare": {
+            "invoice": 500.0,
+            "excel": 500.0,
+            "match": true
+          },
+          "mode": {
+            "invoice": "unknown",
+            "excel": "air",
+            "match": false
+          }
+        }
+      },
+      "validation_result": {
+        "name": "UMA BHARATHI",
+        "from": "COIMBATORE",
+        "to": "CHENNAI",
+        "date": "2025-11-24",
+        "fare": 500.0,
+        "mode_of_transport": "unknown",
+        "confidence": 1.0,
+        "employee_name": "Uma Bharathi",
+        "employee_level": "nan",
+        "fare_limit": 5000.0,
+        "relation": "mother",
+        "status": "approved",
+        "validation_status": "rejected",
+        "remarks": "Invoice data does not match Excel data: Mode mismatch: Invoice='unknown' vs Excel='air'",
+        "violations": [
+          "Mode mismatch: Invoice='unknown' vs Excel='air'"
+        ],
+        "rules_applied": [
+          "Data comparison check"
+        ],
+        "comparison_details": {
+          "from": {
+            "invoice": "coimbatore",
+            "excel": "coimbatore",
+            "match": true
+          },
+          "to": {
+            "invoice": "chennai",
+            "excel": "chennai",
+            "match": true
+          },
+          "fare": {
+            "invoice": 500.0,
+            "excel": 500.0,
+            "match": true
+          },
+          "mode": {
+            "invoice": "unknown",
+            "excel": "air",
+            "match": false
+          }
+        },
+        "session_id": "sess_13856edb0277"
+      }
+    }
+  },
+  "sess_5859a0fe4976": {
+    "session_id": "sess_5859a0fe4976",
+    "created_at": 1764227870.483229,
+    "status": "completed",
+    "steps": [
+      {
+        "step": "load_files",
+        "timestamp": 1764227870.4877558,
+        "data": {
+          "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_6ec01217ade8.pdf",
+          "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_7e2f1ce9e529.xlsx"
+        }
+      },
+      {
+        "step": "extract_invoice",
+        "timestamp": 1764227888.2217076,
+        "data": {
+          "extracted_data": {
+            "passenger_name": "MOHIT",
+            "origin": "COIMBATORE",
+            "destination": "CHENNAI",
+            "travel_date": "2025-11-24",
+            "fare": 500.0,
+            "mode_of_transport": "unknown",
+            "confidence": 0.35,
+            "notes": ""
+          }
+        }
+      },
+      {
+        "step": "match_employee",
+        "timestamp": 1764227888.256239,
+        "data": {
+          "employee_data": {
+            "match_found": true,
+            "employee_name": "Mohit",
+            "employee_level": "l1",
+            "fare_limit": 5000.0,
+            "match_confidence": 1.0,
+            "match_type": "exact",
+            "all_candidates": [],
+            "relation_member": "N/A",
+            "relation": "Self",
+            "status": "approved",
+            "excel_from": "Coimbatore",
+            "excel_to": "Chennai",
+            "excel_fare": 500.0,
+            "excel_mode": "air"
+          }
+        }
+      },
+      {
+        "step": "data_comparison_failed",
+        "timestamp": 1764227888.260867,
+        "data": {
+          "comparison_result": {
+            "matches": false,
+            "mismatches": [
+              "Mode mismatch: Invoice='unknown' vs Excel='air'"
+            ],
+            "comparison_details": {
+              "from": {
+                "invoice": "coimbatore",
+                "excel": "coimbatore",
+                "match": true
+              },
+              "to": {
+                "invoice": "chennai",
+                "excel": "chennai",
+                "match": true
+              },
+              "fare": {
+                "invoice": 500.0,
+                "excel": 500.0,
+                "match": true
+              },
+              "mode": {
+                "invoice": "unknown",
+                "excel": "air",
+                "match": false
+              }
+            }
+          },
+          "validation_result": {
+            "name": "MOHIT",
+            "from": "COIMBATORE",
+            "to": "CHENNAI",
+            "date": "2025-11-24",
+            "fare": 500.0,
+            "mode_of_transport": "unknown",
+            "confidence": 1.0,
+            "employee_name": "Mohit",
+            "employee_level": "l1",
+            "fare_limit": 5000.0,
+            "relation": "Self",
+            "status": "approved",
+            "validation_status": "rejected",
+            "remarks": "Invoice data does not match Excel data: Mode mismatch: Invoice='unknown' vs Excel='air'",
+            "violations": [
+              "Mode mismatch: Invoice='unknown' vs Excel='air'"
+            ],
+            "rules_applied": [
+              "Data comparison check"
+            ],
+            "comparison_details": {
+              "from": {
+                "invoice": "coimbatore",
+                "excel": "coimbatore",
+                "match": true
+              },
+              "to": {
+                "invoice": "chennai",
+                "excel": "chennai",
+                "match": true
+              },
+              "fare": {
+                "invoice": 500.0,
+                "excel": 500.0,
+                "match": true
+              },
+              "mode": {
+                "invoice": "unknown",
+                "excel": "air",
+                "match": false
+              }
+            },
+            "session_id": "sess_5859a0fe4976"
+          }
+        }
+      }
+    ],
+    "data": {
+      "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_6ec01217ade8.pdf",
+      "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_7e2f1ce9e529.xlsx",
+      "extracted_data": {
+        "passenger_name": "MOHIT",
+        "origin": "COIMBATORE",
+        "destination": "CHENNAI",
+        "travel_date": "2025-11-24",
+        "fare": 500.0,
+        "mode_of_transport": "unknown",
+        "confidence": 0.35,
+        "notes": ""
+      },
+      "employee_data": {
+        "match_found": true,
+        "employee_name": "Mohit",
+        "employee_level": "l1",
+        "fare_limit": 5000.0,
+        "match_confidence": 1.0,
+        "match_type": "exact",
+        "all_candidates": [],
+        "relation_member": "N/A",
+        "relation": "Self",
+        "status": "approved",
+        "excel_from": "Coimbatore",
+        "excel_to": "Chennai",
+        "excel_fare": 500.0,
+        "excel_mode": "air"
+      },
+      "comparison_result": {
+        "matches": false,
+        "mismatches": [
+          "Mode mismatch: Invoice='unknown' vs Excel='air'"
+        ],
+        "comparison_details": {
+          "from": {
+            "invoice": "coimbatore",
+            "excel": "coimbatore",
+            "match": true
+          },
+          "to": {
+            "invoice": "chennai",
+            "excel": "chennai",
+            "match": true
+          },
+          "fare": {
+            "invoice": 500.0,
+            "excel": 500.0,
+            "match": true
+          },
+          "mode": {
+            "invoice": "unknown",
+            "excel": "air",
+            "match": false
+          }
+        }
+      },
+      "validation_result": {
+        "name": "MOHIT",
+        "from": "COIMBATORE",
+        "to": "CHENNAI",
+        "date": "2025-11-24",
+        "fare": 500.0,
+        "mode_of_transport": "unknown",
+        "confidence": 1.0,
+        "employee_name": "Mohit",
+        "employee_level": "l1",
+        "fare_limit": 5000.0,
+        "relation": "Self",
+        "status": "approved",
+        "validation_status": "rejected",
+        "remarks": "Invoice data does not match Excel data: Mode mismatch: Invoice='unknown' vs Excel='air'",
+        "violations": [
+          "Mode mismatch: Invoice='unknown' vs Excel='air'"
+        ],
+        "rules_applied": [
+          "Data comparison check"
+        ],
+        "comparison_details": {
+          "from": {
+            "invoice": "coimbatore",
+            "excel": "coimbatore",
+            "match": true
+          },
+          "to": {
+            "invoice": "chennai",
+            "excel": "chennai",
+            "match": true
+          },
+          "fare": {
+            "invoice": 500.0,
+            "excel": 500.0,
+            "match": true
+          },
+          "mode": {
+            "invoice": "unknown",
+            "excel": "air",
+            "match": false
+          }
+        },
+        "session_id": "sess_5859a0fe4976"
+      }
+    }
+  },
+  "sess_7ddc1f329dcd": {
+    "session_id": "sess_7ddc1f329dcd",
+    "created_at": 1764228083.718022,
+    "status": "completed",
+    "steps": [
+      {
+        "step": "load_files",
+        "timestamp": 1764228083.733724,
+        "data": {
+          "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_75cb0b55cefa.png",
+          "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_e63d0ac12f87.xlsx"
+        }
+      },
+      {
+        "step": "extract_invoice",
+        "timestamp": 1764228102.8239002,
+        "data": {
+          "extracted_data": {
+            "passenger_name": "UMA BHARATHI",
+            "origin": "COIMBATORE",
+            "destination": "CHENNAI",
+            "travel_date": "2025-11-24",
+            "fare": 500.0,
+            "mode_of_transport": "unknown",
+            "confidence": 0.35,
+            "notes": ""
+          }
+        }
+      },
+      {
+        "step": "match_employee",
+        "timestamp": 1764228102.9443998,
+        "data": {
+          "employee_data": {
+            "match_found": true,
+            "employee_name": "Uma Bharathi",
+            "employee_level": "nan",
+            "fare_limit": 5000.0,
+            "match_confidence": 1.0,
+            "match_type": "exact",
+            "all_candidates": [],
+            "relation_member": "N/A",
+            "relation": "mother",
+            "status": "approved",
+            "excel_from": "Coimbatore",
+            "excel_to": "Chennai",
+            "excel_fare": 500.0,
+            "excel_mode": "air"
+          }
+        }
+      },
+      {
+        "step": "data_comparison_failed",
+        "timestamp": 1764228102.949063,
+        "data": {
+          "comparison_result": {
+            "matches": false,
+            "mismatches": [
+              "Mode mismatch: Invoice='unknown' vs Excel='air'"
+            ],
+            "comparison_details": {
+              "from": {
+                "invoice": "coimbatore",
+                "excel": "coimbatore",
+                "match": true
+              },
+              "to": {
+                "invoice": "chennai",
+                "excel": "chennai",
+                "match": true
+              },
+              "fare": {
+                "invoice": 500.0,
+                "excel": 500.0,
+                "match": true
+              },
+              "mode": {
+                "invoice": "unknown",
+                "excel": "air",
+                "match": false
+              }
+            }
+          },
+          "validation_result": {
+            "name": "UMA BHARATHI",
+            "from": "COIMBATORE",
+            "to": "CHENNAI",
+            "date": "2025-11-24",
+            "fare": 500.0,
+            "mode_of_transport": "unknown",
+            "confidence": 1.0,
+            "employee_name": "Uma Bharathi",
+            "employee_level": "nan",
+            "fare_limit": 5000.0,
+            "relation": "mother",
+            "status": "approved",
+            "validation_status": "rejected",
+            "remarks": "Invoice data does not match Excel data: Mode mismatch: Invoice='unknown' vs Excel='air'",
+            "violations": [
+              "Mode mismatch: Invoice='unknown' vs Excel='air'"
+            ],
+            "rules_applied": [
+              "Data comparison check"
+            ],
+            "comparison_details": {
+              "from": {
+                "invoice": "coimbatore",
+                "excel": "coimbatore",
+                "match": true
+              },
+              "to": {
+                "invoice": "chennai",
+                "excel": "chennai",
+                "match": true
+              },
+              "fare": {
+                "invoice": 500.0,
+                "excel": 500.0,
+                "match": true
+              },
+              "mode": {
+                "invoice": "unknown",
+                "excel": "air",
+                "match": false
+              }
+            },
+            "session_id": "sess_7ddc1f329dcd"
+          }
+        }
+      }
+    ],
+    "data": {
+      "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_75cb0b55cefa.png",
+      "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_e63d0ac12f87.xlsx",
+      "extracted_data": {
+        "passenger_name": "UMA BHARATHI",
+        "origin": "COIMBATORE",
+        "destination": "CHENNAI",
+        "travel_date": "2025-11-24",
+        "fare": 500.0,
+        "mode_of_transport": "unknown",
+        "confidence": 0.35,
+        "notes": ""
+      },
+      "employee_data": {
+        "match_found": true,
+        "employee_name": "Uma Bharathi",
+        "employee_level": "nan",
+        "fare_limit": 5000.0,
+        "match_confidence": 1.0,
+        "match_type": "exact",
+        "all_candidates": [],
+        "relation_member": "N/A",
+        "relation": "mother",
+        "status": "approved",
+        "excel_from": "Coimbatore",
+        "excel_to": "Chennai",
+        "excel_fare": 500.0,
+        "excel_mode": "air"
+      },
+      "comparison_result": {
+        "matches": false,
+        "mismatches": [
+          "Mode mismatch: Invoice='unknown' vs Excel='air'"
+        ],
+        "comparison_details": {
+          "from": {
+            "invoice": "coimbatore",
+            "excel": "coimbatore",
+            "match": true
+          },
+          "to": {
+            "invoice": "chennai",
+            "excel": "chennai",
+            "match": true
+          },
+          "fare": {
+            "invoice": 500.0,
+            "excel": 500.0,
+            "match": true
+          },
+          "mode": {
+            "invoice": "unknown",
+            "excel": "air",
+            "match": false
+          }
+        }
+      },
+      "validation_result": {
+        "name": "UMA BHARATHI",
+        "from": "COIMBATORE",
+        "to": "CHENNAI",
+        "date": "2025-11-24",
+        "fare": 500.0,
+        "mode_of_transport": "unknown",
+        "confidence": 1.0,
+        "employee_name": "Uma Bharathi",
+        "employee_level": "nan",
+        "fare_limit": 5000.0,
+        "relation": "mother",
+        "status": "approved",
+        "validation_status": "rejected",
+        "remarks": "Invoice data does not match Excel data: Mode mismatch: Invoice='unknown' vs Excel='air'",
+        "violations": [
+          "Mode mismatch: Invoice='unknown' vs Excel='air'"
+        ],
+        "rules_applied": [
+          "Data comparison check"
+        ],
+        "comparison_details": {
+          "from": {
+            "invoice": "coimbatore",
+            "excel": "coimbatore",
+            "match": true
+          },
+          "to": {
+            "invoice": "chennai",
+            "excel": "chennai",
+            "match": true
+          },
+          "fare": {
+            "invoice": 500.0,
+            "excel": 500.0,
+            "match": true
+          },
+          "mode": {
+            "invoice": "unknown",
+            "excel": "air",
+            "match": false
+          }
+        },
+        "session_id": "sess_7ddc1f329dcd"
+      }
+    }
+  },
+  "sess_b039c86cf662": {
+    "session_id": "sess_b039c86cf662",
+    "created_at": 1764228102.9583697,
+    "status": "completed",
+    "steps": [
+      {
+        "step": "load_files",
+        "timestamp": 1764228102.96274,
+        "data": {
+          "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_22b20743bb8e.pdf",
+          "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_e63d0ac12f87.xlsx"
+        }
+      },
+      {
+        "step": "extract_invoice",
+        "timestamp": 1764228120.9598212,
+        "data": {
+          "extracted_data": {
+            "passenger_name": "MOHIT",
+            "origin": "COIMBATORE",
+            "destination": "CHENNAI",
+            "travel_date": "2025-11-24",
+            "fare": 500.0,
+            "mode_of_transport": "unknown",
+            "confidence": 0.35,
+            "notes": ""
+          }
+        }
+      },
+      {
+        "step": "match_employee",
+        "timestamp": 1764228120.9964232,
+        "data": {
+          "employee_data": {
+            "match_found": true,
+            "employee_name": "Mohit",
+            "employee_level": "l1",
+            "fare_limit": 5000.0,
+            "match_confidence": 1.0,
+            "match_type": "exact",
+            "all_candidates": [],
+            "relation_member": "N/A",
+            "relation": "Self",
+            "status": "approved",
+            "excel_from": "Coimbatore",
+            "excel_to": "Chennai",
+            "excel_fare": 500.0,
+            "excel_mode": "air"
+          }
+        }
+      },
+      {
+        "step": "data_comparison_failed",
+        "timestamp": 1764228121.0012665,
+        "data": {
+          "comparison_result": {
+            "matches": false,
+            "mismatches": [
+              "Mode mismatch: Invoice='unknown' vs Excel='air'"
+            ],
+            "comparison_details": {
+              "from": {
+                "invoice": "coimbatore",
+                "excel": "coimbatore",
+                "match": true
+              },
+              "to": {
+                "invoice": "chennai",
+                "excel": "chennai",
+                "match": true
+              },
+              "fare": {
+                "invoice": 500.0,
+                "excel": 500.0,
+                "match": true
+              },
+              "mode": {
+                "invoice": "unknown",
+                "excel": "air",
+                "match": false
+              }
+            }
+          },
+          "validation_result": {
+            "name": "MOHIT",
+            "from": "COIMBATORE",
+            "to": "CHENNAI",
+            "date": "2025-11-24",
+            "fare": 500.0,
+            "mode_of_transport": "unknown",
+            "confidence": 1.0,
+            "employee_name": "Mohit",
+            "employee_level": "l1",
+            "fare_limit": 5000.0,
+            "relation": "Self",
+            "status": "approved",
+            "validation_status": "rejected",
+            "remarks": "Invoice data does not match Excel data: Mode mismatch: Invoice='unknown' vs Excel='air'",
+            "violations": [
+              "Mode mismatch: Invoice='unknown' vs Excel='air'"
+            ],
+            "rules_applied": [
+              "Data comparison check"
+            ],
+            "comparison_details": {
+              "from": {
+                "invoice": "coimbatore",
+                "excel": "coimbatore",
+                "match": true
+              },
+              "to": {
+                "invoice": "chennai",
+                "excel": "chennai",
+                "match": true
+              },
+              "fare": {
+                "invoice": 500.0,
+                "excel": 500.0,
+                "match": true
+              },
+              "mode": {
+                "invoice": "unknown",
+                "excel": "air",
+                "match": false
+              }
+            },
+            "session_id": "sess_b039c86cf662"
+          }
+        }
+      }
+    ],
+    "data": {
+      "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_22b20743bb8e.pdf",
+      "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_e63d0ac12f87.xlsx",
+      "extracted_data": {
+        "passenger_name": "MOHIT",
+        "origin": "COIMBATORE",
+        "destination": "CHENNAI",
+        "travel_date": "2025-11-24",
+        "fare": 500.0,
+        "mode_of_transport": "unknown",
+        "confidence": 0.35,
+        "notes": ""
+      },
+      "employee_data": {
+        "match_found": true,
+        "employee_name": "Mohit",
+        "employee_level": "l1",
+        "fare_limit": 5000.0,
+        "match_confidence": 1.0,
+        "match_type": "exact",
+        "all_candidates": [],
+        "relation_member": "N/A",
+        "relation": "Self",
+        "status": "approved",
+        "excel_from": "Coimbatore",
+        "excel_to": "Chennai",
+        "excel_fare": 500.0,
+        "excel_mode": "air"
+      },
+      "comparison_result": {
+        "matches": false,
+        "mismatches": [
+          "Mode mismatch: Invoice='unknown' vs Excel='air'"
+        ],
+        "comparison_details": {
+          "from": {
+            "invoice": "coimbatore",
+            "excel": "coimbatore",
+            "match": true
+          },
+          "to": {
+            "invoice": "chennai",
+            "excel": "chennai",
+            "match": true
+          },
+          "fare": {
+            "invoice": 500.0,
+            "excel": 500.0,
+            "match": true
+          },
+          "mode": {
+            "invoice": "unknown",
+            "excel": "air",
+            "match": false
+          }
+        }
+      },
+      "validation_result": {
+        "name": "MOHIT",
+        "from": "COIMBATORE",
+        "to": "CHENNAI",
+        "date": "2025-11-24",
+        "fare": 500.0,
+        "mode_of_transport": "unknown",
+        "confidence": 1.0,
+        "employee_name": "Mohit",
+        "employee_level": "l1",
+        "fare_limit": 5000.0,
+        "relation": "Self",
+        "status": "approved",
+        "validation_status": "rejected",
+        "remarks": "Invoice data does not match Excel data: Mode mismatch: Invoice='unknown' vs Excel='air'",
+        "violations": [
+          "Mode mismatch: Invoice='unknown' vs Excel='air'"
+        ],
+        "rules_applied": [
+          "Data comparison check"
+        ],
+        "comparison_details": {
+          "from": {
+            "invoice": "coimbatore",
+            "excel": "coimbatore",
+            "match": true
+          },
+          "to": {
+            "invoice": "chennai",
+            "excel": "chennai",
+            "match": true
+          },
+          "fare": {
+            "invoice": 500.0,
+            "excel": 500.0,
+            "match": true
+          },
+          "mode": {
+            "invoice": "unknown",
+            "excel": "air",
+            "match": false
+          }
+        },
+        "session_id": "sess_b039c86cf662"
+      }
+    }
+  },
+  "sess_b52559aa7a46": {
+    "session_id": "sess_b52559aa7a46",
+    "created_at": 1764228154.6094267,
+    "status": "completed",
+    "steps": [
+      {
+        "step": "load_files",
+        "timestamp": 1764228154.6209967,
+        "data": {
+          "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_e6d43689f45e.png",
+          "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_9fece16d68d5.xlsx"
+        }
+      },
+      {
+        "step": "extract_invoice",
+        "timestamp": 1764228172.1880844,
+        "data": {
+          "extracted_data": {
+            "passenger_name": "UMA BHARATHI",
+            "origin": "COIMBATORE",
+            "destination": "CHENNAI",
+            "travel_date": "2025-11-24",
+            "fare": 500.0,
+            "mode_of_transport": "unknown",
+            "confidence": 0.35,
+            "notes": ""
+          }
+        }
+      },
+      {
+        "step": "match_employee",
+        "timestamp": 1764228172.307726,
+        "data": {
+          "employee_data": {
+            "match_found": true,
+            "employee_name": "Uma Bharathi",
+            "employee_level": "nan",
+            "fare_limit": 5000.0,
+            "match_confidence": 1.0,
+            "match_type": "exact",
+            "all_candidates": [],
+            "relation_member": "N/A",
+            "relation": "mother",
+            "status": "approved",
+            "excel_from": "Coimbatore",
+            "excel_to": "Chennai",
+            "excel_fare": 500.0,
+            "excel_mode": "air"
+          }
+        }
+      },
+      {
+        "step": "data_comparison_failed",
+        "timestamp": 1764228172.314162,
+        "data": {
+          "comparison_result": {
+            "matches": false,
+            "mismatches": [
+              "Mode mismatch: Invoice='unknown' vs Excel='air'"
+            ],
+            "comparison_details": {
+              "from": {
+                "invoice": "coimbatore",
+                "excel": "coimbatore",
+                "match": true
+              },
+              "to": {
+                "invoice": "chennai",
+                "excel": "chennai",
+                "match": true
+              },
+              "fare": {
+                "invoice": 500.0,
+                "excel": 500.0,
+                "match": true
+              },
+              "mode": {
+                "invoice": "unknown",
+                "excel": "air",
+                "match": false
+              }
+            }
+          },
+          "validation_result": {
+            "name": "UMA BHARATHI",
+            "from": "COIMBATORE",
+            "to": "CHENNAI",
+            "date": "2025-11-24",
+            "fare": 500.0,
+            "mode_of_transport": "unknown",
+            "confidence": 1.0,
+            "employee_name": "Uma Bharathi",
+            "employee_level": "nan",
+            "fare_limit": 5000.0,
+            "relation": "mother",
+            "status": "approved",
+            "validation_status": "rejected",
+            "remarks": "Invoice data does not match Excel data: Mode mismatch: Invoice='unknown' vs Excel='air'",
+            "violations": [
+              "Mode mismatch: Invoice='unknown' vs Excel='air'"
+            ],
+            "rules_applied": [
+              "Data comparison check"
+            ],
+            "comparison_details": {
+              "from": {
+                "invoice": "coimbatore",
+                "excel": "coimbatore",
+                "match": true
+              },
+              "to": {
+                "invoice": "chennai",
+                "excel": "chennai",
+                "match": true
+              },
+              "fare": {
+                "invoice": 500.0,
+                "excel": 500.0,
+                "match": true
+              },
+              "mode": {
+                "invoice": "unknown",
+                "excel": "air",
+                "match": false
+              }
+            },
+            "session_id": "sess_b52559aa7a46"
+          }
+        }
+      }
+    ],
+    "data": {
+      "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_e6d43689f45e.png",
+      "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_9fece16d68d5.xlsx",
+      "extracted_data": {
+        "passenger_name": "UMA BHARATHI",
+        "origin": "COIMBATORE",
+        "destination": "CHENNAI",
+        "travel_date": "2025-11-24",
+        "fare": 500.0,
+        "mode_of_transport": "unknown",
+        "confidence": 0.35,
+        "notes": ""
+      },
+      "employee_data": {
+        "match_found": true,
+        "employee_name": "Uma Bharathi",
+        "employee_level": "nan",
+        "fare_limit": 5000.0,
+        "match_confidence": 1.0,
+        "match_type": "exact",
+        "all_candidates": [],
+        "relation_member": "N/A",
+        "relation": "mother",
+        "status": "approved",
+        "excel_from": "Coimbatore",
+        "excel_to": "Chennai",
+        "excel_fare": 500.0,
+        "excel_mode": "air"
+      },
+      "comparison_result": {
+        "matches": false,
+        "mismatches": [
+          "Mode mismatch: Invoice='unknown' vs Excel='air'"
+        ],
+        "comparison_details": {
+          "from": {
+            "invoice": "coimbatore",
+            "excel": "coimbatore",
+            "match": true
+          },
+          "to": {
+            "invoice": "chennai",
+            "excel": "chennai",
+            "match": true
+          },
+          "fare": {
+            "invoice": 500.0,
+            "excel": 500.0,
+            "match": true
+          },
+          "mode": {
+            "invoice": "unknown",
+            "excel": "air",
+            "match": false
+          }
+        }
+      },
+      "validation_result": {
+        "name": "UMA BHARATHI",
+        "from": "COIMBATORE",
+        "to": "CHENNAI",
+        "date": "2025-11-24",
+        "fare": 500.0,
+        "mode_of_transport": "unknown",
+        "confidence": 1.0,
+        "employee_name": "Uma Bharathi",
+        "employee_level": "nan",
+        "fare_limit": 5000.0,
+        "relation": "mother",
+        "status": "approved",
+        "validation_status": "rejected",
+        "remarks": "Invoice data does not match Excel data: Mode mismatch: Invoice='unknown' vs Excel='air'",
+        "violations": [
+          "Mode mismatch: Invoice='unknown' vs Excel='air'"
+        ],
+        "rules_applied": [
+          "Data comparison check"
+        ],
+        "comparison_details": {
+          "from": {
+            "invoice": "coimbatore",
+            "excel": "coimbatore",
+            "match": true
+          },
+          "to": {
+            "invoice": "chennai",
+            "excel": "chennai",
+            "match": true
+          },
+          "fare": {
+            "invoice": 500.0,
+            "excel": 500.0,
+            "match": true
+          },
+          "mode": {
+            "invoice": "unknown",
+            "excel": "air",
+            "match": false
+          }
+        },
+        "session_id": "sess_b52559aa7a46"
+      }
+    }
+  },
+  "sess_411c42ca1bf3": {
+    "session_id": "sess_411c42ca1bf3",
+    "created_at": 1764228172.322516,
+    "status": "completed",
+    "steps": [
+      {
+        "step": "load_files",
+        "timestamp": 1764228172.3288975,
+        "data": {
+          "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_1a0bce2c1deb.pdf",
+          "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_9fece16d68d5.xlsx"
+        }
+      },
+      {
+        "step": "extract_invoice",
+        "timestamp": 1764228190.798301,
+        "data": {
+          "extracted_data": {
+            "passenger_name": "MOHIT",
+            "origin": "COIMBATORE",
+            "destination": "CHENNAI",
+            "travel_date": "2025-11-24",
+            "fare": 500.0,
+            "mode_of_transport": "unknown",
+            "confidence": 0.35,
+            "notes": ""
+          }
+        }
+      },
+      {
+        "step": "match_employee",
+        "timestamp": 1764228190.8371272,
+        "data": {
+          "employee_data": {
+            "match_found": true,
+            "employee_name": "Mohit",
+            "employee_level": "l1",
+            "fare_limit": 5000.0,
+            "match_confidence": 1.0,
+            "match_type": "exact",
+            "all_candidates": [],
+            "relation_member": "N/A",
+            "relation": "Self",
+            "status": "approved",
+            "excel_from": "Coimbatore",
+            "excel_to": "Chennai",
+            "excel_fare": 500.0,
+            "excel_mode": "air"
+          }
+        }
+      },
+      {
+        "step": "data_comparison_failed",
+        "timestamp": 1764228190.841421,
+        "data": {
+          "comparison_result": {
+            "matches": false,
+            "mismatches": [
+              "Mode mismatch: Invoice='unknown' vs Excel='air'"
+            ],
+            "comparison_details": {
+              "from": {
+                "invoice": "coimbatore",
+                "excel": "coimbatore",
+                "match": true
+              },
+              "to": {
+                "invoice": "chennai",
+                "excel": "chennai",
+                "match": true
+              },
+              "fare": {
+                "invoice": 500.0,
+                "excel": 500.0,
+                "match": true
+              },
+              "mode": {
+                "invoice": "unknown",
+                "excel": "air",
+                "match": false
+              }
+            }
+          },
+          "validation_result": {
+            "name": "MOHIT",
+            "from": "COIMBATORE",
+            "to": "CHENNAI",
+            "date": "2025-11-24",
+            "fare": 500.0,
+            "mode_of_transport": "unknown",
+            "confidence": 1.0,
+            "employee_name": "Mohit",
+            "employee_level": "l1",
+            "fare_limit": 5000.0,
+            "relation": "Self",
+            "status": "approved",
+            "validation_status": "rejected",
+            "remarks": "Invoice data does not match Excel data: Mode mismatch: Invoice='unknown' vs Excel='air'",
+            "violations": [
+              "Mode mismatch: Invoice='unknown' vs Excel='air'"
+            ],
+            "rules_applied": [
+              "Data comparison check"
+            ],
+            "comparison_details": {
+              "from": {
+                "invoice": "coimbatore",
+                "excel": "coimbatore",
+                "match": true
+              },
+              "to": {
+                "invoice": "chennai",
+                "excel": "chennai",
+                "match": true
+              },
+              "fare": {
+                "invoice": 500.0,
+                "excel": 500.0,
+                "match": true
+              },
+              "mode": {
+                "invoice": "unknown",
+                "excel": "air",
+                "match": false
+              }
+            },
+            "session_id": "sess_411c42ca1bf3"
+          }
+        }
+      }
+    ],
+    "data": {
+      "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_1a0bce2c1deb.pdf",
+      "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_9fece16d68d5.xlsx",
+      "extracted_data": {
+        "passenger_name": "MOHIT",
+        "origin": "COIMBATORE",
+        "destination": "CHENNAI",
+        "travel_date": "2025-11-24",
+        "fare": 500.0,
+        "mode_of_transport": "unknown",
+        "confidence": 0.35,
+        "notes": ""
+      },
+      "employee_data": {
+        "match_found": true,
+        "employee_name": "Mohit",
+        "employee_level": "l1",
+        "fare_limit": 5000.0,
+        "match_confidence": 1.0,
+        "match_type": "exact",
+        "all_candidates": [],
+        "relation_member": "N/A",
+        "relation": "Self",
+        "status": "approved",
+        "excel_from": "Coimbatore",
+        "excel_to": "Chennai",
+        "excel_fare": 500.0,
+        "excel_mode": "air"
+      },
+      "comparison_result": {
+        "matches": false,
+        "mismatches": [
+          "Mode mismatch: Invoice='unknown' vs Excel='air'"
+        ],
+        "comparison_details": {
+          "from": {
+            "invoice": "coimbatore",
+            "excel": "coimbatore",
+            "match": true
+          },
+          "to": {
+            "invoice": "chennai",
+            "excel": "chennai",
+            "match": true
+          },
+          "fare": {
+            "invoice": 500.0,
+            "excel": 500.0,
+            "match": true
+          },
+          "mode": {
+            "invoice": "unknown",
+            "excel": "air",
+            "match": false
+          }
+        }
+      },
+      "validation_result": {
+        "name": "MOHIT",
+        "from": "COIMBATORE",
+        "to": "CHENNAI",
+        "date": "2025-11-24",
+        "fare": 500.0,
+        "mode_of_transport": "unknown",
+        "confidence": 1.0,
+        "employee_name": "Mohit",
+        "employee_level": "l1",
+        "fare_limit": 5000.0,
+        "relation": "Self",
+        "status": "approved",
+        "validation_status": "rejected",
+        "remarks": "Invoice data does not match Excel data: Mode mismatch: Invoice='unknown' vs Excel='air'",
+        "violations": [
+          "Mode mismatch: Invoice='unknown' vs Excel='air'"
+        ],
+        "rules_applied": [
+          "Data comparison check"
+        ],
+        "comparison_details": {
+          "from": {
+            "invoice": "coimbatore",
+            "excel": "coimbatore",
+            "match": true
+          },
+          "to": {
+            "invoice": "chennai",
+            "excel": "chennai",
+            "match": true
+          },
+          "fare": {
+            "invoice": 500.0,
+            "excel": 500.0,
+            "match": true
+          },
+          "mode": {
+            "invoice": "unknown",
+            "excel": "air",
+            "match": false
+          }
+        },
+        "session_id": "sess_411c42ca1bf3"
+      }
+    }
+  },
+  "sess_1a8448883074": {
+    "session_id": "sess_1a8448883074",
+    "created_at": 1764228556.8572977,
+    "status": "completed",
+    "steps": [
+      {
+        "step": "load_files",
+        "timestamp": 1764228556.870787,
+        "data": {
+          "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_1e83dc8191f9.png",
+          "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_87fcd102fe91.xlsx"
+        }
+      },
+      {
+        "step": "extract_invoice",
+        "timestamp": 1764228584.5551417,
+        "data": {
+          "extracted_data": {
+            "passenger_name": "UMA BHARATHI",
+            "origin": "COIMBATORE",
+            "destination": "CHENNAI",
+            "travel_date": "2025-11-24",
+            "fare": 500.0,
+            "mode_of_transport": "train",
+            "confidence": 0.98,
+            "notes": "All fields extracted clearly from railway ticket"
+          }
+        }
+      },
+      {
+        "step": "match_employee",
+        "timestamp": 1764228584.682868,
+        "data": {
+          "employee_data": {
+            "match_found": true,
+            "employee_name": "Uma Bharathi",
+            "employee_level": "nan",
+            "fare_limit": 5000.0,
+            "match_confidence": 1.0,
+            "match_type": "exact",
+            "all_candidates": [],
+            "relation_member": "N/A",
+            "relation": "mother",
+            "status": "approved",
+            "excel_from": "Coimbatore",
+            "excel_to": "Chennai",
+            "excel_fare": 500.0,
+            "excel_mode": "air"
+          }
+        }
+      },
+      {
+        "step": "data_comparison_failed",
+        "timestamp": 1764228584.6872892,
+        "data": {
+          "comparison_result": {
+            "matches": false,
+            "mismatches": [
+              "Mode mismatch: Invoice='train' vs Excel='air'"
+            ],
+            "comparison_details": {
+              "from": {
+                "invoice": "coimbatore",
+                "excel": "coimbatore",
+                "match": true
+              },
+              "to": {
+                "invoice": "chennai",
+                "excel": "chennai",
+                "match": true
+              },
+              "fare": {
+                "invoice": 500.0,
+                "excel": 500.0,
+                "match": true
+              },
+              "mode": {
+                "invoice": "train",
+                "excel": "air",
+                "match": false,
+                "skipped": false
+              }
+            }
+          },
+          "validation_result": {
+            "name": "UMA BHARATHI",
+            "from": "COIMBATORE",
+            "to": "CHENNAI",
+            "date": "2025-11-24",
+            "fare": 500.0,
+            "mode_of_transport": "train",
+            "confidence": 1.0,
+            "employee_name": "Uma Bharathi",
+            "employee_level": "nan",
+            "fare_limit": 5000.0,
+            "relation": "mother",
+            "status": "approved",
+            "validation_status": "rejected",
+            "remarks": "Invoice data does not match Excel data: Mode mismatch: Invoice='train' vs Excel='air'",
+            "violations": [
+              "Mode mismatch: Invoice='train' vs Excel='air'"
+            ],
+            "rules_applied": [
+              "Data comparison check"
+            ],
+            "comparison_details": {
+              "from": {
+                "invoice": "coimbatore",
+                "excel": "coimbatore",
+                "match": true
+              },
+              "to": {
+                "invoice": "chennai",
+                "excel": "chennai",
+                "match": true
+              },
+              "fare": {
+                "invoice": 500.0,
+                "excel": 500.0,
+                "match": true
+              },
+              "mode": {
+                "invoice": "train",
+                "excel": "air",
+                "match": false,
+                "skipped": false
+              }
+            },
+            "session_id": "sess_1a8448883074"
+          }
+        }
+      }
+    ],
+    "data": {
+      "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_1e83dc8191f9.png",
+      "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_87fcd102fe91.xlsx",
+      "extracted_data": {
+        "passenger_name": "UMA BHARATHI",
+        "origin": "COIMBATORE",
+        "destination": "CHENNAI",
+        "travel_date": "2025-11-24",
+        "fare": 500.0,
+        "mode_of_transport": "train",
+        "confidence": 0.98,
+        "notes": "All fields extracted clearly from railway ticket"
+      },
+      "employee_data": {
+        "match_found": true,
+        "employee_name": "Uma Bharathi",
+        "employee_level": "nan",
+        "fare_limit": 5000.0,
+        "match_confidence": 1.0,
+        "match_type": "exact",
+        "all_candidates": [],
+        "relation_member": "N/A",
+        "relation": "mother",
+        "status": "approved",
+        "excel_from": "Coimbatore",
+        "excel_to": "Chennai",
+        "excel_fare": 500.0,
+        "excel_mode": "air"
+      },
+      "comparison_result": {
+        "matches": false,
+        "mismatches": [
+          "Mode mismatch: Invoice='train' vs Excel='air'"
+        ],
+        "comparison_details": {
+          "from": {
+            "invoice": "coimbatore",
+            "excel": "coimbatore",
+            "match": true
+          },
+          "to": {
+            "invoice": "chennai",
+            "excel": "chennai",
+            "match": true
+          },
+          "fare": {
+            "invoice": 500.0,
+            "excel": 500.0,
+            "match": true
+          },
+          "mode": {
+            "invoice": "train",
+            "excel": "air",
+            "match": false,
+            "skipped": false
+          }
+        }
+      },
+      "validation_result": {
+        "name": "UMA BHARATHI",
+        "from": "COIMBATORE",
+        "to": "CHENNAI",
+        "date": "2025-11-24",
+        "fare": 500.0,
+        "mode_of_transport": "train",
+        "confidence": 1.0,
+        "employee_name": "Uma Bharathi",
+        "employee_level": "nan",
+        "fare_limit": 5000.0,
+        "relation": "mother",
+        "status": "approved",
+        "validation_status": "rejected",
+        "remarks": "Invoice data does not match Excel data: Mode mismatch: Invoice='train' vs Excel='air'",
+        "violations": [
+          "Mode mismatch: Invoice='train' vs Excel='air'"
+        ],
+        "rules_applied": [
+          "Data comparison check"
+        ],
+        "comparison_details": {
+          "from": {
+            "invoice": "coimbatore",
+            "excel": "coimbatore",
+            "match": true
+          },
+          "to": {
+            "invoice": "chennai",
+            "excel": "chennai",
+            "match": true
+          },
+          "fare": {
+            "invoice": 500.0,
+            "excel": 500.0,
+            "match": true
+          },
+          "mode": {
+            "invoice": "train",
+            "excel": "air",
+            "match": false,
+            "skipped": false
+          }
+        },
+        "session_id": "sess_1a8448883074"
+      }
+    }
+  },
+  "sess_03199bb2f561": {
+    "session_id": "sess_03199bb2f561",
+    "created_at": 1764228584.698809,
+    "status": "completed",
+    "steps": [
+      {
+        "step": "load_files",
+        "timestamp": 1764228584.704362,
+        "data": {
+          "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_1a62b1bf0c61.pdf",
+          "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_87fcd102fe91.xlsx"
+        }
+      },
+      {
+        "step": "extract_invoice",
+        "timestamp": 1764228608.4500813,
+        "data": {
+          "extracted_data": {
+            "passenger_name": "MOHIT",
+            "origin": "COIMBATORE",
+            "destination": "CHENNAI",
+            "travel_date": "2025-11-24",
+            "fare": 500.0,
+            "mode_of_transport": "train",
+            "confidence": 0.98,
+            "notes": "All fields extracted clearly from railway ticket"
+          }
+        }
+      },
+      {
+        "step": "match_employee",
+        "timestamp": 1764228608.4845212,
+        "data": {
+          "employee_data": {
+            "match_found": true,
+            "employee_name": "Mohit",
+            "employee_level": "l1",
+            "fare_limit": 5000.0,
+            "match_confidence": 1.0,
+            "match_type": "exact",
+            "all_candidates": [],
+            "relation_member": "N/A",
+            "relation": "Self",
+            "status": "approved",
+            "excel_from": "Coimbatore",
+            "excel_to": "Chennai",
+            "excel_fare": 500.0,
+            "excel_mode": "air"
+          }
+        }
+      },
+      {
+        "step": "data_comparison_failed",
+        "timestamp": 1764228608.4905496,
+        "data": {
+          "comparison_result": {
+            "matches": false,
+            "mismatches": [
+              "Mode mismatch: Invoice='train' vs Excel='air'"
+            ],
+            "comparison_details": {
+              "from": {
+                "invoice": "coimbatore",
+                "excel": "coimbatore",
+                "match": true
+              },
+              "to": {
+                "invoice": "chennai",
+                "excel": "chennai",
+                "match": true
+              },
+              "fare": {
+                "invoice": 500.0,
+                "excel": 500.0,
+                "match": true
+              },
+              "mode": {
+                "invoice": "train",
+                "excel": "air",
+                "match": false,
+                "skipped": false
+              }
+            }
+          },
+          "validation_result": {
+            "name": "MOHIT",
+            "from": "COIMBATORE",
+            "to": "CHENNAI",
+            "date": "2025-11-24",
+            "fare": 500.0,
+            "mode_of_transport": "train",
+            "confidence": 1.0,
+            "employee_name": "Mohit",
+            "employee_level": "l1",
+            "fare_limit": 5000.0,
+            "relation": "Self",
+            "status": "approved",
+            "validation_status": "rejected",
+            "remarks": "Invoice data does not match Excel data: Mode mismatch: Invoice='train' vs Excel='air'",
+            "violations": [
+              "Mode mismatch: Invoice='train' vs Excel='air'"
+            ],
+            "rules_applied": [
+              "Data comparison check"
+            ],
+            "comparison_details": {
+              "from": {
+                "invoice": "coimbatore",
+                "excel": "coimbatore",
+                "match": true
+              },
+              "to": {
+                "invoice": "chennai",
+                "excel": "chennai",
+                "match": true
+              },
+              "fare": {
+                "invoice": 500.0,
+                "excel": 500.0,
+                "match": true
+              },
+              "mode": {
+                "invoice": "train",
+                "excel": "air",
+                "match": false,
+                "skipped": false
+              }
+            },
+            "session_id": "sess_03199bb2f561"
+          }
+        }
+      }
+    ],
+    "data": {
+      "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_1a62b1bf0c61.pdf",
+      "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_87fcd102fe91.xlsx",
+      "extracted_data": {
+        "passenger_name": "MOHIT",
+        "origin": "COIMBATORE",
+        "destination": "CHENNAI",
+        "travel_date": "2025-11-24",
+        "fare": 500.0,
+        "mode_of_transport": "train",
+        "confidence": 0.98,
+        "notes": "All fields extracted clearly from railway ticket"
+      },
+      "employee_data": {
+        "match_found": true,
+        "employee_name": "Mohit",
+        "employee_level": "l1",
+        "fare_limit": 5000.0,
+        "match_confidence": 1.0,
+        "match_type": "exact",
+        "all_candidates": [],
+        "relation_member": "N/A",
+        "relation": "Self",
+        "status": "approved",
+        "excel_from": "Coimbatore",
+        "excel_to": "Chennai",
+        "excel_fare": 500.0,
+        "excel_mode": "air"
+      },
+      "comparison_result": {
+        "matches": false,
+        "mismatches": [
+          "Mode mismatch: Invoice='train' vs Excel='air'"
+        ],
+        "comparison_details": {
+          "from": {
+            "invoice": "coimbatore",
+            "excel": "coimbatore",
+            "match": true
+          },
+          "to": {
+            "invoice": "chennai",
+            "excel": "chennai",
+            "match": true
+          },
+          "fare": {
+            "invoice": 500.0,
+            "excel": 500.0,
+            "match": true
+          },
+          "mode": {
+            "invoice": "train",
+            "excel": "air",
+            "match": false,
+            "skipped": false
+          }
+        }
+      },
+      "validation_result": {
+        "name": "MOHIT",
+        "from": "COIMBATORE",
+        "to": "CHENNAI",
+        "date": "2025-11-24",
+        "fare": 500.0,
+        "mode_of_transport": "train",
+        "confidence": 1.0,
+        "employee_name": "Mohit",
+        "employee_level": "l1",
+        "fare_limit": 5000.0,
+        "relation": "Self",
+        "status": "approved",
+        "validation_status": "rejected",
+        "remarks": "Invoice data does not match Excel data: Mode mismatch: Invoice='train' vs Excel='air'",
+        "violations": [
+          "Mode mismatch: Invoice='train' vs Excel='air'"
+        ],
+        "rules_applied": [
+          "Data comparison check"
+        ],
+        "comparison_details": {
+          "from": {
+            "invoice": "coimbatore",
+            "excel": "coimbatore",
+            "match": true
+          },
+          "to": {
+            "invoice": "chennai",
+            "excel": "chennai",
+            "match": true
+          },
+          "fare": {
+            "invoice": 500.0,
+            "excel": 500.0,
+            "match": true
+          },
+          "mode": {
+            "invoice": "train",
+            "excel": "air",
+            "match": false,
+            "skipped": false
+          }
+        },
+        "session_id": "sess_03199bb2f561"
+      }
+    }
+  },
+  "sess_c98587491f79": {
+    "session_id": "sess_c98587491f79",
+    "created_at": 1764228714.0580685,
+    "status": "completed",
+    "steps": [
+      {
+        "step": "load_files",
+        "timestamp": 1764228714.0799797,
+        "data": {
+          "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_4db2157e5bf2.png",
+          "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_bb669b4d6e11.xlsx"
+        }
+      },
+      {
+        "step": "extract_invoice",
+        "timestamp": 1764228738.0627604,
+        "data": {
+          "extracted_data": {
+            "passenger_name": "UMA BHARATHI",
+            "origin": "COIMBATORE",
+            "destination": "CHENNAI",
+            "travel_date": "2025-11-24",
+            "fare": 500.0,
+            "mode_of_transport": "train",
+            "confidence": 0.98,
+            "notes": "All fields extracted clearly from railway ticket"
+          }
+        }
+      },
+      {
+        "step": "match_employee",
+        "timestamp": 1764228738.0996106,
+        "data": {
+          "employee_data": {
+            "match_found": true,
+            "employee_name": "Uma Bharathi",
+            "employee_level": "nan",
+            "fare_limit": 5000.0,
+            "match_confidence": 1.0,
+            "match_type": "exact",
+            "all_candidates": [],
+            "relation_member": "N/A",
+            "relation": "mother",
+            "status": "approved",
+            "excel_from": "Coimbatore",
+            "excel_to": "Chennai",
+            "excel_fare": 500.0,
+            "excel_mode": "train"
+          }
+        }
+      },
+      {
+        "step": "data_comparison",
+        "timestamp": 1764228738.1063805,
+        "data": {
+          "comparison_result": {
+            "matches": true,
+            "mismatches": [],
+            "comparison_details": {
+              "from": {
+                "invoice": "coimbatore",
+                "excel": "coimbatore",
+                "match": true
+              },
+              "to": {
+                "invoice": "chennai",
+                "excel": "chennai",
+                "match": true
+              },
+              "fare": {
+                "invoice": 500.0,
+                "excel": 500.0,
+                "match": true
+              },
+              "mode": {
+                "invoice": "train",
+                "excel": "train",
+                "match": true,
+                "skipped": false
+              }
+            }
+          }
+        }
+      }
+    ],
+    "data": {
+      "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_4db2157e5bf2.png",
+      "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_bb669b4d6e11.xlsx",
+      "extracted_data": {
+        "passenger_name": "UMA BHARATHI",
+        "origin": "COIMBATORE",
+        "destination": "CHENNAI",
+        "travel_date": "2025-11-24",
+        "fare": 500.0,
+        "mode_of_transport": "train",
+        "confidence": 0.98,
+        "notes": "All fields extracted clearly from railway ticket"
+      },
+      "employee_data": {
+        "match_found": true,
+        "employee_name": "Uma Bharathi",
+        "employee_level": "nan",
+        "fare_limit": 5000.0,
+        "match_confidence": 1.0,
+        "match_type": "exact",
+        "all_candidates": [],
+        "relation_member": "N/A",
+        "relation": "mother",
+        "status": "approved",
+        "excel_from": "Coimbatore",
+        "excel_to": "Chennai",
+        "excel_fare": 500.0,
+        "excel_mode": "train"
+      },
+      "comparison_result": {
+        "matches": true,
+        "mismatches": [],
+        "comparison_details": {
+          "from": {
+            "invoice": "coimbatore",
+            "excel": "coimbatore",
+            "match": true
+          },
+          "to": {
+            "invoice": "chennai",
+            "excel": "chennai",
+            "match": true
+          },
+          "fare": {
+            "invoice": 500.0,
+            "excel": 500.0,
+            "match": true
+          },
+          "mode": {
+            "invoice": "train",
+            "excel": "train",
+            "match": true,
+            "skipped": false
+          }
+        }
+      }
+    }
+  },
+  "sess_865feedc01db": {
+    "session_id": "sess_865feedc01db",
+    "created_at": 1764228738.1179922,
+    "status": "completed",
+    "steps": [
+      {
+        "step": "load_files",
+        "timestamp": 1764228738.1262078,
+        "data": {
+          "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_bbafb9a4140a.pdf",
+          "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_bb669b4d6e11.xlsx"
+        }
+      },
+      {
+        "step": "extract_invoice",
+        "timestamp": 1764228762.7471645,
+        "data": {
+          "extracted_data": {
+            "passenger_name": "MOHIT",
+            "origin": "COIMBATORE",
+            "destination": "CHENNAI",
+            "travel_date": "2025-11-24",
+            "fare": 500.0,
+            "mode_of_transport": "train",
+            "confidence": 0.98,
+            "notes": "All fields extracted clearly from railway ticket"
+          }
+        }
+      },
+      {
+        "step": "match_employee",
+        "timestamp": 1764228762.8305726,
+        "data": {
+          "employee_data": {
+            "match_found": true,
+            "employee_name": "Mohit",
+            "employee_level": "l1",
+            "fare_limit": 5000.0,
+            "match_confidence": 1.0,
+            "match_type": "exact",
+            "all_candidates": [],
+            "relation_member": "N/A",
+            "relation": "Self",
+            "status": "approved",
+            "excel_from": "Coimbatore",
+            "excel_to": "Chennai",
+            "excel_fare": 500.0,
+            "excel_mode": "train"
+          }
+        }
+      },
+      {
+        "step": "data_comparison",
+        "timestamp": 1764228762.8380263,
+        "data": {
+          "comparison_result": {
+            "matches": true,
+            "mismatches": [],
+            "comparison_details": {
+              "from": {
+                "invoice": "coimbatore",
+                "excel": "coimbatore",
+                "match": true
+              },
+              "to": {
+                "invoice": "chennai",
+                "excel": "chennai",
+                "match": true
+              },
+              "fare": {
+                "invoice": 500.0,
+                "excel": 500.0,
+                "match": true
+              },
+              "mode": {
+                "invoice": "train",
+                "excel": "train",
+                "match": true,
+                "skipped": false
+              }
+            }
+          }
+        }
+      },
+      {
+        "step": "validate_policy",
+        "timestamp": 1764228776.6665335,
+        "data": {
+          "validation_result": {
+            "validation_status": "approved",
+            "confidence": 0.95,
+            "remarks": "Invoice fare is within the employee's level (L1) limit. Employee name matches with high confidence. No policy violations detected. All required fields appear valid.",
+            "rules_applied": [
+              "Employee identification",
+              "Required invoice fields",
+              "Fare limit validation",
+              "Data quality check",
+              "Employee match quality"
+            ],
+            "violations": []
+          }
+        }
+      }
+    ],
+    "data": {
+      "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_bbafb9a4140a.pdf",
+      "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_bb669b4d6e11.xlsx",
+      "extracted_data": {
+        "passenger_name": "MOHIT",
+        "origin": "COIMBATORE",
+        "destination": "CHENNAI",
+        "travel_date": "2025-11-24",
+        "fare": 500.0,
+        "mode_of_transport": "train",
+        "confidence": 0.98,
+        "notes": "All fields extracted clearly from railway ticket"
+      },
+      "employee_data": {
+        "match_found": true,
+        "employee_name": "Mohit",
+        "employee_level": "l1",
+        "fare_limit": 5000.0,
+        "match_confidence": 1.0,
+        "match_type": "exact",
+        "all_candidates": [],
+        "relation_member": "N/A",
+        "relation": "Self",
+        "status": "approved",
+        "excel_from": "Coimbatore",
+        "excel_to": "Chennai",
+        "excel_fare": 500.0,
+        "excel_mode": "train"
+      },
+      "comparison_result": {
+        "matches": true,
+        "mismatches": [],
+        "comparison_details": {
+          "from": {
+            "invoice": "coimbatore",
+            "excel": "coimbatore",
+            "match": true
+          },
+          "to": {
+            "invoice": "chennai",
+            "excel": "chennai",
+            "match": true
+          },
+          "fare": {
+            "invoice": 500.0,
+            "excel": 500.0,
+            "match": true
+          },
+          "mode": {
+            "invoice": "train",
+            "excel": "train",
+            "match": true,
+            "skipped": false
+          }
+        }
+      },
+      "validation_result": {
+        "validation_status": "approved",
+        "confidence": 0.95,
+        "remarks": "Invoice fare is within the employee's level (L1) limit. Employee name matches with high confidence. No policy violations detected. All required fields appear valid.",
+        "rules_applied": [
+          "Employee identification",
+          "Required invoice fields",
+          "Fare limit validation",
+          "Data quality check",
+          "Employee match quality"
+        ],
+        "violations": []
+      }
+    }
+  },
+  "sess_cf5ed0c7b48c": {
+    "session_id": "sess_cf5ed0c7b48c",
+    "created_at": 1764228855.0458417,
+    "status": "completed",
+    "steps": [
+      {
+        "step": "load_files",
+        "timestamp": 1764228855.0647378,
+        "data": {
+          "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_dadf19688712.png",
+          "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_f0488891f449.xlsx"
+        }
+      },
+      {
+        "step": "extract_invoice",
+        "timestamp": 1764228878.5654142,
+        "data": {
+          "extracted_data": {
+            "passenger_name": "UMA BHARATHI",
+            "origin": "COIMBATORE",
+            "destination": "CHENNAI",
+            "travel_date": "2025-11-24",
+            "fare": 500.0,
+            "mode_of_transport": "train",
+            "confidence": 0.98,
+            "notes": "All fields extracted clearly from railway ticket"
+          }
+        }
+      },
+      {
+        "step": "match_employee",
+        "timestamp": 1764228878.6941636,
+        "data": {
+          "employee_data": {
+            "match_found": true,
+            "employee_name": "Uma Bharathi",
+            "employee_level": "nan",
+            "fare_limit": 5000.0,
+            "match_confidence": 1.0,
+            "match_type": "exact",
+            "all_candidates": [],
+            "relation_member": "N/A",
+            "relation": "mother",
+            "status": "rejected",
+            "excel_from": "Coimbatore",
+            "excel_to": "Chennai",
+            "excel_fare": 500.0,
+            "excel_mode": "train",
+            "validation_error": "Employee status is 'rejected'. Only approved employees can proceed.",
+            "auto_reject": true
+          }
+        }
+      },
+      {
+        "step": "auto_reject",
+        "timestamp": 1764228878.70441,
+        "data": {
+          "validation_result": {
+            "name": "UMA BHARATHI",
+            "from": "COIMBATORE",
+            "to": "CHENNAI",
+            "date": "2025-11-24",
+            "fare": 500.0,
+            "confidence": 1.0,
+            "employee_name": "Uma Bharathi",
+            "employee_level": "nan",
+            "fare_limit": 5000.0,
+            "relation_member": "N/A",
+            "relation": "mother",
+            "status": "rejected",
+            "validation_status": "rejected",
+            "remarks": "Employee status is 'rejected'. Only approved employees can proceed.",
+            "violations": [
+              "Employee status is 'rejected'. Only approved employees can proceed."
+            ],
+            "rules_applied": [
+              "Employee status check",
+              "Relation validation"
+            ],
+            "session_id": "sess_cf5ed0c7b48c"
+          }
+        }
+      }
+    ],
+    "data": {
+      "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_dadf19688712.png",
+      "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_f0488891f449.xlsx",
+      "extracted_data": {
+        "passenger_name": "UMA BHARATHI",
+        "origin": "COIMBATORE",
+        "destination": "CHENNAI",
+        "travel_date": "2025-11-24",
+        "fare": 500.0,
+        "mode_of_transport": "train",
+        "confidence": 0.98,
+        "notes": "All fields extracted clearly from railway ticket"
+      },
+      "employee_data": {
+        "match_found": true,
+        "employee_name": "Uma Bharathi",
+        "employee_level": "nan",
+        "fare_limit": 5000.0,
+        "match_confidence": 1.0,
+        "match_type": "exact",
+        "all_candidates": [],
+        "relation_member": "N/A",
+        "relation": "mother",
+        "status": "rejected",
+        "excel_from": "Coimbatore",
+        "excel_to": "Chennai",
+        "excel_fare": 500.0,
+        "excel_mode": "train",
+        "validation_error": "Employee status is 'rejected'. Only approved employees can proceed.",
+        "auto_reject": true
+      },
+      "validation_result": {
+        "name": "UMA BHARATHI",
+        "from": "COIMBATORE",
+        "to": "CHENNAI",
+        "date": "2025-11-24",
+        "fare": 500.0,
+        "confidence": 1.0,
+        "employee_name": "Uma Bharathi",
+        "employee_level": "nan",
+        "fare_limit": 5000.0,
+        "relation_member": "N/A",
+        "relation": "mother",
+        "status": "rejected",
+        "validation_status": "rejected",
+        "remarks": "Employee status is 'rejected'. Only approved employees can proceed.",
+        "violations": [
+          "Employee status is 'rejected'. Only approved employees can proceed."
+        ],
+        "rules_applied": [
+          "Employee status check",
+          "Relation validation"
+        ],
+        "session_id": "sess_cf5ed0c7b48c"
+      }
+    }
+  },
+  "sess_bf4a5819d738": {
+    "session_id": "sess_bf4a5819d738",
+    "created_at": 1764228878.7178743,
+    "status": "completed",
+    "steps": [
+      {
+        "step": "load_files",
+        "timestamp": 1764228878.7244644,
+        "data": {
+          "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_6d790ee4cca3.pdf",
+          "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_f0488891f449.xlsx"
+        }
+      },
+      {
+        "step": "extract_invoice",
+        "timestamp": 1764228904.3624232,
+        "data": {
+          "extracted_data": {
+            "passenger_name": "MOHIT",
+            "origin": "COIMBATORE",
+            "destination": "CHENNAI",
+            "travel_date": "2025-11-24",
+            "fare": 500.0,
+            "mode_of_transport": "train",
+            "confidence": 0.98,
+            "notes": "All fields extracted clearly from railway ticket"
+          }
+        }
+      },
+      {
+        "step": "match_employee",
+        "timestamp": 1764228904.403455,
+        "data": {
+          "employee_data": {
+            "match_found": true,
+            "employee_name": "Mohit",
+            "employee_level": "l1",
+            "fare_limit": 5000.0,
+            "match_confidence": 1.0,
+            "match_type": "exact",
+            "all_candidates": [],
+            "relation_member": "N/A",
+            "relation": "Self",
+            "status": "approved",
+            "excel_from": "Coimbatore",
+            "excel_to": "Chennai",
+            "excel_fare": 500.0,
+            "excel_mode": "train"
+          }
+        }
+      },
+      {
+        "step": "data_comparison",
+        "timestamp": 1764228904.412009,
+        "data": {
+          "comparison_result": {
+            "matches": true,
+            "mismatches": [],
+            "comparison_details": {
+              "from": {
+                "invoice": "coimbatore",
+                "excel": "coimbatore",
+                "match": true
+              },
+              "to": {
+                "invoice": "chennai",
+                "excel": "chennai",
+                "match": true
+              },
+              "fare": {
+                "invoice": 500.0,
+                "excel": 500.0,
+                "match": true
+              },
+              "mode": {
+                "invoice": "train",
+                "excel": "train",
+                "match": true,
+                "skipped": false
+              }
+            }
+          }
+        }
+      },
+      {
+        "step": "validate_policy",
+        "timestamp": 1764228917.886805,
+        "data": {
+          "validation_result": {
+            "validation_status": "approved",
+            "confidence": 0.95,
+            "remarks": "Invoice fare is within the employee's level (L1) limit. Employee name matches with high confidence. No policy violations detected. Extraction confidence is high.",
+            "rules_applied": [
+              "Employee identification",
+              "Required invoice fields",
+              "Fare limit validation",
+              "Data quality check",
+              "Employee match quality"
+            ],
+            "violations": []
+          }
+        }
+      }
+    ],
+    "data": {
+      "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_6d790ee4cca3.pdf",
+      "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_f0488891f449.xlsx",
+      "extracted_data": {
+        "passenger_name": "MOHIT",
+        "origin": "COIMBATORE",
+        "destination": "CHENNAI",
+        "travel_date": "2025-11-24",
+        "fare": 500.0,
+        "mode_of_transport": "train",
+        "confidence": 0.98,
+        "notes": "All fields extracted clearly from railway ticket"
+      },
+      "employee_data": {
+        "match_found": true,
+        "employee_name": "Mohit",
+        "employee_level": "l1",
+        "fare_limit": 5000.0,
+        "match_confidence": 1.0,
+        "match_type": "exact",
+        "all_candidates": [],
+        "relation_member": "N/A",
+        "relation": "Self",
+        "status": "approved",
+        "excel_from": "Coimbatore",
+        "excel_to": "Chennai",
+        "excel_fare": 500.0,
+        "excel_mode": "train"
+      },
+      "comparison_result": {
+        "matches": true,
+        "mismatches": [],
+        "comparison_details": {
+          "from": {
+            "invoice": "coimbatore",
+            "excel": "coimbatore",
+            "match": true
+          },
+          "to": {
+            "invoice": "chennai",
+            "excel": "chennai",
+            "match": true
+          },
+          "fare": {
+            "invoice": 500.0,
+            "excel": 500.0,
+            "match": true
+          },
+          "mode": {
+            "invoice": "train",
+            "excel": "train",
+            "match": true,
+            "skipped": false
+          }
+        }
+      },
+      "validation_result": {
+        "validation_status": "approved",
+        "confidence": 0.95,
+        "remarks": "Invoice fare is within the employee's level (L1) limit. Employee name matches with high confidence. No policy violations detected. Extraction confidence is high.",
+        "rules_applied": [
+          "Employee identification",
+          "Required invoice fields",
+          "Fare limit validation",
+          "Data quality check",
+          "Employee match quality"
+        ],
+        "violations": []
+      }
+    }
+  },
+  "sess_aa36bf344666": {
+    "session_id": "sess_aa36bf344666",
+    "created_at": 1764232937.1923864,
+    "status": "completed",
+    "steps": [
+      {
+        "step": "load_files",
+        "timestamp": 1764232937.221117,
+        "data": {
+          "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_1bb149959006.png",
+          "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_9773a258dd93.xlsx"
+        }
+      },
+      {
+        "step": "extract_invoice",
+        "timestamp": 1764232981.6972678,
+        "data": {
+          "extracted_data": {
+            "passenger_name": "UMA BHARATHI",
+            "origin": "COIMBATORE",
+            "destination": "CHENNAI",
+            "travel_date": "2025-11-24",
+            "fare": 500.0,
+            "mode_of_transport": "train",
+            "confidence": 0.98,
+            "notes": "All fields extracted clearly from railway ticket"
+          }
+        }
+      },
+      {
+        "step": "match_employee",
+        "timestamp": 1764232981.8262892,
+        "data": {
+          "employee_data": {
+            "match_found": true,
+            "employee_name": "Uma Bharathi",
+            "employee_level": "nan",
+            "fare_limit": 5000.0,
+            "match_confidence": 1.0,
+            "match_type": "exact",
+            "all_candidates": [],
+            "relation_member": "N/A",
+            "relation": "mother",
+            "status": "approved",
+            "excel_from": "Coimbatore",
+            "excel_to": "Chennai",
+            "excel_fare": 500.0,
+            "excel_mode": "train"
+          }
+        }
+      },
+      {
+        "step": "data_comparison",
+        "timestamp": 1764232981.833844,
+        "data": {
+          "comparison_result": {
+            "matches": true,
+            "mismatches": [],
+            "comparison_details": {
+              "from": {
+                "invoice": "coimbatore",
+                "excel": "coimbatore",
+                "match": true
+              },
+              "to": {
+                "invoice": "chennai",
+                "excel": "chennai",
+                "match": true
+              },
+              "fare": {
+                "invoice": 500.0,
+                "excel": 500.0,
+                "match": true
+              },
+              "mode": {
+                "invoice": "train",
+                "excel": "train",
+                "match": true,
+                "skipped": false
+              }
+            }
+          }
+        }
+      }
+    ],
+    "data": {
+      "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_1bb149959006.png",
+      "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_9773a258dd93.xlsx",
+      "extracted_data": {
+        "passenger_name": "UMA BHARATHI",
+        "origin": "COIMBATORE",
+        "destination": "CHENNAI",
+        "travel_date": "2025-11-24",
+        "fare": 500.0,
+        "mode_of_transport": "train",
+        "confidence": 0.98,
+        "notes": "All fields extracted clearly from railway ticket"
+      },
+      "employee_data": {
+        "match_found": true,
+        "employee_name": "Uma Bharathi",
+        "employee_level": "nan",
+        "fare_limit": 5000.0,
+        "match_confidence": 1.0,
+        "match_type": "exact",
+        "all_candidates": [],
+        "relation_member": "N/A",
+        "relation": "mother",
+        "status": "approved",
+        "excel_from": "Coimbatore",
+        "excel_to": "Chennai",
+        "excel_fare": 500.0,
+        "excel_mode": "train"
+      },
+      "comparison_result": {
+        "matches": true,
+        "mismatches": [],
+        "comparison_details": {
+          "from": {
+            "invoice": "coimbatore",
+            "excel": "coimbatore",
+            "match": true
+          },
+          "to": {
+            "invoice": "chennai",
+            "excel": "chennai",
+            "match": true
+          },
+          "fare": {
+            "invoice": 500.0,
+            "excel": 500.0,
+            "match": true
+          },
+          "mode": {
+            "invoice": "train",
+            "excel": "train",
+            "match": true,
+            "skipped": false
+          }
+        }
+      }
+    }
+  },
+  "sess_d07fbf4d381c": {
+    "session_id": "sess_d07fbf4d381c",
+    "created_at": 1764232981.8465364,
+    "status": "completed",
+    "steps": [
+      {
+        "step": "load_files",
+        "timestamp": 1764232981.8564005,
+        "data": {
+          "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_fd58437c677e.pdf",
+          "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_9773a258dd93.xlsx"
+        }
+      },
+      {
+        "step": "extract_invoice",
+        "timestamp": 1764233017.0090547,
+        "data": {
+          "extracted_data": {
+            "passenger_name": "MOHIT",
+            "origin": "COIMBATORE",
+            "destination": "CHENNAI",
+            "travel_date": "2025-11-24",
+            "fare": 500.0,
+            "mode_of_transport": "train",
+            "confidence": 0.98,
+            "notes": "All fields extracted clearly from railway ticket"
+          }
+        }
+      },
+      {
+        "step": "match_employee",
+        "timestamp": 1764233017.0564904,
+        "data": {
+          "employee_data": {
+            "match_found": true,
+            "employee_name": "Mohit",
+            "employee_level": "l1",
+            "fare_limit": 5000.0,
+            "match_confidence": 1.0,
+            "match_type": "exact",
+            "all_candidates": [],
+            "relation_member": "N/A",
+            "relation": "Self",
+            "status": "approved",
+            "excel_from": "Coimbatore",
+            "excel_to": "Chennai",
+            "excel_fare": 500.0,
+            "excel_mode": "train"
+          }
+        }
+      },
+      {
+        "step": "data_comparison",
+        "timestamp": 1764233017.06295,
+        "data": {
+          "comparison_result": {
+            "matches": true,
+            "mismatches": [],
+            "comparison_details": {
+              "from": {
+                "invoice": "coimbatore",
+                "excel": "coimbatore",
+                "match": true
+              },
+              "to": {
+                "invoice": "chennai",
+                "excel": "chennai",
+                "match": true
+              },
+              "fare": {
+                "invoice": 500.0,
+                "excel": 500.0,
+                "match": true
+              },
+              "mode": {
+                "invoice": "train",
+                "excel": "train",
+                "match": true,
+                "skipped": false
+              }
+            }
+          }
+        }
+      },
+      {
+        "step": "validate_policy",
+        "timestamp": 1764233035.669737,
+        "data": {
+          "validation_result": {
+            "validation_status": "approved",
+            "confidence": 0.95,
+            "remarks": "Invoice fare is within the employee's level (L1) limit. Employee name matches with high confidence. No policy violations detected. All required fields appear valid.",
+            "rules_applied": [
+              "Employee identification",
+              "Required invoice fields",
+              "Fare limit validation",
+              "Data quality check",
+              "Employee match quality"
+            ],
+            "violations": []
+          }
+        }
+      }
+    ],
+    "data": {
+      "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_fd58437c677e.pdf",
+      "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_9773a258dd93.xlsx",
+      "extracted_data": {
+        "passenger_name": "MOHIT",
+        "origin": "COIMBATORE",
+        "destination": "CHENNAI",
+        "travel_date": "2025-11-24",
+        "fare": 500.0,
+        "mode_of_transport": "train",
+        "confidence": 0.98,
+        "notes": "All fields extracted clearly from railway ticket"
+      },
+      "employee_data": {
+        "match_found": true,
+        "employee_name": "Mohit",
+        "employee_level": "l1",
+        "fare_limit": 5000.0,
+        "match_confidence": 1.0,
+        "match_type": "exact",
+        "all_candidates": [],
+        "relation_member": "N/A",
+        "relation": "Self",
+        "status": "approved",
+        "excel_from": "Coimbatore",
+        "excel_to": "Chennai",
+        "excel_fare": 500.0,
+        "excel_mode": "train"
+      },
+      "comparison_result": {
+        "matches": true,
+        "mismatches": [],
+        "comparison_details": {
+          "from": {
+            "invoice": "coimbatore",
+            "excel": "coimbatore",
+            "match": true
+          },
+          "to": {
+            "invoice": "chennai",
+            "excel": "chennai",
+            "match": true
+          },
+          "fare": {
+            "invoice": 500.0,
+            "excel": 500.0,
+            "match": true
+          },
+          "mode": {
+            "invoice": "train",
+            "excel": "train",
+            "match": true,
+            "skipped": false
+          }
+        }
+      },
+      "validation_result": {
+        "validation_status": "approved",
+        "confidence": 0.95,
+        "remarks": "Invoice fare is within the employee's level (L1) limit. Employee name matches with high confidence. No policy violations detected. All required fields appear valid.",
+        "rules_applied": [
+          "Employee identification",
+          "Required invoice fields",
+          "Fare limit validation",
+          "Data quality check",
+          "Employee match quality"
+        ],
+        "violations": []
+      }
+    }
+  },
+  "sess_5627fde21f2b": {
+    "session_id": "sess_5627fde21f2b",
+    "created_at": 1764233109.4118521,
+    "status": "completed",
+    "steps": [
+      {
+        "step": "load_files",
+        "timestamp": 1764233109.438014,
+        "data": {
+          "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_33f1b05730cd.png",
+          "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_92f7794d3fa1.xlsx"
+        }
+      },
+      {
+        "step": "extract_invoice",
+        "timestamp": 1764233143.5908358,
+        "data": {
+          "extracted_data": {
+            "passenger_name": "UMA BHARATHI",
+            "origin": "COIMBATORE",
+            "destination": "CHENNAI",
+            "travel_date": "2025-11-24",
+            "fare": 500.0,
+            "mode_of_transport": "train",
+            "confidence": 0.98,
+            "notes": "All fields extracted clearly from railway ticket"
+          }
+        }
+      },
+      {
+        "step": "match_employee",
+        "timestamp": 1764233143.63704,
+        "data": {
+          "employee_data": {
+            "match_found": true,
+            "employee_name": "Uma Bharathi",
+            "employee_level": "nan",
+            "fare_limit": 5000.0,
+            "match_confidence": 1.0,
+            "match_type": "exact",
+            "all_candidates": [],
+            "relation_member": "N/A",
+            "relation": "friend",
+            "status": "approved",
+            "excel_from": "Coimbatore",
+            "excel_to": "Chennai",
+            "excel_fare": 500.0,
+            "excel_mode": "train",
+            "validation_error": "Relation 'friend' is not valid. Must be one of: self, wife, husband, son, daughter, mother, father",
+            "auto_reject": true
+          }
+        }
+      },
+      {
+        "step": "auto_reject",
+        "timestamp": 1764233143.6436136,
+        "data": {
+          "validation_result": {
+            "name": "UMA BHARATHI",
+            "from": "COIMBATORE",
+            "to": "CHENNAI",
+            "date": "2025-11-24",
+            "fare": 500.0,
+            "confidence": 1.0,
+            "employee_name": "Uma Bharathi",
+            "employee_level": "nan",
+            "fare_limit": 5000.0,
+            "relation_member": "N/A",
+            "relation": "friend",
+            "status": "approved",
+            "validation_status": "rejected",
+            "remarks": "Relation 'friend' is not valid. Must be one of: self, wife, husband, son, daughter, mother, father",
+            "violations": [
+              "Relation 'friend' is not valid. Must be one of: self, wife, husband, son, daughter, mother, father"
+            ],
+            "rules_applied": [
+              "Employee status check",
+              "Relation validation"
+            ],
+            "session_id": "sess_5627fde21f2b"
+          }
+        }
+      }
+    ],
+    "data": {
+      "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_33f1b05730cd.png",
+      "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_92f7794d3fa1.xlsx",
+      "extracted_data": {
+        "passenger_name": "UMA BHARATHI",
+        "origin": "COIMBATORE",
+        "destination": "CHENNAI",
+        "travel_date": "2025-11-24",
+        "fare": 500.0,
+        "mode_of_transport": "train",
+        "confidence": 0.98,
+        "notes": "All fields extracted clearly from railway ticket"
+      },
+      "employee_data": {
+        "match_found": true,
+        "employee_name": "Uma Bharathi",
+        "employee_level": "nan",
+        "fare_limit": 5000.0,
+        "match_confidence": 1.0,
+        "match_type": "exact",
+        "all_candidates": [],
+        "relation_member": "N/A",
+        "relation": "friend",
+        "status": "approved",
+        "excel_from": "Coimbatore",
+        "excel_to": "Chennai",
+        "excel_fare": 500.0,
+        "excel_mode": "train",
+        "validation_error": "Relation 'friend' is not valid. Must be one of: self, wife, husband, son, daughter, mother, father",
+        "auto_reject": true
+      },
+      "validation_result": {
+        "name": "UMA BHARATHI",
+        "from": "COIMBATORE",
+        "to": "CHENNAI",
+        "date": "2025-11-24",
+        "fare": 500.0,
+        "confidence": 1.0,
+        "employee_name": "Uma Bharathi",
+        "employee_level": "nan",
+        "fare_limit": 5000.0,
+        "relation_member": "N/A",
+        "relation": "friend",
+        "status": "approved",
+        "validation_status": "rejected",
+        "remarks": "Relation 'friend' is not valid. Must be one of: self, wife, husband, son, daughter, mother, father",
+        "violations": [
+          "Relation 'friend' is not valid. Must be one of: self, wife, husband, son, daughter, mother, father"
+        ],
+        "rules_applied": [
+          "Employee status check",
+          "Relation validation"
+        ],
+        "session_id": "sess_5627fde21f2b"
+      }
+    }
+  },
+  "sess_3880efb64a08": {
+    "session_id": "sess_3880efb64a08",
+    "created_at": 1764233143.6588051,
+    "status": "completed",
+    "steps": [
+      {
+        "step": "load_files",
+        "timestamp": 1764233143.669928,
+        "data": {
+          "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_3472c998f662.pdf",
+          "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_92f7794d3fa1.xlsx"
+        }
+      },
+      {
+        "step": "extract_invoice",
+        "timestamp": 1764233177.2852082,
+        "data": {
+          "extracted_data": {
+            "passenger_name": "MOHIT",
+            "origin": "COIMBATORE",
+            "destination": "CHENNAI",
+            "travel_date": "2025-11-24",
+            "fare": 500.0,
+            "mode_of_transport": "train",
+            "confidence": 0.98,
+            "notes": "All fields extracted clearly from railway ticket"
+          }
+        }
+      },
+      {
+        "step": "match_employee",
+        "timestamp": 1764233177.3280566,
+        "data": {
+          "employee_data": {
+            "match_found": true,
+            "employee_name": "Mohit",
+            "employee_level": "l1",
+            "fare_limit": 5000.0,
+            "match_confidence": 1.0,
+            "match_type": "exact",
+            "all_candidates": [],
+            "relation_member": "N/A",
+            "relation": "Self",
+            "status": "approved",
+            "excel_from": "Coimbatore",
+            "excel_to": "Chennai",
+            "excel_fare": 500.0,
+            "excel_mode": "train"
+          }
+        }
+      },
+      {
+        "step": "data_comparison",
+        "timestamp": 1764233177.3386438,
+        "data": {
+          "comparison_result": {
+            "matches": true,
+            "mismatches": [],
+            "comparison_details": {
+              "from": {
+                "invoice": "coimbatore",
+                "excel": "coimbatore",
+                "match": true
+              },
+              "to": {
+                "invoice": "chennai",
+                "excel": "chennai",
+                "match": true
+              },
+              "fare": {
+                "invoice": 500.0,
+                "excel": 500.0,
+                "match": true
+              },
+              "mode": {
+                "invoice": "train",
+                "excel": "train",
+                "match": true,
+                "skipped": false
+              }
+            }
+          }
+        }
+      },
+      {
+        "step": "validate_policy",
+        "timestamp": 1764233195.3018777,
+        "data": {
+          "validation_result": {
+            "validation_status": "approved",
+            "confidence": 0.95,
+            "remarks": "Invoice fare is within the employee's level (L1) limit. Employee name matches with high confidence. No policy violations detected. All required fields appear valid.",
+            "rules_applied": [
+              "Employee identification",
+              "Required invoice fields",
+              "Fare limit validation",
+              "Data quality check",
+              "Employee match quality"
+            ],
+            "violations": []
+          }
+        }
+      }
+    ],
+    "data": {
+      "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_3472c998f662.pdf",
+      "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_92f7794d3fa1.xlsx",
+      "extracted_data": {
+        "passenger_name": "MOHIT",
+        "origin": "COIMBATORE",
+        "destination": "CHENNAI",
+        "travel_date": "2025-11-24",
+        "fare": 500.0,
+        "mode_of_transport": "train",
+        "confidence": 0.98,
+        "notes": "All fields extracted clearly from railway ticket"
+      },
+      "employee_data": {
+        "match_found": true,
+        "employee_name": "Mohit",
+        "employee_level": "l1",
+        "fare_limit": 5000.0,
+        "match_confidence": 1.0,
+        "match_type": "exact",
+        "all_candidates": [],
+        "relation_member": "N/A",
+        "relation": "Self",
+        "status": "approved",
+        "excel_from": "Coimbatore",
+        "excel_to": "Chennai",
+        "excel_fare": 500.0,
+        "excel_mode": "train"
+      },
+      "comparison_result": {
+        "matches": true,
+        "mismatches": [],
+        "comparison_details": {
+          "from": {
+            "invoice": "coimbatore",
+            "excel": "coimbatore",
+            "match": true
+          },
+          "to": {
+            "invoice": "chennai",
+            "excel": "chennai",
+            "match": true
+          },
+          "fare": {
+            "invoice": 500.0,
+            "excel": 500.0,
+            "match": true
+          },
+          "mode": {
+            "invoice": "train",
+            "excel": "train",
+            "match": true,
+            "skipped": false
+          }
+        }
+      },
+      "validation_result": {
+        "validation_status": "approved",
+        "confidence": 0.95,
+        "remarks": "Invoice fare is within the employee's level (L1) limit. Employee name matches with high confidence. No policy violations detected. All required fields appear valid.",
+        "rules_applied": [
+          "Employee identification",
+          "Required invoice fields",
+          "Fare limit validation",
+          "Data quality check",
+          "Employee match quality"
+        ],
+        "violations": []
+      }
+    }
+  },
+  "sess_da40c57db16e": {
+    "session_id": "sess_da40c57db16e",
+    "created_at": 1764233350.9676163,
+    "status": "completed",
+    "steps": [
+      {
+        "step": "load_files",
+        "timestamp": 1764233350.9817228,
+        "data": {
+          "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_e1d8c7645df1.png",
+          "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_06580d6dcfe1.xlsx"
+        }
+      },
+      {
+        "step": "extract_invoice",
+        "timestamp": 1764233386.064574,
+        "data": {
+          "extracted_data": {
+            "passenger_name": "UMA BHARATHI",
+            "origin": "COIMBATORE",
+            "destination": "CHENNAI",
+            "travel_date": "2025-11-24",
+            "fare": 500.0,
+            "mode_of_transport": "train",
+            "confidence": 0.98,
+            "notes": "All fields extracted clearly from railway ticket"
+          }
+        }
+      },
+      {
+        "step": "match_employee",
+        "timestamp": 1764233386.113415,
+        "data": {
+          "employee_data": {
+            "match_found": true,
+            "employee_name": "Uma Bharathi",
+            "employee_level": "nan",
+            "fare_limit": 5000.0,
+            "match_confidence": 1.0,
+            "match_type": "exact",
+            "all_candidates": [],
+            "relation_member": "N/A",
+            "relation": "mother",
+            "status": "approved",
+            "excel_from": "Coimbatore",
+            "excel_to": "Chennai",
+            "excel_fare": 500.0,
+            "excel_mode": "air"
+          }
+        }
+      },
+      {
+        "step": "data_comparison_failed",
+        "timestamp": 1764233386.1227903,
+        "data": {
+          "comparison_result": {
+            "matches": false,
+            "mismatches": [
+              "Mode mismatch: Invoice='train' vs Excel='air'"
+            ],
+            "comparison_details": {
+              "from": {
+                "invoice": "coimbatore",
+                "excel": "coimbatore",
+                "match": true
+              },
+              "to": {
+                "invoice": "chennai",
+                "excel": "chennai",
+                "match": true
+              },
+              "fare": {
+                "invoice": 500.0,
+                "excel": 500.0,
+                "match": true
+              },
+              "mode": {
+                "invoice": "train",
+                "excel": "air",
+                "match": false,
+                "skipped": false
+              }
+            }
+          },
+          "validation_result": {
+            "name": "UMA BHARATHI",
+            "from": "COIMBATORE",
+            "to": "CHENNAI",
+            "date": "2025-11-24",
+            "fare": 500.0,
+            "mode_of_transport": "train",
+            "confidence": 1.0,
+            "employee_name": "Uma Bharathi",
+            "employee_level": "nan",
+            "fare_limit": 5000.0,
+            "relation": "mother",
+            "status": "approved",
+            "validation_status": "rejected",
+            "remarks": "Data mismatch: Mode mismatch: Invoice='train' vs Excel='air'",
+            "violations": [
+              "Mode mismatch: Invoice='train' vs Excel='air'"
+            ],
+            "rules_applied": [
+              "Data comparison check"
+            ],
+            "comparison_details": {
+              "from": {
+                "invoice": "coimbatore",
+                "excel": "coimbatore",
+                "match": true
+              },
+              "to": {
+                "invoice": "chennai",
+                "excel": "chennai",
+                "match": true
+              },
+              "fare": {
+                "invoice": 500.0,
+                "excel": 500.0,
+                "match": true
+              },
+              "mode": {
+                "invoice": "train",
+                "excel": "air",
+                "match": false,
+                "skipped": false
+              }
+            },
+            "session_id": "sess_da40c57db16e"
+          }
+        }
+      }
+    ],
+    "data": {
+      "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_e1d8c7645df1.png",
+      "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_06580d6dcfe1.xlsx",
+      "extracted_data": {
+        "passenger_name": "UMA BHARATHI",
+        "origin": "COIMBATORE",
+        "destination": "CHENNAI",
+        "travel_date": "2025-11-24",
+        "fare": 500.0,
+        "mode_of_transport": "train",
+        "confidence": 0.98,
+        "notes": "All fields extracted clearly from railway ticket"
+      },
+      "employee_data": {
+        "match_found": true,
+        "employee_name": "Uma Bharathi",
+        "employee_level": "nan",
+        "fare_limit": 5000.0,
+        "match_confidence": 1.0,
+        "match_type": "exact",
+        "all_candidates": [],
+        "relation_member": "N/A",
+        "relation": "mother",
+        "status": "approved",
+        "excel_from": "Coimbatore",
+        "excel_to": "Chennai",
+        "excel_fare": 500.0,
+        "excel_mode": "air"
+      },
+      "comparison_result": {
+        "matches": false,
+        "mismatches": [
+          "Mode mismatch: Invoice='train' vs Excel='air'"
+        ],
+        "comparison_details": {
+          "from": {
+            "invoice": "coimbatore",
+            "excel": "coimbatore",
+            "match": true
+          },
+          "to": {
+            "invoice": "chennai",
+            "excel": "chennai",
+            "match": true
+          },
+          "fare": {
+            "invoice": 500.0,
+            "excel": 500.0,
+            "match": true
+          },
+          "mode": {
+            "invoice": "train",
+            "excel": "air",
+            "match": false,
+            "skipped": false
+          }
+        }
+      },
+      "validation_result": {
+        "name": "UMA BHARATHI",
+        "from": "COIMBATORE",
+        "to": "CHENNAI",
+        "date": "2025-11-24",
+        "fare": 500.0,
+        "mode_of_transport": "train",
+        "confidence": 1.0,
+        "employee_name": "Uma Bharathi",
+        "employee_level": "nan",
+        "fare_limit": 5000.0,
+        "relation": "mother",
+        "status": "approved",
+        "validation_status": "rejected",
+        "remarks": "Data mismatch: Mode mismatch: Invoice='train' vs Excel='air'",
+        "violations": [
+          "Mode mismatch: Invoice='train' vs Excel='air'"
+        ],
+        "rules_applied": [
+          "Data comparison check"
+        ],
+        "comparison_details": {
+          "from": {
+            "invoice": "coimbatore",
+            "excel": "coimbatore",
+            "match": true
+          },
+          "to": {
+            "invoice": "chennai",
+            "excel": "chennai",
+            "match": true
+          },
+          "fare": {
+            "invoice": 500.0,
+            "excel": 500.0,
+            "match": true
+          },
+          "mode": {
+            "invoice": "train",
+            "excel": "air",
+            "match": false,
+            "skipped": false
+          }
+        },
+        "session_id": "sess_da40c57db16e"
+      }
+    }
+  },
+  "sess_fd9101fef05d": {
+    "session_id": "sess_fd9101fef05d",
+    "created_at": 1764233386.1392453,
+    "status": "completed",
+    "steps": [
+      {
+        "step": "load_files",
+        "timestamp": 1764233386.1493926,
+        "data": {
+          "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_d1fd2779e7b1.pdf",
+          "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_06580d6dcfe1.xlsx"
+        }
+      },
+      {
+        "step": "extract_invoice",
+        "timestamp": 1764233421.7509618,
+        "data": {
+          "extracted_data": {
+            "passenger_name": "MOHIT",
+            "origin": "COIMBATORE",
+            "destination": "CHENNAI",
+            "travel_date": "2025-11-24",
+            "fare": 500.0,
+            "mode_of_transport": "train",
+            "confidence": 0.98,
+            "notes": "All fields extracted clearly from railway ticket"
+          }
+        }
+      },
+      {
+        "step": "match_employee",
+        "timestamp": 1764233421.7993734,
+        "data": {
+          "employee_data": {
+            "match_found": true,
+            "employee_name": "Mohit",
+            "employee_level": "l1",
+            "fare_limit": 5000.0,
+            "match_confidence": 1.0,
+            "match_type": "exact",
+            "all_candidates": [],
+            "relation_member": "N/A",
+            "relation": "Self",
+            "status": "approved",
+            "excel_from": "Coimbatore",
+            "excel_to": "Chennai",
+            "excel_fare": 500.0,
+            "excel_mode": "train"
+          }
+        }
+      },
+      {
+        "step": "data_comparison",
+        "timestamp": 1764233421.8096793,
+        "data": {
+          "comparison_result": {
+            "matches": true,
+            "mismatches": [],
+            "comparison_details": {
+              "from": {
+                "invoice": "coimbatore",
+                "excel": "coimbatore",
+                "match": true
+              },
+              "to": {
+                "invoice": "chennai",
+                "excel": "chennai",
+                "match": true
+              },
+              "fare": {
+                "invoice": 500.0,
+                "excel": 500.0,
+                "match": true
+              },
+              "mode": {
+                "invoice": "train",
+                "excel": "train",
+                "match": true,
+                "skipped": false
+              }
+            }
+          }
+        }
+      },
+      {
+        "step": "validate_policy",
+        "timestamp": 1764233440.190031,
+        "data": {
+          "validation_result": {
+            "validation_status": "approved",
+            "confidence": 0.99,
+            "remarks": "Invoice fare is within the employee's level (L1) limit. Employee name matches with high confidence. No policy violations detected.",
+            "rules_applied": [
+              "Employee identification",
+              "Required invoice fields",
+              "Fare limit validation",
+              "Data quality check",
+              "Employee match quality"
+            ],
+            "violations": []
+          }
+        }
+      }
+    ],
+    "data": {
+      "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_d1fd2779e7b1.pdf",
+      "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_06580d6dcfe1.xlsx",
+      "extracted_data": {
+        "passenger_name": "MOHIT",
+        "origin": "COIMBATORE",
+        "destination": "CHENNAI",
+        "travel_date": "2025-11-24",
+        "fare": 500.0,
+        "mode_of_transport": "train",
+        "confidence": 0.98,
+        "notes": "All fields extracted clearly from railway ticket"
+      },
+      "employee_data": {
+        "match_found": true,
+        "employee_name": "Mohit",
+        "employee_level": "l1",
+        "fare_limit": 5000.0,
+        "match_confidence": 1.0,
+        "match_type": "exact",
+        "all_candidates": [],
+        "relation_member": "N/A",
+        "relation": "Self",
+        "status": "approved",
+        "excel_from": "Coimbatore",
+        "excel_to": "Chennai",
+        "excel_fare": 500.0,
+        "excel_mode": "train"
+      },
+      "comparison_result": {
+        "matches": true,
+        "mismatches": [],
+        "comparison_details": {
+          "from": {
+            "invoice": "coimbatore",
+            "excel": "coimbatore",
+            "match": true
+          },
+          "to": {
+            "invoice": "chennai",
+            "excel": "chennai",
+            "match": true
+          },
+          "fare": {
+            "invoice": 500.0,
+            "excel": 500.0,
+            "match": true
+          },
+          "mode": {
+            "invoice": "train",
+            "excel": "train",
+            "match": true,
+            "skipped": false
+          }
+        }
+      },
+      "validation_result": {
+        "validation_status": "approved",
+        "confidence": 0.99,
+        "remarks": "Invoice fare is within the employee's level (L1) limit. Employee name matches with high confidence. No policy violations detected.",
+        "rules_applied": [
+          "Employee identification",
+          "Required invoice fields",
+          "Fare limit validation",
+          "Data quality check",
+          "Employee match quality"
+        ],
+        "violations": []
+      }
+    }
+  },
+  "sess_7d22bc1f7bf0": {
+    "session_id": "sess_7d22bc1f7bf0",
+    "created_at": 1764235096.969256,
+    "status": "completed",
+    "steps": [
+      {
+        "step": "load_files",
+        "timestamp": 1764235096.9885833,
+        "data": {
+          "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_2c7f4da47220.png",
+          "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_ecafc375c71f.xlsx"
+        }
+      },
+      {
+        "step": "extract_invoice",
+        "timestamp": 1764235121.1211514,
+        "data": {
+          "extracted_data": {
+            "passenger_name": "UMA BHARATHI",
+            "origin": "COIMBATORE",
+            "destination": "CHENNAI",
+            "travel_date": "2025-11-24",
+            "fare": 500.0,
+            "mode_of_transport": "train",
+            "confidence": 0.98,
+            "notes": "All fields extracted clearly from railway ticket"
+          }
+        }
+      },
+      {
+        "step": "match_employee",
+        "timestamp": 1764235121.162143,
+        "data": {
+          "employee_data": {
+            "match_found": true,
+            "employee_name": "Uma Bharathi",
+            "employee_level": "nan",
+            "fare_limit": 5000.0,
+            "match_confidence": 1.0,
+            "match_type": "exact",
+            "all_candidates": [],
+            "relation_member": "N/A",
+            "relation": "mother",
+            "status": "approved",
+            "excel_from": "Coimbatore",
+            "excel_to": "Chennai",
+            "excel_fare": 500.0,
+            "excel_mode": "train"
+          }
+        }
+      },
+      {
+        "step": "data_comparison",
+        "timestamp": 1764235121.1719112,
+        "data": {
+          "comparison_result": {
+            "matches": true,
+            "mismatches": [],
+            "comparison_details": {
+              "from": {
+                "invoice": "coimbatore",
+                "excel": "coimbatore",
+                "match": true
+              },
+              "to": {
+                "invoice": "chennai",
+                "excel": "chennai",
+                "match": true
+              },
+              "fare": {
+                "invoice": 500.0,
+                "excel": 500.0,
+                "match": true
+              },
+              "mode": {
+                "invoice": "train",
+                "excel": "train",
+                "match": true,
+                "skipped": false
+              }
+            }
+          }
+        }
+      }
+    ],
+    "data": {
+      "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_2c7f4da47220.png",
+      "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_ecafc375c71f.xlsx",
+      "extracted_data": {
+        "passenger_name": "UMA BHARATHI",
+        "origin": "COIMBATORE",
+        "destination": "CHENNAI",
+        "travel_date": "2025-11-24",
+        "fare": 500.0,
+        "mode_of_transport": "train",
+        "confidence": 0.98,
+        "notes": "All fields extracted clearly from railway ticket"
+      },
+      "employee_data": {
+        "match_found": true,
+        "employee_name": "Uma Bharathi",
+        "employee_level": "nan",
+        "fare_limit": 5000.0,
+        "match_confidence": 1.0,
+        "match_type": "exact",
+        "all_candidates": [],
+        "relation_member": "N/A",
+        "relation": "mother",
+        "status": "approved",
+        "excel_from": "Coimbatore",
+        "excel_to": "Chennai",
+        "excel_fare": 500.0,
+        "excel_mode": "train"
+      },
+      "comparison_result": {
+        "matches": true,
+        "mismatches": [],
+        "comparison_details": {
+          "from": {
+            "invoice": "coimbatore",
+            "excel": "coimbatore",
+            "match": true
+          },
+          "to": {
+            "invoice": "chennai",
+            "excel": "chennai",
+            "match": true
+          },
+          "fare": {
+            "invoice": 500.0,
+            "excel": 500.0,
+            "match": true
+          },
+          "mode": {
+            "invoice": "train",
+            "excel": "train",
+            "match": true,
+            "skipped": false
+          }
+        }
+      }
+    }
+  },
+  "sess_b410b82a15f4": {
+    "session_id": "sess_b410b82a15f4",
+    "created_at": 1764235121.1902306,
+    "status": "completed",
+    "steps": [
+      {
+        "step": "load_files",
+        "timestamp": 1764235121.2010171,
+        "data": {
+          "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_b70f04ff6c34.pdf",
+          "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_ecafc375c71f.xlsx"
+        }
+      },
+      {
+        "step": "extract_invoice",
+        "timestamp": 1764235146.627468,
+        "data": {
+          "extracted_data": {
+            "passenger_name": "MOHIT",
+            "origin": "COIMBATORE",
+            "destination": "CHENNAI",
+            "travel_date": "2025-11-24",
+            "fare": 500.0,
+            "mode_of_transport": "train",
+            "confidence": 0.98,
+            "notes": "All fields extracted clearly from railway ticket"
+          }
+        }
+      },
+      {
+        "step": "match_employee",
+        "timestamp": 1764235146.6627133,
+        "data": {
+          "employee_data": {
+            "match_found": true,
+            "employee_name": "Mohit",
+            "employee_level": "l1",
+            "fare_limit": 5000.0,
+            "match_confidence": 1.0,
+            "match_type": "exact",
+            "all_candidates": [],
+            "relation_member": "N/A",
+            "relation": "Self",
+            "status": "approved",
+            "excel_from": "Coimbatore",
+            "excel_to": "Chennai",
+            "excel_fare": 500.0,
+            "excel_mode": "train"
+          }
+        }
+      },
+      {
+        "step": "data_comparison",
+        "timestamp": 1764235146.6717114,
+        "data": {
+          "comparison_result": {
+            "matches": true,
+            "mismatches": [],
+            "comparison_details": {
+              "from": {
+                "invoice": "coimbatore",
+                "excel": "coimbatore",
+                "match": true
+              },
+              "to": {
+                "invoice": "chennai",
+                "excel": "chennai",
+                "match": true
+              },
+              "fare": {
+                "invoice": 500.0,
+                "excel": 500.0,
+                "match": true
+              },
+              "mode": {
+                "invoice": "train",
+                "excel": "train",
+                "match": true,
+                "skipped": false
+              }
+            }
+          }
+        }
+      },
+      {
+        "step": "validate_policy",
+        "timestamp": 1764235160.2455819,
+        "data": {
+          "validation_result": {
+            "validation_status": "approved",
+            "confidence": 0.95,
+            "remarks": "Invoice fare is within the employee's level (L1) limit. Employee name matches with high confidence. No policy violations detected. All required fields appear valid.",
+            "rules_applied": [
+              "Employee identification",
+              "Required invoice fields",
+              "Fare limit validation",
+              "Data quality check",
+              "Employee match quality"
+            ],
+            "violations": []
+          }
+        }
+      }
+    ],
+    "data": {
+      "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_b70f04ff6c34.pdf",
+      "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_ecafc375c71f.xlsx",
+      "extracted_data": {
+        "passenger_name": "MOHIT",
+        "origin": "COIMBATORE",
+        "destination": "CHENNAI",
+        "travel_date": "2025-11-24",
+        "fare": 500.0,
+        "mode_of_transport": "train",
+        "confidence": 0.98,
+        "notes": "All fields extracted clearly from railway ticket"
+      },
+      "employee_data": {
+        "match_found": true,
+        "employee_name": "Mohit",
+        "employee_level": "l1",
+        "fare_limit": 5000.0,
+        "match_confidence": 1.0,
+        "match_type": "exact",
+        "all_candidates": [],
+        "relation_member": "N/A",
+        "relation": "Self",
+        "status": "approved",
+        "excel_from": "Coimbatore",
+        "excel_to": "Chennai",
+        "excel_fare": 500.0,
+        "excel_mode": "train"
+      },
+      "comparison_result": {
+        "matches": true,
+        "mismatches": [],
+        "comparison_details": {
+          "from": {
+            "invoice": "coimbatore",
+            "excel": "coimbatore",
+            "match": true
+          },
+          "to": {
+            "invoice": "chennai",
+            "excel": "chennai",
+            "match": true
+          },
+          "fare": {
+            "invoice": 500.0,
+            "excel": 500.0,
+            "match": true
+          },
+          "mode": {
+            "invoice": "train",
+            "excel": "train",
+            "match": true,
+            "skipped": false
+          }
+        }
+      },
+      "validation_result": {
+        "validation_status": "approved",
+        "confidence": 0.95,
+        "remarks": "Invoice fare is within the employee's level (L1) limit. Employee name matches with high confidence. No policy violations detected. All required fields appear valid.",
+        "rules_applied": [
+          "Employee identification",
+          "Required invoice fields",
+          "Fare limit validation",
+          "Data quality check",
+          "Employee match quality"
+        ],
+        "violations": []
+      }
+    }
+  },
+  "sess_3ce9d13333fb": {
+    "session_id": "sess_3ce9d13333fb",
+    "created_at": 1764235199.2929876,
+    "status": "completed",
+    "steps": [
+      {
+        "step": "load_files",
+        "timestamp": 1764235199.3332665,
+        "data": {
+          "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_bb09c85d738d.png",
+          "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_b058a872eb01.xlsx"
+        }
+      },
+      {
+        "step": "extract_invoice",
+        "timestamp": 1764235223.9811156,
+        "data": {
+          "extracted_data": {
+            "passenger_name": "UMA BHARATHI",
+            "origin": "COIMBATORE",
+            "destination": "CHENNAI",
+            "travel_date": "2025-11-24",
+            "fare": 500.0,
+            "mode_of_transport": "train",
+            "confidence": 0.98,
+            "notes": "All fields extracted clearly from railway ticket"
+          }
+        }
+      },
+      {
+        "step": "match_employee",
+        "timestamp": 1764235224.0313563,
+        "data": {
+          "employee_data": {
+            "match_found": true,
+            "employee_name": "Uma Bharathi",
+            "employee_level": "nan",
+            "fare_limit": 5000.0,
+            "match_confidence": 1.0,
+            "match_type": "exact",
+            "all_candidates": [],
+            "relation_member": "N/A",
+            "relation": "Sister",
+            "status": "approved",
+            "excel_from": "Coimbatore",
+            "excel_to": "Chennai",
+            "excel_fare": 500.0,
+            "excel_mode": "train",
+            "validation_error": "Relation 'sister' is not valid. Must be one of: self, wife, husband, son, daughter, mother, father",
+            "auto_reject": true
+          }
+        }
+      },
+      {
+        "step": "auto_reject",
+        "timestamp": 1764235224.0433774,
+        "data": {
+          "validation_result": {
+            "name": "UMA BHARATHI",
+            "from": "COIMBATORE",
+            "to": "CHENNAI",
+            "date": "2025-11-24",
+            "fare": 500.0,
+            "confidence": 1.0,
+            "employee_name": "Uma Bharathi",
+            "employee_level": "nan",
+            "fare_limit": 5000.0,
+            "relation_member": "N/A",
+            "relation": "Sister",
+            "status": "approved",
+            "validation_status": "rejected",
+            "remarks": "Relation 'sister' is not valid. Must be one of: self, wife, husband, son, daughter, mother, father",
+            "violations": [
+              "Relation 'sister' is not valid. Must be one of: self, wife, husband, son, daughter, mother, father"
+            ],
+            "rules_applied": [
+              "Employee status check",
+              "Relation validation"
+            ],
+            "session_id": "sess_3ce9d13333fb"
+          }
+        }
+      }
+    ],
+    "data": {
+      "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_bb09c85d738d.png",
+      "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_b058a872eb01.xlsx",
+      "extracted_data": {
+        "passenger_name": "UMA BHARATHI",
+        "origin": "COIMBATORE",
+        "destination": "CHENNAI",
+        "travel_date": "2025-11-24",
+        "fare": 500.0,
+        "mode_of_transport": "train",
+        "confidence": 0.98,
+        "notes": "All fields extracted clearly from railway ticket"
+      },
+      "employee_data": {
+        "match_found": true,
+        "employee_name": "Uma Bharathi",
+        "employee_level": "nan",
+        "fare_limit": 5000.0,
+        "match_confidence": 1.0,
+        "match_type": "exact",
+        "all_candidates": [],
+        "relation_member": "N/A",
+        "relation": "Sister",
+        "status": "approved",
+        "excel_from": "Coimbatore",
+        "excel_to": "Chennai",
+        "excel_fare": 500.0,
+        "excel_mode": "train",
+        "validation_error": "Relation 'sister' is not valid. Must be one of: self, wife, husband, son, daughter, mother, father",
+        "auto_reject": true
+      },
+      "validation_result": {
+        "name": "UMA BHARATHI",
+        "from": "COIMBATORE",
+        "to": "CHENNAI",
+        "date": "2025-11-24",
+        "fare": 500.0,
+        "confidence": 1.0,
+        "employee_name": "Uma Bharathi",
+        "employee_level": "nan",
+        "fare_limit": 5000.0,
+        "relation_member": "N/A",
+        "relation": "Sister",
+        "status": "approved",
+        "validation_status": "rejected",
+        "remarks": "Relation 'sister' is not valid. Must be one of: self, wife, husband, son, daughter, mother, father",
+        "violations": [
+          "Relation 'sister' is not valid. Must be one of: self, wife, husband, son, daughter, mother, father"
+        ],
+        "rules_applied": [
+          "Employee status check",
+          "Relation validation"
+        ],
+        "session_id": "sess_3ce9d13333fb"
+      }
+    }
+  },
+  "sess_6672d71c5d2a": {
+    "session_id": "sess_6672d71c5d2a",
+    "created_at": 1764235224.0673487,
+    "status": "completed",
+    "steps": [
+      {
+        "step": "load_files",
+        "timestamp": 1764235224.0810835,
+        "data": {
+          "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_4ae605c7a83d.pdf",
+          "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_b058a872eb01.xlsx"
+        }
+      },
+      {
+        "step": "extract_invoice",
+        "timestamp": 1764235249.4770286,
+        "data": {
+          "extracted_data": {
+            "passenger_name": "MOHIT",
+            "origin": "COIMBATORE",
+            "destination": "CHENNAI",
+            "travel_date": "2025-11-24",
+            "fare": 500.0,
+            "mode_of_transport": "train",
+            "confidence": 0.98,
+            "notes": "All fields extracted clearly from railway ticket"
+          }
+        }
+      },
+      {
+        "step": "match_employee",
+        "timestamp": 1764235249.5302103,
+        "data": {
+          "employee_data": {
+            "match_found": true,
+            "employee_name": "Mohit",
+            "employee_level": "l1",
+            "fare_limit": 5000.0,
+            "match_confidence": 1.0,
+            "match_type": "exact",
+            "all_candidates": [],
+            "relation_member": "N/A",
+            "relation": "Self",
+            "status": "approved",
+            "excel_from": "Coimbatore",
+            "excel_to": "Chennai",
+            "excel_fare": 500.0,
+            "excel_mode": "train"
+          }
+        }
+      },
+      {
+        "step": "data_comparison",
+        "timestamp": 1764235249.5429447,
+        "data": {
+          "comparison_result": {
+            "matches": true,
+            "mismatches": [],
+            "comparison_details": {
+              "from": {
+                "invoice": "coimbatore",
+                "excel": "coimbatore",
+                "match": true
+              },
+              "to": {
+                "invoice": "chennai",
+                "excel": "chennai",
+                "match": true
+              },
+              "fare": {
+                "invoice": 500.0,
+                "excel": 500.0,
+                "match": true
+              },
+              "mode": {
+                "invoice": "train",
+                "excel": "train",
+                "match": true,
+                "skipped": false
+              }
+            }
+          }
+        }
+      },
+      {
+        "step": "validate_policy",
+        "timestamp": 1764235263.161929,
+        "data": {
+          "validation_result": {
+            "validation_status": "approved",
+            "confidence": 0.99,
+            "remarks": "Invoice fare is within the employee's level (L1) limit. Employee name matches with high confidence. No policy violations detected. Extraction confidence is high.",
+            "rules_applied": [
+              "Employee identification",
+              "Required invoice fields",
+              "Fare limit validation",
+              "Data quality check",
+              "Employee match quality"
+            ],
+            "violations": []
+          }
+        }
+      }
+    ],
+    "data": {
+      "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_4ae605c7a83d.pdf",
+      "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_b058a872eb01.xlsx",
+      "extracted_data": {
+        "passenger_name": "MOHIT",
+        "origin": "COIMBATORE",
+        "destination": "CHENNAI",
+        "travel_date": "2025-11-24",
+        "fare": 500.0,
+        "mode_of_transport": "train",
+        "confidence": 0.98,
+        "notes": "All fields extracted clearly from railway ticket"
+      },
+      "employee_data": {
+        "match_found": true,
+        "employee_name": "Mohit",
+        "employee_level": "l1",
+        "fare_limit": 5000.0,
+        "match_confidence": 1.0,
+        "match_type": "exact",
+        "all_candidates": [],
+        "relation_member": "N/A",
+        "relation": "Self",
+        "status": "approved",
+        "excel_from": "Coimbatore",
+        "excel_to": "Chennai",
+        "excel_fare": 500.0,
+        "excel_mode": "train"
+      },
+      "comparison_result": {
+        "matches": true,
+        "mismatches": [],
+        "comparison_details": {
+          "from": {
+            "invoice": "coimbatore",
+            "excel": "coimbatore",
+            "match": true
+          },
+          "to": {
+            "invoice": "chennai",
+            "excel": "chennai",
+            "match": true
+          },
+          "fare": {
+            "invoice": 500.0,
+            "excel": 500.0,
+            "match": true
+          },
+          "mode": {
+            "invoice": "train",
+            "excel": "train",
+            "match": true,
+            "skipped": false
+          }
+        }
+      },
+      "validation_result": {
+        "validation_status": "approved",
+        "confidence": 0.99,
+        "remarks": "Invoice fare is within the employee's level (L1) limit. Employee name matches with high confidence. No policy violations detected. Extraction confidence is high.",
+        "rules_applied": [
+          "Employee identification",
+          "Required invoice fields",
+          "Fare limit validation",
+          "Data quality check",
+          "Employee match quality"
+        ],
+        "violations": []
+      }
+    }
+  },
+  "sess_923e2f6082c8": {
+    "session_id": "sess_923e2f6082c8",
+    "created_at": 1764235942.5487683,
+    "status": "completed",
+    "steps": [
+      {
+        "step": "load_files",
+        "timestamp": 1764235942.5674343,
+        "data": {
+          "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_3f54f19311c0.png",
+          "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_9272ee52d66a.xlsx"
+        }
+      },
+      {
+        "step": "extract_invoice",
+        "timestamp": 1764235965.988532,
+        "data": {
+          "extracted_data": {
+            "passenger_name": "UMA BHARATHI",
+            "origin": "COIMBATORE",
+            "destination": "CHENNAI",
+            "travel_date": "2025-11-24",
+            "fare": 500.0,
+            "mode_of_transport": "train",
+            "confidence": 0.98,
+            "notes": "All fields extracted clearly from railway ticket"
+          }
+        }
+      },
+      {
+        "step": "match_employee",
+        "timestamp": 1764235966.040845,
+        "data": {
+          "employee_data": {
+            "match_found": true,
+            "employee_name": "Uma Bharathi",
+            "employee_level": "nan",
+            "fare_limit": 5000.0,
+            "match_confidence": 1.0,
+            "match_type": "exact",
+            "all_candidates": [],
+            "relation_member": "N/A",
+            "relation": "Sister",
+            "status": "approved",
+            "excel_from": "Coimbatore",
+            "excel_to": "Chennai",
+            "excel_fare": 500.0,
+            "excel_mode": "train",
+            "validation_error": "Relation 'sister' is not valid. Must be one of: self, wife, husband, son, daughter, mother, father",
+            "auto_reject": true
+          }
+        }
+      },
+      {
+        "step": "auto_reject",
+        "timestamp": 1764235966.0511858,
+        "data": {
+          "validation_result": {
+            "name": "UMA BHARATHI",
+            "from": "COIMBATORE",
+            "to": "CHENNAI",
+            "date": "2025-11-24",
+            "fare": 500.0,
+            "confidence": 1.0,
+            "employee_name": "Uma Bharathi",
+            "employee_level": "nan",
+            "fare_limit": 5000.0,
+            "relation_member": "N/A",
+            "relation": "Sister",
+            "status": "approved",
+            "validation_status": "rejected",
+            "remarks": "Relation 'sister' is not valid. Must be one of: self, wife, husband, son, daughter, mother, father",
+            "violations": [
+              "Relation 'sister' is not valid. Must be one of: self, wife, husband, son, daughter, mother, father"
+            ],
+            "rules_applied": [
+              "Employee status check",
+              "Relation validation"
+            ],
+            "session_id": "sess_923e2f6082c8"
+          }
+        }
+      }
+    ],
+    "data": {
+      "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_3f54f19311c0.png",
+      "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_9272ee52d66a.xlsx",
+      "extracted_data": {
+        "passenger_name": "UMA BHARATHI",
+        "origin": "COIMBATORE",
+        "destination": "CHENNAI",
+        "travel_date": "2025-11-24",
+        "fare": 500.0,
+        "mode_of_transport": "train",
+        "confidence": 0.98,
+        "notes": "All fields extracted clearly from railway ticket"
+      },
+      "employee_data": {
+        "match_found": true,
+        "employee_name": "Uma Bharathi",
+        "employee_level": "nan",
+        "fare_limit": 5000.0,
+        "match_confidence": 1.0,
+        "match_type": "exact",
+        "all_candidates": [],
+        "relation_member": "N/A",
+        "relation": "Sister",
+        "status": "approved",
+        "excel_from": "Coimbatore",
+        "excel_to": "Chennai",
+        "excel_fare": 500.0,
+        "excel_mode": "train",
+        "validation_error": "Relation 'sister' is not valid. Must be one of: self, wife, husband, son, daughter, mother, father",
+        "auto_reject": true
+      },
+      "validation_result": {
+        "name": "UMA BHARATHI",
+        "from": "COIMBATORE",
+        "to": "CHENNAI",
+        "date": "2025-11-24",
+        "fare": 500.0,
+        "confidence": 1.0,
+        "employee_name": "Uma Bharathi",
+        "employee_level": "nan",
+        "fare_limit": 5000.0,
+        "relation_member": "N/A",
+        "relation": "Sister",
+        "status": "approved",
+        "validation_status": "rejected",
+        "remarks": "Relation 'sister' is not valid. Must be one of: self, wife, husband, son, daughter, mother, father",
+        "violations": [
+          "Relation 'sister' is not valid. Must be one of: self, wife, husband, son, daughter, mother, father"
+        ],
+        "rules_applied": [
+          "Employee status check",
+          "Relation validation"
+        ],
+        "session_id": "sess_923e2f6082c8"
+      }
+    }
+  },
+  "sess_911e10a4f73f": {
+    "session_id": "sess_911e10a4f73f",
+    "created_at": 1764235966.0714664,
+    "status": "completed",
+    "steps": [
+      {
+        "step": "load_files",
+        "timestamp": 1764235966.0820649,
+        "data": {
+          "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_bbe1576e2b20.pdf",
+          "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_9272ee52d66a.xlsx"
+        }
+      },
+      {
+        "step": "extract_invoice",
+        "timestamp": 1764235989.729585,
+        "data": {
+          "extracted_data": {
+            "passenger_name": "MOHIT",
+            "origin": "COIMBATORE",
+            "destination": "CHENNAI",
+            "travel_date": "2025-11-24",
+            "fare": 500.0,
+            "mode_of_transport": "train",
+            "confidence": 0.98,
+            "notes": "All fields extracted clearly from railway ticket"
+          }
+        }
+      },
+      {
+        "step": "match_employee",
+        "timestamp": 1764235989.773847,
+        "data": {
+          "employee_data": {
+            "match_found": true,
+            "employee_name": "Mohit",
+            "employee_level": "l1",
+            "fare_limit": 5000.0,
+            "match_confidence": 1.0,
+            "match_type": "exact",
+            "all_candidates": [],
+            "relation_member": "N/A",
+            "relation": "Self",
+            "status": "approved",
+            "excel_from": "Coimbatore",
+            "excel_to": "Chennai",
+            "excel_fare": 500.0,
+            "excel_mode": "train"
+          }
+        }
+      },
+      {
+        "step": "data_comparison",
+        "timestamp": 1764235989.7849355,
+        "data": {
+          "comparison_result": {
+            "matches": true,
+            "mismatches": [],
+            "comparison_details": {
+              "from": {
+                "invoice": "coimbatore",
+                "excel": "coimbatore",
+                "match": true
+              },
+              "to": {
+                "invoice": "chennai",
+                "excel": "chennai",
+                "match": true
+              },
+              "fare": {
+                "invoice": 500.0,
+                "excel": 500.0,
+                "match": true
+              },
+              "mode": {
+                "invoice": "train",
+                "excel": "train",
+                "match": true,
+                "skipped": false
+              }
+            }
+          }
+        }
+      },
+      {
+        "step": "validate_policy",
+        "timestamp": 1764236002.7219675,
+        "data": {
+          "validation_result": {
+            "validation_status": "approved",
+            "confidence": 0.99,
+            "remarks": "Invoice fare is within the employee's level (L1) limit. Employee name matches with high confidence. No policy violations detected.",
+            "rules_applied": [
+              "Employee identification",
+              "Required invoice fields",
+              "Fare limit validation",
+              "Data quality check",
+              "Employee match quality"
+            ],
+            "violations": []
+          }
+        }
+      }
+    ],
+    "data": {
+      "invoice_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/invoices/inv_bbe1576e2b20.pdf",
+      "proposal_path": "/home/mohitchandran/Desktop/LIC_POC/data/uploads/proposals/prop_9272ee52d66a.xlsx",
+      "extracted_data": {
+        "passenger_name": "MOHIT",
+        "origin": "COIMBATORE",
+        "destination": "CHENNAI",
+        "travel_date": "2025-11-24",
+        "fare": 500.0,
+        "mode_of_transport": "train",
+        "confidence": 0.98,
+        "notes": "All fields extracted clearly from railway ticket"
+      },
+      "employee_data": {
+        "match_found": true,
+        "employee_name": "Mohit",
+        "employee_level": "l1",
+        "fare_limit": 5000.0,
+        "match_confidence": 1.0,
+        "match_type": "exact",
+        "all_candidates": [],
+        "relation_member": "N/A",
+        "relation": "Self",
+        "status": "approved",
+        "excel_from": "Coimbatore",
+        "excel_to": "Chennai",
+        "excel_fare": 500.0,
+        "excel_mode": "train"
+      },
+      "comparison_result": {
+        "matches": true,
+        "mismatches": [],
+        "comparison_details": {
+          "from": {
+            "invoice": "coimbatore",
+            "excel": "coimbatore",
+            "match": true
+          },
+          "to": {
+            "invoice": "chennai",
+            "excel": "chennai",
+            "match": true
+          },
+          "fare": {
+            "invoice": 500.0,
+            "excel": 500.0,
+            "match": true
+          },
+          "mode": {
+            "invoice": "train",
+            "excel": "train",
+            "match": true,
+            "skipped": false
+          }
+        }
+      },
+      "validation_result": {
+        "validation_status": "approved",
+        "confidence": 0.99,
+        "remarks": "Invoice fare is within the employee's level (L1) limit. Employee name matches with high confidence. No policy violations detected.",
+        "rules_applied": [
+          "Employee identification",
+          "Required invoice fields",
+          "Fare limit validation",
+          "Data quality check",
+          "Employee match quality"
+        ],
+        "violations": []
+      }
+    }
   }
 }

@@ -203,18 +203,141 @@ class Orchestrator:
                 proposal_path, extracted_data['passenger_name'], session_id
             )
             print(f"✅ Employee matched!")
-            print(f"   Name: {employee_data.get('name', 'unknown')}")
+            print(f"   Name: {employee_data.get('employee_name', 'unknown')}")
             print(f"   Level: {employee_data.get('employee_level', 'unknown')}")
             print(f"   Fare Limit: ₹{employee_data.get('fare_limit', 0.0):,.2f}")
+            print(f"   Relation: {employee_data.get('relation', 'N/A')}")
+            print(f"   Status: {employee_data.get('status', 'N/A')}")
+            print(f"   Excel From: {employee_data.get('excel_from', 'N/A')}")
+            print(f"   Excel To: {employee_data.get('excel_to', 'N/A')}")
+            print(f"   Excel Fare: ₹{employee_data.get('excel_fare', 0.0):.2f}")
+            print(f"   Excel Mode: {employee_data.get('excel_mode', 'N/A')}")
             
-            # Step 4: Validate against policy
-            print(f"\n📋 STEP 4: Validating Against Policy...")
-            print(f"   Running RAG-based policy check...")
-            validation_result = await self._validate_policy(
-                extracted_data, employee_data, session_id
+            # Check for auto-rejection from employee validation (status/relation check)
+            if employee_data.get('auto_reject'):
+                print(f"\n❌ VALIDATION REJECTED - Pre-validation Failed")
+                print(f"   Reason: {employee_data.get('validation_error', 'Unknown error')}")
+                
+                # Build rejection response
+                rejection_result = {
+                    'name': extracted_data.get('passenger_name', 'unknown'),
+                    'from': extracted_data.get('origin', 'unknown'),
+                    'to': extracted_data.get('destination', 'unknown'),
+                    'date': extracted_data.get('travel_date', 'unknown'),
+                    'fare': extracted_data.get('fare', 0.0),
+                    'confidence': 1.0,  # High confidence in rejection due to hard rule violation
+                    'employee_name': employee_data.get('employee_name', 'unknown'),
+                    'employee_level': employee_data.get('employee_level', 'unknown'),
+                    'fare_limit': employee_data.get('fare_limit', 0.0),
+                    'relation_member': employee_data.get('relation_member', 'N/A'),
+                    'relation': employee_data.get('relation', 'N/A'),
+                    'status': employee_data.get('status', 'N/A'),
+                    'validation_status': 'rejected',
+                    'remarks': employee_data.get('validation_error', 'Validation failed'),
+                    'violations': [employee_data.get('validation_error', 'Validation failed')],
+                    'rules_applied': ['Employee status check', 'Relation validation'],
+                    'session_id': session_id
+                }
+                
+                self.session_manager.update_session(session_id, 'auto_reject', {
+                    'validation_result': rejection_result
+                })
+                self.session_manager.close_session(session_id)
+                
+                print(f"\n{'='*80}")
+                print(f"❌ VALIDATION WORKFLOW COMPLETED WITH REJECTION")
+                print(f"{'='*80}")
+                print(f"Rejection Reason: {employee_data.get('validation_error')}")
+                print(f"{'='*80}\n")
+                
+                return rejection_result
+            
+            # Step 3.5: Compare invoice data with Excel data
+            print(f"\n🔍 STEP 3.5: Comparing Invoice with Excel...")
+            print(f"   Verifying travel details match...")
+            comparison_result = self.excel_agent.compare_invoice_with_excel(
+                invoice_data=extracted_data,
+                excel_data=employee_data,
+                log_prefix=f"[{session_id}] "
             )
-            print(f"✅ Validation completed!")
-            print(f"   Status: {validation_result.get('validation_status', 'unknown').upper()}")
+            
+            if comparison_result['matches']:
+                print(f"✅ Data comparison passed!")
+                print(f"   All fields match between invoice and Excel")
+            else:
+                print(f"❌ Data comparison failed!")
+                print(f"   Mismatches found:")
+                for mismatch in comparison_result['mismatches']:
+                    print(f"   - {mismatch}")
+                
+                # Build rejection response for data mismatch
+                rejection_result = {
+                    'name': extracted_data.get('passenger_name', 'unknown'),
+                    'from': extracted_data.get('origin', 'unknown'),
+                    'to': extracted_data.get('destination', 'unknown'),
+                    'date': extracted_data.get('travel_date', 'unknown'),
+                    'fare': extracted_data.get('fare', 0.0),
+                    'mode_of_transport': extracted_data.get('mode_of_transport', 'unknown'),
+                    'confidence': 1.0,
+                    'employee_name': employee_data.get('employee_name', 'unknown'),
+                    'employee_level': employee_data.get('employee_level', 'unknown'),
+                    'fare_limit': employee_data.get('fare_limit', 0.0),
+                    'relation': employee_data.get('relation', 'N/A'),
+                    'status': employee_data.get('status', 'N/A'),
+                    'validation_status': 'rejected',
+                    'remarks': f"Data mismatch: {', '.join(comparison_result['mismatches'])}",
+                    'violations': comparison_result['mismatches'],
+                    'rules_applied': ['Data comparison check'],
+                    'comparison_details': comparison_result['comparison_details'],
+                    'session_id': session_id
+                }
+                
+                self.session_manager.update_session(session_id, 'data_comparison_failed', {
+                    'comparison_result': comparison_result,
+                    'validation_result': rejection_result
+                })
+                self.session_manager.close_session(session_id)
+                
+                print(f"\n{'='*80}")
+                print(f"❌ VALIDATION WORKFLOW COMPLETED WITH REJECTION")
+                print(f"{'='*80}")
+                print(f"Rejection Reason: Data mismatch between invoice and Excel")
+                print(f"{'='*80}\n")
+                
+                return rejection_result
+            
+            # Store comparison result
+            self.session_manager.update_session(session_id, 'data_comparison', {
+                'comparison_result': comparison_result
+            })
+            
+            # Step 4: Validate against policy (ONLY for relation='self')
+            relation = employee_data.get('relation', '').lower()
+            
+            if relation == 'self':
+                # Primary employee - apply policy rules
+                print(f"\n📋 STEP 4: Validating Against Policy...")
+                print(f"   Relation is 'self' - applying policy rules")
+                print(f"   Running RAG-based policy check...")
+                validation_result = await self._validate_policy(
+                    extracted_data, employee_data, session_id
+                )
+                print(f"✅ Policy validation completed!")
+                print(f"   Status: {validation_result.get('validation_status', 'unknown').upper()}")
+            else:
+                # Dependent - skip policy validation, auto-approve if data matches
+                print(f"\n📋 STEP 4: Policy Validation...")
+                print(f"   Relation is '{relation}' (dependent) - skipping policy rules")
+                print(f"   Data comparison passed - auto-approving")
+                validation_result = {
+                    'validation_status': 'approved',
+                    'confidence': 1.0,
+                    'remarks': f'Dependent travel approved. Data matches Excel. Relation: {relation}',
+                    'violations': [],
+                    'policy_rules_applied': ['Data comparison only (dependent travel)']
+                }
+                print(f"✅ Auto-approved!")
+                print(f"   Status: APPROVED (dependent with matching data)")
             
             # Step 5: Build final response
             print(f"\n📊 STEP 5: Building Final Response...")
@@ -439,9 +562,17 @@ class Orchestrator:
                 'to': extracted_data.get('destination', 'unknown'),
                 'date': extracted_data.get('travel_date', 'unknown'),
                 'fare': float(extracted_data.get('fare', 0.0)),
+                'mode_of_transport': extracted_data.get('mode_of_transport', 'unknown'),
+                'employee_name': employee_data.get('employee_name', 'unknown'),
+                'employee_level': employee_data.get('employee_level', 'unknown'),
+                'fare_limit': employee_data.get('fare_limit', 0.0),
+                'relation': employee_data.get('relation', 'N/A'),
+                'status': employee_data.get('status', 'N/A'),
                 'confidence': round(overall_confidence, 2),
                 'validation_status': validation_result.get('validation_status', 'rejected'),
                 'remarks': validation_result.get('remarks', 'Validation completed'),
+                'violations': validation_result.get('violations', []),
+                'rules_applied': validation_result.get('policy_rules_applied', []),
                 'session_id': session_id
             }
             

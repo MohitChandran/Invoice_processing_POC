@@ -31,17 +31,16 @@ class ExtractionAgent:
             file_path: Path to invoice file (PDF or image)
             session_id: Session identifier for logging
             
-        Returns:
+            Returns:
             Dict with extracted fields:
                 - passenger_name: str
                 - origin: str
                 - destination: str
                 - travel_date: str
                 - fare: float
+                - mode_of_transport: str
                 - confidence: float (0-1)
-                - raw_text: str (full extracted text)
-                
-        Raises:
+                - raw_text: str (full extracted text)        Raises:
             Exception: If extraction fails
         """
         try:
@@ -57,12 +56,12 @@ class ExtractionAgent:
             # Create extraction prompt
             extraction_prompt = self._create_extraction_prompt()
             
-            system_prompt = """You are an AI vision model specialized in reading and extracting data from travel invoice documents.
+            system_prompt = """You are an AI vision model specialized in reading and extracting data from travel invoice documents (bus tickets, train tickets, flight tickets, taxi receipts).
 
 YOUR TASK:
-1. Carefully examine the entire invoice image
-2. Locate and read all text fields in the document
-3. Extract the 5 required fields: passenger_name, origin, destination, travel_date, fare
+1. Carefully examine the ENTIRE invoice image - read ALL text and look at visual elements (logos, layouts)
+2. Locate and extract ALL 6 required fields: passenger_name, origin, destination, travel_date, fare, mode_of_transport
+3. For mode_of_transport: Look for explicit text OR infer from document type (railway ticket → "train", bus ticket → "bus", flight boarding pass → "flight")
 4. Return ONLY a valid JSON object with these fields
 5. Do NOT include any explanation, markdown, or extra text
 
@@ -130,6 +129,21 @@ CRITICAL: Your response must be ONLY the JSON object, nothing else. No markdown,
    - Extract: ONLY the numeric value (e.g., if you see "₹5500.00", extract 5500.00)
    - Remove currency symbols, commas, and text
 
+6. **Mode of Transport** (mode_of_transport)
+   - Look for EXPLICIT text: "Mode", "Transport", "Vehicle Type", "Bus", "Train", "Railway", "Flight", "Air", "Car", "Taxi", "Metro"
+   - INFER from document type if not explicitly stated:
+     * Railway ticket / IRCTC ticket / PNR → "train"
+     * Bus ticket / roadways / state transport → "bus"
+     * Flight ticket / airline / boarding pass / airport → "flight"
+     * Cab receipt / taxi receipt / Uber / Ola → "taxi"
+     * Metro ticket / metro card → "metro"
+   - INFER from visual elements:
+     * Railway logo, train images, PNR numbers → "train"
+     * Airlines logo, flight numbers, boarding pass layout → "flight"
+     * Bus operator logos, seat numbers → "bus"
+   - Extract one of: "train", "bus", "flight", "taxi", "metro", "car"
+   - If absolutely unclear after checking ALL text and visual elements, use "unknown"
+
 ================================
 RESPONSE FORMAT (JSON ONLY):
 ================================
@@ -142,17 +156,27 @@ Respond with ONLY this JSON structure, nothing else:
     "destination": "Delhi",
     "travel_date": "2025-11-24",
     "fare": 5500.00,
+    "mode_of_transport": "bus",
     "confidence": 0.95,
     "notes": "All fields extracted clearly"
 }
 
 RULES:
 - Look at EVERY part of the image - top, bottom, left, right, center
-- Read ALL text in the image carefully
+- Read ALL text in the image carefully, including headers, footers, watermarks, logos
+- For mode_of_transport: FIRST check for explicit text, THEN look at document design/type/logo
 - If a field is not visible or unclear, use "unknown" for text fields and 0.0 for fare
 - Set confidence between 0.0 (very uncertain) to 1.0 (very certain)
 - DO NOT add any explanation or text outside the JSON
 - DO NOT use markdown code blocks, just raw JSON
+
+SPECIAL FOCUS - Mode of Transport Detection:
+- Check ticket header for "Railway", "Bus", "Flight", "Airlines", "Metro"
+- Look for PNR numbers (indicates train), flight numbers (indicates flight), seat numbers (bus/train/flight)
+- Check for railway/airline/bus operator logos or names
+- Railway tickets often have: PNR, coach, berth, train number
+- Bus tickets often have: bus number, seat number, operator name
+- Flight tickets often have: flight number, PNR, airline name, boarding pass layout
 
 Now analyze the image and extract the information in JSON format:"""
         
@@ -212,6 +236,7 @@ Now analyze the image and extract the information in JSON format:"""
                 'destination': str(data.get('destination', 'unknown')).strip(),
                 'travel_date': str(data.get('travel_date', 'unknown')).strip(),
                 'fare': float(data.get('fare', 0.0)),
+                'mode_of_transport': str(data.get('mode_of_transport', 'unknown')).strip().lower(),
                 'confidence': float(data.get('confidence', 0.5)),
                 'notes': str(data.get('notes', '')).strip()
             }
@@ -232,6 +257,8 @@ Now analyze the image and extract the information in JSON format:"""
                 missing_fields.append('destination')
             if normalized['fare'] == 0.0:
                 missing_fields.append('fare')
+            if normalized['mode_of_transport'] == 'unknown':
+                missing_fields.append('mode_of_transport')
             
             if missing_fields:
                 logger.warning(f"Missing fields in extraction: {missing_fields}")
@@ -249,6 +276,7 @@ Now analyze the image and extract the information in JSON format:"""
                 'destination': 'unknown',
                 'travel_date': 'unknown',
                 'fare': 0.0,
+                'mode_of_transport': 'unknown',
                 'confidence': 0.0,
                 'notes': f'Normalization failed: {str(e)}'
             }
