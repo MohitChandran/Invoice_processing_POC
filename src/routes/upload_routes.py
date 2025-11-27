@@ -72,6 +72,10 @@ async def upload_invoices_batch(
             - results: Detailed results for each file
     """
     try:
+        # Normalize single UploadFile to list for robustness (support 1..N files)
+        if not isinstance(files, (list, tuple)):
+            files = [files]
+
         logger.info(f"Received batch invoice upload: {len(files)} files (session: {session_id})")
         print(f"\n📤 Uploading {len(files)} invoice files...")
         

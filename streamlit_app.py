@@ -74,8 +74,16 @@ def upload_file(file, file_type, session_id):
 # Function to upload multiple invoices
 def upload_invoices_batch(files, session_id):
     try:
+        # Normalize single file input to list to support 1..N files
+        if files is None:
+            print("[LOG] No files provided to upload_invoices_batch")
+            return False, "No files provided"
+
+        if not isinstance(files, (list, tuple)):
+            files = [files]
+
         print(f"[LOG] Uploading batch of {len(files)} invoices")
-        
+
         # Prepare files for multipart upload
         files_data = [('files', (f.name, f, f.type)) for f in files]
         endpoint = f"{API_BASE_URL}/upload-invoices-batch?session_id={session_id}"
@@ -239,190 +247,115 @@ if st.button("🚀 Process & Validate", type="primary", use_container_width=True
             # STEP 3: Extract & Validate
             st.write("### 🤖 STEP 3: AI Processing")
             
-            # Determine if batch or single processing
-            is_batch = len(invoice_files) > 1
+            # Always use batch validation (supports 1 or more invoices)
+            num_invoices = len(invoice_files)
+            is_batch = num_invoices > 1
             
-            if is_batch:
-                st.info(f"📦 Processing {len(invoice_files)} invoices in batch mode")
+            st.info(f"📦 Processing {num_invoices} invoice{'s' if num_invoices > 1 else ''}")
+            
+            with st.spinner(f"🔄 Extracting and validating {num_invoices} invoice{'s' if num_invoices > 1 else ''}..."):
+                print(f"[LOG] Starting batch validation pipeline for {num_invoices} invoice(s)...")
+                success, batch_result = process_batch_validation(invoice_ids, proposal_id, st.session_state.session_id)
                 
-                with st.spinner(f"🔄 Extracting and validating {len(invoice_files)} invoices..."):
-                    print(f"[LOG] Starting batch validation pipeline...")
-                    success, batch_result = process_batch_validation(invoice_ids, proposal_id, st.session_state.session_id)
-                    
-                    if not success:
-                        st.error(f"❌ Batch processing failed: {batch_result}")
-                        print(f"[LOG] Batch processing failed: {batch_result}")
-                        st.stop()
-                    
-                    print(f"[LOG] Batch processing completed: {batch_result['processed']}/{batch_result['total_invoices']}")
-            else:
-                st.info("Processing single invoice")
+                if not success:
+                    st.error(f"❌ Processing failed: {batch_result}")
+                    print(f"[LOG] Processing failed: {batch_result}")
+                    st.stop()
                 
-                with st.spinner("🔄 Extracting data from invoice (using VLM)..."):
-                    print(f"[LOG] Starting validation pipeline...")
-                    success, result = process_validation(st.session_state.session_id)
-                    
-                    if not success:
-                        st.error(f"❌ Processing failed: {result}")
-                        print(f"[LOG] Processing failed: {result}")
-                        st.stop()
+                print(f"[LOG] Batch processing completed: {batch_result['processed']}/{batch_result['total_invoices']}")
             
             # STEP 4: Display Results
             st.markdown("---")
             st.write("### 🎯 STEP 4: Validation Results")
             
-            if is_batch:
-                # Display batch results
-                print(f"[LOG] Displaying batch results...")
-                
-                st.write(f"#### 📦 Batch Summary")
-                col_summary1, col_summary2, col_summary3 = st.columns(3)
-                
-                with col_summary1:
-                    st.metric("Total Invoices", batch_result['total_invoices'])
-                with col_summary2:
-                    st.metric("Processed", batch_result['processed'], delta_color="normal")
-                with col_summary3:
-                    st.metric("Failed", batch_result['failed'], delta_color="inverse")
-                
-                st.markdown("---")
-                
-                # Display results table
-                st.write("#### 📊 Individual Results")
-                
-                # Prepare data for table
-                table_data = []
-                for item in batch_result['results']:
-                    if item['status'] == 'success' and item['result']:
-                        r = item['result']
-                        table_data.append({
-                            'Passenger': r.get('name', 'N/A'),
-                            'From': r.get('from', 'N/A'),
-                            'To': r.get('to', 'N/A'),
-                            'Fare': f"₹{r.get('fare', 0.0):,.2f}",
-                            'Relation': r.get('relation', 'N/A'),
-                            'Status': r.get('validation_status', 'unknown').upper(),
-                            'Remarks': r.get('remarks', 'N/A')[:50] + '...' if len(r.get('remarks', '')) > 50 else r.get('remarks', 'N/A')
-                        })
-                    else:
-                        table_data.append({
-                            'Passenger': 'ERROR',
-                            'From': '-',
-                            'To': '-',
-                            'Fare': '-',
-                            'Relation': '-',
-                            'Status': 'ERROR',
-                            'Remarks': item.get('error', 'Unknown error')[:50]
-                        })
-                
-                df = pd.DataFrame(table_data)
-                st.dataframe(df, use_container_width=True)
-                
-                # Detailed view for each invoice
-                st.write("#### 🔍 Detailed Results")
-                for idx, item in enumerate(batch_result['results'], 1):
-                    if item['status'] == 'success' and item['result']:
-                        r = item['result']
-                        status = r.get('validation_status', 'unknown')
-                        
-                        with st.expander(f"Invoice {idx}: {r.get('name', 'N/A')} - {status.upper()}", expanded=False):
-                            col1, col2, col3 = st.columns(3)
-                            
-                            with col1:
-                                st.write("**Travel Details:**")
-                                st.write(f"- From: {r.get('from', 'N/A')}")
-                                st.write(f"- To: {r.get('to', 'N/A')}")
-                                st.write(f"- Date: {r.get('date', 'N/A')}")
-                                st.write(f"- Mode: {r.get('mode_of_transport', 'N/A')}")
-                            
-                            with col2:
-                                st.write("**Employee Details:**")
-                                st.write(f"- Name: {r.get('employee_name', 'N/A')}")
-                                st.write(f"- Level: {r.get('employee_level', 'N/A')}")
-                                st.write(f"- Relation: {r.get('relation', 'N/A')}")
-                                st.write(f"- Status: {r.get('status', 'N/A')}")
-                            
-                            with col3:
-                                st.write("**Financial:**")
-                                st.write(f"- Fare: ₹{r.get('fare', 0.0):,.2f}")
-                                st.write(f"- Limit: ₹{r.get('fare_limit', 0.0):,.2f}")
-                                st.write(f"- Confidence: {r.get('confidence', 0.0)*100:.1f}%")
-                            
-                            if status == 'approved':
-                                st.success(f"✅ APPROVED: {r.get('remarks', 'No remarks')}")
-                            else:
-                                st.error(f"❌ REJECTED: {r.get('remarks', 'No remarks')}")
-                                if r.get('violations'):
-                                    st.write("**Violations:**")
-                                    for v in r['violations']:
-                                        st.write(f"- {v}")
-                
-                # Store batch results
-                st.session_state.validation_results = batch_result
-                
-            else:
-                # Display single result (existing logic)
-                print(f"[LOG] Extraction completed, displaying single result...")
-                
-                # Show extracted data in an expander
-                with st.expander("📋 **View Full JSON Response**", expanded=False):
-                    st.json(result)
-                
-                # Display key extracted fields prominently
-                st.write("#### 📊 Travel Details:")
-                
-                col_a, col_b, col_c = st.columns(3)
-                
-                with col_a:
-                    st.metric(label="Passenger Name", value=result.get('name', 'N/A'))
-                    st.metric(label="Travel Date", value=result.get('date', 'N/A'))
-                
-                with col_b:
-                    st.metric(label="From", value=result.get('from', 'N/A'))
-                    st.metric(label="To", value=result.get('to', 'N/A'))
-                
-                with col_c:
-                    st.metric(label="Fare Amount", value=f"₹{result.get('fare', 0.0):,.2f}")
-                    st.metric(label="Mode", value=result.get('mode_of_transport', 'N/A'))
-                
-                # Display Employee Details
-                st.write("#### 👤 Employee Details:")
-                
-                col_emp1, col_emp2, col_emp3 = st.columns(3)
-                
-                with col_emp1:
-                    st.metric(label="Employee Name", value=result.get('employee_name', 'N/A'))
-                    st.metric(label="Employee Level", value=result.get('employee_level', 'N/A'))
-                
-                with col_emp2:
-                    st.metric(label="Relation Type", value=result.get('relation', 'N/A'))
-                    st.metric(label="Status", value=result.get('status', 'N/A'))
-                
-                with col_emp3:
-                    st.metric(label="Fare Limit", value=f"₹{result.get('fare_limit', 0.0):,.2f}")
-                    st.metric(label="Confidence", value=f"{result.get('confidence', 0.0)*100:.1f}%")
-                
-                st.markdown("---")
-                
-                # Validation Status
-                st.write("### ✅ Validation Result")
-                
-                status = result.get('validation_status', 'unknown')
-                
-                if status == 'approved':
-                    st.success(f"🎉 **APPROVED** - Invoice complies with policy")
+            # Always display as batch results (works for 1 or more)
+            print(f"[LOG] Displaying batch results...")
+            
+            st.write(f"#### 📦 Summary")
+            col_summary1, col_summary2, col_summary3 = st.columns(3)
+            
+            with col_summary1:
+                st.metric("Total Invoices", batch_result['total_invoices'])
+            with col_summary2:
+                st.metric("Processed", batch_result['processed'], delta_color="normal")
+            with col_summary3:
+                st.metric("Failed", batch_result['failed'], delta_color="inverse")
+            
+            st.markdown("---")
+            
+            # Display results table
+            st.write("#### 📊 Individual Results")
+            
+            # Prepare data for table
+            table_data = []
+            for item in batch_result['results']:
+                if item['status'] == 'success' and item['result']:
+                    r = item['result']
+                    table_data.append({
+                        'Passenger': r.get('name', 'N/A'),
+                        'From': r.get('from', 'N/A'),
+                        'To': r.get('to', 'N/A'),
+                        'Fare': f"₹{r.get('fare', 0.0):,.2f}",
+                        'Relation': r.get('relation', 'N/A'),
+                        'Status': r.get('validation_status', 'unknown').upper(),
+                        'Remarks': r.get('remarks', 'N/A')[:50] + '...' if len(r.get('remarks', '')) > 50 else r.get('remarks', 'N/A')
+                    })
                 else:
-                    st.error(f"❌ **REJECTED** - Policy violations found")
+                    table_data.append({
+                        'Passenger': 'ERROR',
+                        'From': '-',
+                        'To': '-',
+                        'Fare': '-',
+                        'Relation': '-',
+                        'Status': 'ERROR',
+                        'Remarks': item.get('error', 'Unknown error')[:50]
+                    })
+            
+            df = pd.DataFrame(table_data)
+            st.dataframe(df, use_container_width=True)
+            
+            # Detailed view for each invoice
+            st.write("#### 🔍 Detailed Results")
+            for idx, item in enumerate(batch_result['results'], 1):
+                if item['status'] == 'success' and item['result']:
+                    r = item['result']
+                    status = r.get('validation_status', 'unknown')
+                    
+                    with st.expander(f"Invoice {idx}: {r.get('name', 'N/A')} - {status.upper()}", expanded=False):
+                        col1, col2, col3 = st.columns(3)
+                        
+                        with col1:
+                            st.write("**Travel Details:**")
+                            st.write(f"- From: {r.get('from', 'N/A')}")
+                            st.write(f"- To: {r.get('to', 'N/A')}")
+                            st.write(f"- Date: {r.get('date', 'N/A')}")
+                            st.write(f"- Mode: {r.get('mode_of_transport', 'N/A')}")
+                        
+                        with col2:
+                            st.write("**Employee Details:**")
+                            st.write(f"- Name: {r.get('employee_name', 'N/A')}")
+                            st.write(f"- Level: {r.get('employee_level', 'N/A')}")
+                            st.write(f"- Relation: {r.get('relation', 'N/A')}")
+                            st.write(f"- Status: {r.get('status', 'N/A')}")
+                        
+                        with col3:
+                            st.write("**Financial:**")
+                            st.write(f"- Fare: ₹{r.get('fare', 0.0):,.2f}")
+                            st.write(f"- Limit: ₹{r.get('fare_limit', 0.0):,.2f}")
+                            st.write(f"- Confidence: {r.get('confidence', 0.0)*100:.1f}%")
+                        
+                        if status == 'approved':
+                            st.success(f"✅ APPROVED: {r.get('remarks', 'No remarks')}")
+                        else:
+                            st.error(f"❌ REJECTED: {r.get('remarks', 'No remarks')}")
+                            if r.get('violations'):
+                                st.write("**Violations:**")
+                                for v in r['violations']:
+                                    st.write(f"- {v}")
                 
-                st.write(f"**Remarks:** {result.get('remarks', 'No remarks')}")
-                
-                if result.get('violations'):
-                    st.write("**Violations:**")
-                    for v in result['violations']:
-                        st.write(f"- {v}")
-                
-                # Store results
-                st.session_state.validation_results = result
+            # Store batch results
+            st.session_state.validation_results = batch_result
+            
             st.success("✅ Processing completed!")
             print(f"[LOG] All steps completed successfully")
 
